@@ -1,0 +1,15 @@
+<article>
+	<div class="content-article">
+	#foreach($to in $top.getSiblings())
+		#if($to.topHeader.data != "")
+			<h2>
+				$to.topHeader.data
+			</h2>
+		#end
+		#if($to.topHeader.data != "")
+			<img src="" />
+		#end
+
+	#end
+	</div>
+</article>

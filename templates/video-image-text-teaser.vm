@@ -1,0 +1,28 @@
+<div class="video-image-text-teaser">
+	#if($videosOrImages.data != "")
+		<div class="media-wpr">
+			#set ($choose = $videosOrImages.data)
+			#set ($choose = $choose.indexOf('mp4'))
+			#if ($choose != -1)				
+				<video width="100%" controls>
+					<source src="$videosOrImages.getData()" type="video/mp4">
+					Your browser does not support the video tag.
+				</video> 
+			#else 
+				<div>
+					<img src="$videosOrImages.data">
+				</div>					
+			#end					
+			#if($mainHeader.data != "")					
+				<div class="content-wpr">
+					<div class="inner-wpr">
+						#if($mainHeaderLink.data != "")<a href="$mainHeaderLink.data">#end
+							<h2>$mainHeader.data</h2>
+							<p>$mainParagrah.data</p>
+						#if($mainHeaderLink.data != "")</a>#end
+					</div>
+				</div>
+			#end
+		</div>
+	#end
+</div>

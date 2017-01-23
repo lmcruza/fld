@@ -1,0 +1,113 @@
+
+<root available-locales="en_US,es_ES" default-locale="en_US">
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="separator" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="media" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Select media]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Seleccionar imagen]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="isImageHeaderWhite" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Is image header white?]]></entry>
+				<entry name="predefinedValue"><![CDATA[false]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[¿Texto de cabecera de la imagen en blanco?]]></entry>
+				<entry name="predefinedValue"><![CDATA[false]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="image-header" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Image header]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Cabcera de imagen]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="imageParagraf" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Image paragraph]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Párrafo de cabecera de imagen]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="content-header" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Content header]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Contenido de la cabecera]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="info-text" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Info text]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Texto de información]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="button-text" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Button text]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Texto del botón]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="link-url" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label"><![CDATA[Link url]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label"><![CDATA[Enlace (url)]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+				<entry name="tip"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label"><![CDATA[Separator]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+			<entry name="tip"><![CDATA[]]></entry>
+			<entry name="style"><![CDATA[]]></entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label"><![CDATA[Separador]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+			<entry name="tip"><![CDATA[]]></entry>
+			<entry name="style"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+</root>

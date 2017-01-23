@@ -1,0 +1,35 @@
+<div class="media-space">
+	<div class="top">
+		#if($mainHeader.data != "")
+			<h2>$mainHeader.data</h2>
+		#end
+
+		#set ($choose = $videoOrImage.data)
+		#set ($choose = $choose.indexOf('mp4'))
+		#if ($choose != -1)				
+			<video width="100%" controls>
+				<source src="$videoOrImage.getData()" type="video/mp4">
+				Your browser does not support the video tag.
+			</video> 
+		#else 
+			<div>
+				<img src="$videoOrImage.data">
+			</div>					
+		#end
+		#if($middleHeader.data != "")
+			<h3>$middleHeader.data</h3>
+		#end
+	</div>
+	<div class="bottom">
+		#foreach($bottom in $bottoms.getSiblings())
+			#if($bottom.image.data != "")
+				<img src="$bottom.image.data" />
+			#end
+			#if($bottom.link.data != "") <a href="$bottom.link.data"> #end
+			<h3>$bottom.subHeader.data </h3>
+			<p>$bottom.subParagrah.data</p>
+			#if($bottom.link.data != "")</a>#end
+			
+		#end
+	</div>
+</div>

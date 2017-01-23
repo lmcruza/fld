@@ -1,0 +1,20 @@
+<div class="social-media">
+	#if($image.data != "")
+		<img src="$image.data" />
+	#end	
+	#if($header.data != "")
+		<h2>
+			$header.data
+		</h2>
+	#end
+	<div class="wpr">
+		#if($paragrah.data != "")
+			<p>$paragrah.data</p>
+		#end		
+		#if($buttonText.data != "")
+			<a href="$buttonLink.data">
+				$buttonText.data
+			</a>
+		#end	
+	</div>
+</div>

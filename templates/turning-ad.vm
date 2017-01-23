@@ -1,0 +1,10 @@
+<div class="work">
+	#foreach($wpr in $wprs.getSiblings())		
+		<a class="trigger" href="$wpr.link.data">
+			<div class="feature two show">
+				<div class="face cover"><img src="$wpr.image.data" /></div>
+				<div class="face hover"><p class="info">$wpr.paragrah.data</p></div>
+			</div>
+		</a>
+	#end
+</div>

@@ -1,0 +1,61 @@
+<div class="contact-us">
+	#if($header.data != "")
+		<h2>
+			$header.data
+		</h2>
+	#end
+	#if($headerImage.data != "")
+		<img src="$headerImage.data" />
+	#end
+	#if($secondHeader.data != "")
+		<h3>
+			$secondHeader.data
+		</h3>
+	#end
+	#foreach($bottom in $bottoms.getSiblings())
+		#if($bottom.isTitleBold.data != "")
+			#set ($bold = "white")
+		#else 
+			#set ($bold = "")
+		#end			
+		<div class="accordion-wpr $bold">
+			<div class="wpr">
+				<a href="javascript:void(0)" class="acccordion-link">
+					<div class="left">
+						#if($bottom.picture.data != "")
+							<img src="$bottom.picture.data" />
+						#end				
+					</div>
+					<div class="right">
+						#if($bottom.wholeName.data  != "")
+							<h3>$bottom.wholeName.data <span></span></h3>
+						#end
+						#if($bottom.title.data  != "")
+							<p>$bottom.title.data</p>
+						#end
+					</div>
+					<span class="icon"></span>
+				</a>
+			<div class="acccordion-content">
+				<p>
+					<span class="left-side">
+						Número de teléfono
+					</span>
+					<span class="right-side">
+						$bottom.phoneNumber.data
+					</span>
+				</p>
+				<p>
+					<span class="left-side">
+						Dirección de correo electrónico
+					</span>
+					<span class="right-side">
+						$bottom.emailAddress.data
+					</span>
+				</p>
+			</div>
+			</div>
+		</div>
+	#end	
+</div>
+

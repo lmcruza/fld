@@ -1,0 +1,32 @@
+<div class="four-image-teaser">
+	<div class="top">
+		#foreach($top in $wprs.getSiblings())
+			#if($top.isHeaderWhite.data != "")
+				#set ($color = "white")
+			#else 
+				#set ($color = "")
+			#end								
+			<a class="sub-teaser $color" href="$top.imageHeaderLink.data">
+				<img src="$top.image.data" />
+				<h3>$top.imageHeader.data</h3>
+			</a>			
+		#end
+	</div>
+	<div class="bottom">
+		#if($bottomHeader.data != "")
+			<h2>
+				$bottomHeader.data
+			</h2>
+		#end
+		#if($bottomParagrah.data != "")
+			<p>
+				$bottomParagrah.data
+			</p>
+		#end
+		#if($bottomButton.data != "")
+			<a href="$bottomButtonLink.data">
+				$bottomButton.data
+			</a>
+		#end		
+	</div>
+</div>
