@@ -1,0 +1,37 @@
+<div class="media-container">
+	<div class="media-wpr">
+        #if($imageSeparator.image.getData() != "")
+    		<div>
+                <img src="$imageSeparator.image.getData()" />
+    		</div>					
+        #end
+		#if($header.getData() != "")
+			#if($textInWhite.getData() != "")
+				#set ($color = "white")
+			#else 
+				#set ($color = "")
+			#end						
+			<div class="content-wpr $color">
+				<h3>$header.getData()</h3><br />
+				<p>$information.getData()</p><br />
+            	#if($button.getData() != "")
+                		<a href="$linkToPage.getFriendlyUrl()">
+                			$button.getData()
+                		</a>
+            	#end	
+			</div>
+		#end
+	</div>
+    #if($videoSeparator.mp4Video.getData() != "")
+		<video width="100%" controls>
+			<source src="$videoSeparator.mp4Video.getData()" type="video/mp4">
+			Your browser does not support the video tag.
+		</video> 
+    #end
+    #if($videoSeparator.youtubeVideo.getData() != "")
+		<div>En desarrollo</div>
+    #end
+    #if($videoSeparator.streamingVideo.getData() != "")
+		<div>En desarrollo</div>
+    #end
+</div>

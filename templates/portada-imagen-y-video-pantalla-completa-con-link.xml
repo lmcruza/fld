@@ -1,0 +1,279 @@
+
+<root available-locales="en_US,es_ES" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="header" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Header]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Cabecera]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="information" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Information]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Información]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="textInWhite" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Text in white?]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[¿Texto en blanco?]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="imageSeparator" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="image" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Select image from document library]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Seleccione una imagen de la libería de documentos]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image properties]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Propiedades de la imagen]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="videoSeparator" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="mp4Video" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Select video from document library (only mp4 format)]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Seleccione un vídeo de la librería de documentos (sólo en formato mp4)]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="youtubeVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[YouTube url]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Url de YouTube]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="streamingVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Streaming url]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Url de streaming]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Video properties (inform only one of them, if none then no video control will be shown)]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Propiedades del vídeo (rellene sólo una de las posibilidades, si no rellena ninguna no se mostrará control de vídeo)]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="button" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Button text]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Texto del botón]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="keyword" localizable="true" name="linkToPage" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-link-to-page" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Button link to page]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Enlace a página del site para el botón]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

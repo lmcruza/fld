@@ -1,0 +1,15 @@
+<div class="four-image-teaser">
+	<div class="top">
+    	#foreach($imageProps in $imageSeparator.getSiblings())
+			#if($imageProps.textInWhite.getData() != "")
+				#set ($color = "white")
+			#else 
+				#set ($color = "")
+			#end
+			<a class="sub-teaser $color" href="$imageProps.linkToPage.getFriendlyUrl()">
+				<img src="$imageProps.image.getData()" />
+				<h3>$imageProps.header.getData()</h3>
+			</a>
+    	#end
+	</div>
+</div>

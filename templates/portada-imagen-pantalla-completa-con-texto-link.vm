@@ -1,0 +1,36 @@
+#if($alternativeBackground.getData() != "")
+	#set ($backgroundColor = "alternative-background-color")
+#else 
+	#set ($backgroundColor = "")
+#end						
+
+<div class="media-container $backgroundColor">
+	#if($image.getData() != "")
+	    <div class="media-wpr">
+    		<img src="$image.getData()" />
+		</div>
+	#end
+	#if($textOnImage.getData() != "")
+		#if($textOnImageInWhite.getData() != "")
+			#set ($color = "white")
+		#else 
+			#set ($color = "")
+		#end						
+		<div class="content-wpr $color">
+			<p>$textOnImage.getData()</p>
+		</div>
+	#end
+	#if($header.getData() != "")
+		<h2>
+			$header.getData()
+		</h2>
+	#end
+	#if($paragraph.getData() != "")
+		<p>${paragraph.getData()}</p>
+	#end		
+	#if($button.getData() != "")
+		<a href="$linkToPage.getFriendlyUrl()">
+			$button.getData()
+		</a>
+	#end	
+</div>
