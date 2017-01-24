@@ -18,7 +18,7 @@
 
 <body class="$css_class">
 
-<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a> 
 
 $theme.include($body_top_include)
 
