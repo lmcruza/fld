@@ -27,11 +27,9 @@
 			<source src="$videoSeparator.mp4Video.getData()" type="video/mp4">
 			Your browser does not support the video tag.
 		</video> 
-    #end
-    #if($videoSeparator.youtubeVideo.getData() != "")
-		<div>En desarrollo</div>
-    #end
-    #if($videoSeparator.streamingVideo.getData() != "")
+    #elseif($videoSeparator.youtubeVideo.getData() != "")
+		$htmlUtil.unescape($videoSeparator.youtubeVideo.getData())
+    #elseif($videoSeparator.streamingVideo.getData() != "")
 		<div>En desarrollo</div>
     #end
 </div>

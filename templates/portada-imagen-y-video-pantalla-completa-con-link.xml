@@ -151,10 +151,10 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="youtubeVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="youtubeVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="small">
 			<meta-data locale="en_US">
 				<entry name="label">
-					<![CDATA[YouTube url]]>
+					<![CDATA[Embeded code for YouTube integration]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
@@ -165,7 +165,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Url de YouTube]]>
+					<![CDATA[Código incrustado para la integración de YouTube]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
