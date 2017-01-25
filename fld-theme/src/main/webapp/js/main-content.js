@@ -1,4 +1,45 @@
+function centerImageVideo() {
+	var windowHeight = jQuery( window ).height();
+	var windowWidth = jQuery( window ).width();
+	var windowHeight = windowHeight-100;
+	jQuery("#wrapper .centering-image-video-container").each(function() {
+		var imageWidth = jQuery(this).find(".img-wpr").width();	
+		if(imageWidth > windowWidth){
+			jQuery(this).height(windowHeight);
+			var imageHeight = jQuery(this).find(".img-wpr").height();
+			var topPosition = (imageHeight - windowHeight) / 2;
+			topPosition = topPosition-topPosition-topPosition;
+			jQuery(this).find(".img-wpr").css("top", topPosition);
+			var leftPosition = (imageWidth - windowWidth) / 2;
+			leftPosition = leftPosition-leftPosition-leftPosition;
+			jQuery(this).find(".img-wpr").css("left", leftPosition);
+		}
+		else {
+			jQuery(this).addClass("center");
+		}
+	});	
+}
 jQuery(document).ready(function() {
+	$('#content .img-wpr video').each(function(index) {
+		$(this).attr('id', 'video'+index);
+	});
+	$('#content .img-wpr a.play-icon').each(function(index) {
+		$(this).attr('id', index);
+	});	
+	
+	jQuery("#content .centering-image-video-container .img-wpr a.play-icon").on("click", function(e) {	
+		var currentVideo = $(this).attr('id');
+		var currentVideo = document.getElementById("video"+currentVideo);
+		currentVideo.play(); 
+		
+		$(this).parent().remove()
+		$(currentVideo).css("display", "block");
+		centerImageVideo();
+	});
+	setTimeout(function(){ centerImageVideo(); }, 1000);
+	$( window ).resize(function() {
+		centerImageVideo();
+	});			
 	jQuery("#wrapper .nav-link-mobile").on("click", function(e) {	
 		jQuery("#wrapper .navigation-content-mobile").toggleClass("open");
 	});	

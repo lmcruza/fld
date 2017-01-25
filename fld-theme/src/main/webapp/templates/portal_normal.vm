@@ -57,11 +57,9 @@ $theme.include($body_top_include)
 					<li class="youtube"><a target="_blank" href="$theme.getSetting("youtube")"><i class="icon-youtube "></i><span class="fa-hidden">YouTube</span></a></li>
 				#end
 			</ul>			
-
 			<div class="navigation-content-mobile">
 				#parse ("$full_templates_path/mobile-navigation.vm")
 			</div>
-			
 		</nav>
 	</header>
 	<div id="content">
