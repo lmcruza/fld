@@ -14,7 +14,7 @@ body.portlet {
 }
 
 .portlet-topper {
-	position: relative;
+	position: relative !important;
 
 	.portlet-topper-toolbar {
 		margin: 0;
