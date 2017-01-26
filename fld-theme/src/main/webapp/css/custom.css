@@ -76,14 +76,14 @@ body.dark {
 	background:#FFF;
 }
 #wrapper header .nav-desktop ul.first-lvl li.first-lvl a div:before{
-	content:"-";
+	content:" ";
 	position:relative;
 	top:-2px;
 	padding-right:5px;
 	left:-7px;
 }
 #wrapper header .nav-desktop ul.first-lvl li.first-lvl a.selected div:before{
-	content:".";
+	content:" ";
 	position:relative;
 	top:-6px;
 	padding-right:7px;	
