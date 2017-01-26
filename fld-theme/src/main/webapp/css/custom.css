@@ -1008,7 +1008,32 @@ div.media-container a:hover{
 }
 .centering-image-video-container .img-wpr-inter {
 	position:relative;
-	
+}
+.centering-image-video-container .img-wpr-inter .content-wrapper {
+	position: absolute;
+	top:50%;
+	left:0;	
+	text-align:center;
+	width: 96%;
+	padding:0 2%;
+}
+.centering-image-video-container .img-wpr-inter .content-wrapper  h2{
+	display:inline-block;
+	text-align:center;
+	font-weight:bold;
+	font-size:50px;
+	color:#333333;
+	text-transform:uppercase;
+	margin:0;
+	width:96%;
+}
+.centering-image-video-container .img-wpr-inter .content-wrapper p{
+	font-size:32px;
+	line-height:1.2em;
+	padding-bottom:10px;
+	display:inline-block;
+	width:96%;
+	color:#333333;
 }
 .centering-image-video-container .img-wpr-inter .play-icon {
 	position: absolute;
@@ -1030,6 +1055,11 @@ div.media-container a:hover{
 	display:block;
 	color:#FFF;
 	margin:15px 0 0 21px;
+}
+/*search-layout*/
+.search-layout {
+	font-size:0.7em;
+	padding:0 20px
 }
 /*white selection*/ 
 html body .white {

@@ -85,6 +85,48 @@ $theme.include($body_top_include)
 
 
 	<div id="content">
+		<div class="centering-image-video-container">
+			<div class="img-wpr">
+				<div class="img-wpr-inter">
+					<img src="//assets.volvocars.com/es/~/media/spain/images/2016/12_diciembre/postventa.jpg"/>
+					<a class="play-icon" href="javascript:void(0)"><span></span></a>
+					<div class="content-wrapper">
+						<h2>
+							Lorem Lipsum
+						</h2>
+						<p>
+							lorem lipsum
+						</p>
+					</div>
+					<video controls="" id="yui_patched_v3_11_0_1_1485263537202_788" style="display:none;"> 
+						<source src="/documents/21301/0/20170102_134713.mp4/fa3c8074-4f4a-4893-9269-4c061c4a7319" type="video/mp4">
+						</source> 
+				Your browser does not support the video tag. 
+					</video>					
+				</div>				
+			</div>
+		</div>	
+		<div class="centering-image-video-container">
+			<div class="img-wpr white">
+				<div class="img-wpr-inter">
+					<img src="//assets.volvocars.com/es/~/media/spain/images/2016/12_diciembre/postventa.jpg"/>
+					<a class="play-icon" href="javascript:void(0)"><span></span></a>
+					<div class="content-wrapper">
+						<h2>
+							Lorem Lipsum
+						</h2>
+						<p>
+							lorem lipsum
+						</p>
+					</div>
+					<video controls="" id="yui_patched_v3_11_0_1_1485263537202_788" style="display:none;"> 
+						<source src="/documents/21301/0/20170102_134713.mp4/fa3c8074-4f4a-4893-9269-4c061c4a7319" type="video/mp4">
+						</source> 
+				Your browser does not support the video tag. 
+					</video>					
+				</div>				
+			</div>
+		</div>		
 		#if ($selectable)
 			$theme.include($content_include)
 		#else

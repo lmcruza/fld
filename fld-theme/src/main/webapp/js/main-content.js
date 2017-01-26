@@ -8,11 +8,13 @@ function centerImageVideo() {
 			jQuery(this).height(windowHeight);
 			var imageHeight = jQuery(this).find(".img-wpr").height();
 			var topPosition = (imageHeight - windowHeight) / 2;
+			contentWrapperPosition  = topPosition*1.6;
 			topPosition = topPosition-topPosition-topPosition;
 			jQuery(this).find(".img-wpr").css("top", topPosition);
 			var leftPosition = (imageWidth - windowWidth) / 2;
 			leftPosition = leftPosition-leftPosition-leftPosition;
 			jQuery(this).find(".img-wpr").css("left", leftPosition);
+			jQuery(this).find(".content-wrapper").css("top", contentWrapperPosition) 
 		}
 		else {
 			jQuery(this).addClass("center");
@@ -35,7 +37,8 @@ jQuery(document).ready(function() {
 		var currentVideo = document.getElementById("video"+currentVideo);
 		currentVideo.play(); 
 		
-		$(this).parent().remove()
+		$(this).prev().remove();
+		$(this).remove();
 		$(currentVideo).css("display", "block");
 		centerImageVideo();
 	});
