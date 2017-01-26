@@ -1,0 +1,21 @@
+<div class="contenido-texto-foto-flotante">
+    #if($headerProperties.anchor.getData())
+	    <span id="$headerProperties.anchor.getData()"></span>
+	#end
+    #if($headerProperties.headerText.getData())
+	    <h2>$headerProperties.headerText.getData()</h2>
+	#end
+    #foreach($paragraphSep in $paragraphSeparator.getSiblings())
+        <div class="contenido-texto-foto-flotante paragraph-container">
+            #if($paragraphSep.image.getData())
+        	    <img class="$paragraphSep.imageAlignment.getData()" src="$paragraphSep.image.getData()" />
+        	#end
+            #if($paragraphSep.highlightedText.getData())
+        	    <h2>$paragraphSep.highlightedText.getData()</h2>
+        	#end
+            #if($paragraphSep.paragraph.getData())
+        	    $htmlUtil.unescape($paragraphSep.paragraph.getData())
+        	#end
+        </div>
+    #end
+</div>
