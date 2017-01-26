@@ -64,7 +64,7 @@ $theme.include($body_top_include)
 				#parse ("$full_templates_path/mobile-navigation.vm")
 			</div>
 		</nav>
-		##set($currentSiteName = "web"+$themeDisplay.getLayout().getGroup().getFriendlyURL()) 
+		##set($currentSiteName = "web"+$layout.getGroup().getFriendlyURL()) 
 		<div id="site-search">
 			<form onsubmit="ctem_null_null_3_search(); return false;" name="ctem_null_null_3_fm" method="get" action="$currentSiteName/search">
 				<input name="p_p_id" value="3" type="hidden"/>
@@ -109,12 +109,13 @@ $theme.include($body_top_include)
 				#end
 			</ul>
 		</div>
+		#set($currentSiteUrl = $themeDisplay.getPortalURL()+"/web"+$layout.getGroup().getFriendlyURL()) 
 		<div class="portal-links">
 			<ul>
-				<li><a href="$currentSiteName/aviso-legal">Aviso Legal</a></li>		
-				<li><a href="$currentSiteName/politica-cookies">Política de cookies</a></li>
-				<li><a href="$currentSiteName/politica-de-privacidad">Política de Privacidad</a></li>
-				<li><a href="$currentSiteName/mapa-web1">Mapa web</a></li>
+				<li><a href="$currentSiteUrl/aviso-legal">Aviso Legal</a></li>		
+				<li><a href="$currentSiteUrl/politica-cookies">Política de cookies</a></li>
+				<li><a href="$currentSiteUrl/politica-de-privacidad">Política de Privacidad</a></li>
+				<li><a href="$currentSiteUrl/mapa-web1">Mapa web</a></li>
 			</ul>
 		</div>
 		<div class="info-wpr">
