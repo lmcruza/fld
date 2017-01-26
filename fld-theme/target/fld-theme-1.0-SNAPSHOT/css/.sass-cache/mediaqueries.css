@@ -1,0 +1,9 @@
+/*
+1. L(arge) / Desktop. (min-width: 1090px)
+2. M(edium) / Tablet. (min-width: 650px) and (max-width: 1089px)
+3. S(mall) / Mobile (max-width: 649px)
+*/
+@media screen and (min-width: 1090px) {
+  .mobile {
+    display: none; } }
+
