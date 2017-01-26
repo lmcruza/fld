@@ -1,0 +1,19 @@
+<div class="four-image-teaser">
+	<div class="bottom">
+		#if($header.getData())
+			<h2>
+				$header.getData()
+			</h2>
+		#end
+		#if($paragraph.getData())
+			<p>
+				$paragraph.getData()
+			</p>
+		#end
+		#if($buttonText.getData())
+			<a href="$buttonLink.getData()">
+				$buttonText.getData()
+			</a>
+		#end		
+	</div>
+</div>
