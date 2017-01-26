@@ -1,7 +1,7 @@
 $gray: #555;
 $white: #FFF;
 
-$linkColor: #0AF;
+$linkColor: #98989d;
 $linkColorHover: darken($linkColor, 15%);
 
 $baseBorderRadius: 2px;
@@ -13,17 +13,17 @@ $btnBackgroundHighlight: #EAEAEA;
 $btnBorder: #CFCFCF;
 $btnDangerBackground: #F53924;
 $btnDangerBackgroundHighlight: #ED2C17;
-$btnInfoBackground: #00CFFF;
+$btnInfoBackground: #98989d;
 $btnInfoBackgroundHighlight: darken($btnInfoBackground, 4%);
-$btnPrimaryBackground: #54AAFF;
-$btnPrimaryBackgroundHighlight: #4A96E8;
+$btnPrimaryBackground: #98989d;
+$btnPrimaryBackgroundHighlight: #98989d;
 $btnSuccessBackground: #0ECD27;
 $btnSuccessBackgroundHighlight: #0ABA1D;
 $btnWarningBackground: #FFA658;
 $btnWarningBackgroundHighlight: #F49645;
 
 $dropdownLinkBackgroundActive: lighten($linkColor, 5%);
-$dropdownLinkBackgroundHover: darken(#3ECAF4, 10%);
+$dropdownLinkBackgroundHover: darken(#98989d, 10%);
 $dropdownLinkColorActive: $white;
 
 $navbarBackground: #F3F3F3;
@@ -39,7 +39,7 @@ $errorBorder: #FCACA5;
 $errorText: #B50303;
 $infoBackground: #CEF1FC;
 $infoBorder: darken($infoBackground, 10%);
-$infoText: #12718F;
+$infoText: #98989d;
 $successBackground: #F1FBD1;
 $successBorder: #BCE830;
 $successText: #488F06;

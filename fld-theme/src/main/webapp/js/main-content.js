@@ -20,6 +20,9 @@ function centerImageVideo() {
 	});	
 }
 jQuery(document).ready(function() {
+	jQuery("#open-search, #close-search").on("click", function() {
+		jQuery("#site-search").toggleClass("open");
+	});	
 	$('#content .img-wpr video').each(function(index) {
 		$(this).attr('id', 'video'+index);
 	});

@@ -45,7 +45,7 @@ $theme.include($body_top_include)
 			</div>
 			<a class="nav-link-mobile" href="javascript:void(0)">
 				<span></span>
-			</a>			
+			</a>
 			<ul id="menu-main-right" class="nav-menu">
 				#if ($theme.getSetting("twitter") != "")
 					<li class="twitter"><a target="_blank" href="$theme.getSetting("twitter")"><i class="icon-twitter "></i><span class="fa-hidden">Twitter</span></a></li>
@@ -56,12 +56,34 @@ $theme.include($body_top_include)
 				#if ($theme.getSetting("youtube") != "")
 					<li class="youtube"><a target="_blank" href="$theme.getSetting("youtube")"><i class="icon-youtube "></i><span class="fa-hidden">YouTube</span></a></li>
 				#end
-			</ul>			
+			</ul>	
+			<a id="open-search" href="javascript:void(0);">
+				<i class="icon-search"></i>
+			</a>
 			<div class="navigation-content-mobile">
 				#parse ("$full_templates_path/mobile-navigation.vm")
 			</div>
 		</nav>
+		##set($currentSiteName = "web"+$themeDisplay.getLayout().getGroup().getFriendlyURL()) 
+		<div id="site-search">
+			<form onsubmit="ctem_null_null_3_search(); return false;" name="ctem_null_null_3_fm" method="get" action="$currentSiteName/search">
+				<input name="p_p_id" value="3" type="hidden"/>
+				<input name="p_p_lifecycle" value="0" type="hidden"/>
+				<input name="p_p_state" value="maximized" type="hidden"/>
+				<input name="p_p_mode" value="view" type="hidden"/>
+				<input name="_3_struts_action" value="/search/search" type="hidden"/>
+				<input name="_3_redirect" value="/$currentSiteName/search" type="hidden"/> 
+				<input name="_3_groupId" value="$themeDisplay.getLayout().getGroup().getGroupId()" type="hidden"/> 
+				<input name="_3_keywords" size="30" class="search-box" value="" type="text"/> 
+				<input type="submit" class="btn" value='Buscar'/> 
+			</form>
+			<a id="close-search" href="javascript:void(0)">
+				<i class="icon-remove"></i>
+			</a>
+		</div>		
 	</header>
+
+
 	<div id="content">
 		#if ($selectable)
 			$theme.include($content_include)
@@ -73,7 +95,6 @@ $theme.include($body_top_include)
 			$theme.wrapPortlet("portlet.vm", $content_include)
 		#end		
 	</div>
-	#set($currentSiteName = "web"+$themeDisplay.getLayout().getGroup().getFriendlyURL()) 
 	<footer id="footer" role="contentinfo">
 		<div class="channels">
 			<ul>

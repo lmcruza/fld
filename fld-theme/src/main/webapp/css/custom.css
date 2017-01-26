@@ -2,6 +2,7 @@
 #wrapper {
 	padding:0;
 }
+
 body {
 	padding:0 !important;
 	font-size:20px !important;
@@ -270,6 +271,43 @@ body.dark {
 	display:block;
 	color:#FFF;	
 }
+/*site search*/
+#open-search {
+    float: right;
+    font-size: 18px;
+    margin-top: 23px;
+	color:#595959;
+}
+#open-search:hover {
+	color:#c90000;
+	text-decoration:none;
+}
+#site-search {
+	display:none;
+	border-bottom:#98989d 1px solid;
+	border-top:#98989d 1px solid;
+	margin-top:10px;
+	padding:10px;
+}
+#site-search.open{
+	display:block;
+}
+#site-search form {
+	margin-bottom:0;
+	display:inline-block;
+	margin-right:10px;
+}
+#site-search .search-box {
+	margin-bottom:0;
+}
+#site-search a#close-search{
+	color:#98989d;
+	vertical-align: middle;
+}
+#site-search a#close-search:hover {
+	color:#c90000;
+	text-decoration:none;
+} 
 /*CONTENT*/
 div.media-container {
 	text-align:center;
