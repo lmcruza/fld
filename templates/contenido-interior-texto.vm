@@ -1,0 +1,25 @@
+<div class="content-article-top">
+	#foreach($to in $top.getSiblings())
+		#if($to.topHeader.getData())
+			<h2>
+				$to.topHeader.getData()
+			</h2>
+		#end
+		#if($to.image.getData())
+			<img src="$to.image.getData()" />
+		#end
+		#if($to.topParagraph.getData())
+			<p>$to.topParagraph.getData()</p>
+		#end
+	#end
+</div>
+<div class="content-article-bottom">
+	#if($bottom.bottomHeader.getData())
+		<h2>
+			$bottom.bottomHeader.getData()
+		</h2>
+	#end
+	#if($bottom.bottomParagraph.getData())
+		<p>$bottom.bottomParagraph.getData()</p>
+	#end
+</div>
