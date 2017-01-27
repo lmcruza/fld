@@ -17,7 +17,7 @@
 			<p>$paragraph.getData()</p>
 		#end		
 		#if($buttonText.getData())
-			<a href="$buttonLink.getFriendlyUrl()">
+			<a href="$linkToPage.getFriendlyUrl()">
 				$buttonText.getData()
 			</a>
 		#end	
