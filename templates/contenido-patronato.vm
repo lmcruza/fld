@@ -1,0 +1,35 @@
+<div class="contact-us">
+	#if($mainHeader.getData())
+		<h2>
+			$mainHeader.getData()
+		</h2>
+	#end
+	#if($headerImage.getData())
+		<img src="$headerImage.getData()" />
+	#end
+	#if($secondHeader.getData())
+		<h3>
+			$secondHeader.getData()
+		</h3>
+	#end
+	#foreach($person in $personDetails.getSiblings())
+		<div class="accordion-wpr $bold">
+			<div class="wpr">
+				<a href="javascript:void(0)" class="acccordion-link">
+					<div class="left">
+						<img src="$person.picture.getData()" />
+					</div>
+					<div class="right">
+						<h3>$person.wholeName.getData()<span></span></h3>
+						<p>$person.title.getData()</p>
+					</div>
+					<span class="icon"></span>
+				</a>
+			<div class="acccordion-content">
+				<p>
+					$person.resumee.getData()
+				</p>
+			</div>
+		</div>
+	#end	
+</div>
