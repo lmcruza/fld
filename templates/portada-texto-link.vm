@@ -11,7 +11,7 @@
 			</p>
 		#end
 		#if($buttonText.getData())
-			<a href="$buttonLink.getData()">
+			<a href="$buttonLink.getFriendlyUrl()">
 				$buttonText.getData()
 			</a>
 		#end		
