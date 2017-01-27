@@ -1,0 +1,10 @@
+<div class="work">
+	#foreach($imageProp in $imageProperties.getSiblings())		
+		<a class="trigger" href="$imageProp.linkToPage.getFriendlyUrl()">
+			<div class="feature two show">
+				<div class="face cover"><img src="$imageProp.image.getData()" /></div>
+				<div class="face hover"><p class="info">$imageProp.paragraph.getData()</p></div>
+			</div>
+		</a>
+	#end
+</div>
