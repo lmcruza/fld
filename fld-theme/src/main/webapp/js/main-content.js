@@ -8,7 +8,7 @@ function centerImageVideo() {
 			jQuery(this).height(windowHeight);
 			var imageHeight = jQuery(this).find(".img-wpr").height();
 			var topPosition = (imageHeight - windowHeight) / 2;
-			contentWrapperPosition  = topPosition*1.6;
+			contentWrapperPosition  = topPosition*1.1;
 			topPosition = topPosition-topPosition-topPosition;
 			jQuery(this).find(".img-wpr").css("top", topPosition);
 			var leftPosition = (imageWidth - windowWidth) / 2;
