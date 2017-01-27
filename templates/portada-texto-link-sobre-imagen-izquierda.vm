@@ -1,0 +1,25 @@
+#if($isTextWhite.getData())
+	#set ($color = "white")
+#else 
+	#set ($color = "")
+#end	
+<div class="social-media $color">
+	#if($$image.getData())
+		<img src="$image.getData()" />
+	#end	
+	#if($header.getData())
+		<h2>
+			$header.getData()
+		</h2>
+	#end
+	<div class="wpr">
+		#if($paragraph.getData())
+			<p>$paragraph.getData()</p>
+		#end		
+		#if($buttonText.getData())
+			<a href="$buttonLink.getFriendlyUrl()">
+				$buttonText.getData()
+			</a>
+		#end	
+	</div>
+</div>
