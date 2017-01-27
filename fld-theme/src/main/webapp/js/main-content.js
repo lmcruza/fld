@@ -18,6 +18,10 @@ function centerImageVideo() {
 		}
 		else {
 			jQuery(this).addClass("center");
+			jQuery(this).find(".img-wpr").attr("style", "position:relative");
+			var itemHeight = jQuery(this).find(".img-wpr").height();
+			jQuery(this).css("height", itemHeight);
+			jQuery(this).find(".content-wrapper").css("top", "20px")
 		}
 	});	
 }
