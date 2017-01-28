@@ -25,10 +25,10 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="fileDescription" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="fileDescription" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Texto]]>
+					<![CDATA[Descripción del fichero]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
