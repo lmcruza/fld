@@ -1,0 +1,29 @@
+#if (!$entries.isEmpty())
+	<div class="contenido-listado-noticias">
+		#foreach ($entry in $entries)
+			#set($renderer = $entry.getAssetRenderer() )
+			#set($className = $renderer.getClassName() )
+			#if( $className == "com.liferay.portlet.journal.model.JournalArticle" )
+				#set( $journalArticle = $renderer.getArticle() )
+				#set( $document = $saxReaderUtil.read($journalArticle.getContent()) )
+				#set( $rootElement = $document.getRootElement() )
+				##set( $link = $renderer.getURLViewInContext($renderRequest, $renderResponse, '') )
+				#set( $link = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry, true) )
+				<div class="contenido-listado-noticia"">
+				    <p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $entry.getCreateDate()), $locale)</p>
+					<h1 class="title">$entry.getTitle($locale)</h1>
+    				#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='summaryHeader']") )
+    				#set( $summaryHeader = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+					<div">$summaryHeader</div>
+    				#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='summaryImage']") )
+    				#set( $summaryImage = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+                    <div"><img src="$summaryImage" ></div>
+    				#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='summary']") )
+    				#set( $summary = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+					<div">$summary</div>
+					<a href="$link">Read More</a>           
+				</div>
+			#end
+		#end
+	</div>
+#end

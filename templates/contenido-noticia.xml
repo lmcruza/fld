@@ -1,0 +1,339 @@
+
+<root available-locales="es_ES,en_US" default-locale="en_US">
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="headerText" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-text-html" width="large">
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Cabecera]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Header text]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="summaryHeader" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Cabecera del resumen]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Summary header]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="summaryImage" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Seleccione imagen de resumen de la librería de documentos]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Select summary image from document library]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="summary" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-text-html" width="large">
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Resumen]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Summary]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="paragraphSeparator" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="highlightedText" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="large">
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Texto destacado]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Highlighted text]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="image" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Seleccione imagen flotante de la librería de documentos]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Select floating image from document library]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="imageAlignment" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option16435" type="option" value="left">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[left]]>
+					</entry>
+				</meta-data>
+				<meta-data locale="es_ES">
+					<entry name="label">
+						<![CDATA[izquierda]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option16436" type="option" value="center">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[center]]>
+					</entry>
+				</meta-data>
+				<meta-data locale="es_ES">
+					<entry name="label">
+						<![CDATA[centrada]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option16437" type="option" value="right">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[right]]>
+					</entry>
+				</meta-data>
+				<meta-data locale="es_ES">
+					<entry name="label">
+						<![CDATA[derecha]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Alineación de la imagen]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Image alignment]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="paragraph" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="large">
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Párrafo]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Paragraph]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Separador]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Paragraph separator]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="fileSeparator" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="file" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Seleccione fichero de la librería de documentos]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Select file from document library]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="fileDescription" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[Text]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[File description]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Separador de ficheros]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[File separator]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

@@ -1,0 +1,26 @@
+<div class="contenido-noticia">
+    <p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $reserved-article-modified-date.getData()), $locale)</p>
+    #if($headerText.getData() != "")
+	    <h2>$headerText.getData()</h2>
+	#end
+    #foreach($paragraphSep in $paragraphSeparator.getSiblings())
+        <div class="contenido-noticia paragraph-container">
+            #if($paragraphSep.image.getData() != "")
+        	    <img class="$paragraphSep.imageAlignment.getData()" src="$paragraphSep.image.getData()" />
+        	#end
+            #if($paragraphSep.highlightedText.getData() != "")
+        	    <h2>$paragraphSep.highlightedText.getData()</h2>
+        	#end
+            #if($paragraphSep.paragraph.getData() != "")
+        	    $htmlUtil.unescape($paragraphSep.paragraph.getData())
+        	#end
+        </div>
+    #end
+</div>
+<div class="contenido-archivos-relacionados">
+	#foreach($fileSep in $fileSeparator.getSiblings())
+	    <div class="archivo-relacionado">
+	        <a href="$fileSep.file.getData()&download=true">$fileSep.fileDescription.getData()</a>
+	    </div>
+	#end
+</div>
