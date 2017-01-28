@@ -1,0 +1,31 @@
+<div class="article-acccordion">
+	#if($mainHeader.getData())
+		<h2 class="top">$mainHeader.getData()</h2>
+	#end
+	#if($image.getData())
+		<img src="$image.getData()" />
+	#end
+	#foreach($ingressSep in $ingressSeparator.getSiblings())
+		#if($ingressSep.ingress.getData())
+			<p class="ingress">$ingressSep.ingress.getData()</p>
+		#end
+	#end
+	#foreach($accordionSep in $accordionSeparator.getSiblings())
+		<div class="accordion-wpr">
+			<a href="javascript:void(0)" class="acccordion-link">
+				<h3>$accordionSep.accordionHeader.getData() <span></span></h3>
+			</a>
+			<div class="acccordion-content">
+				<p>$accordionSep.accordionParagraph.getData()</p>
+			</div>
+		</div>
+	#end
+	#foreach($bottomContentSep in $bottomContentSeparator.getSiblings())
+		#if($bottomContentSep.bottomHeader.getData())
+			<h2 class="bottom">$bottomContentSep.bottomHeader.getData()</h2>
+		#end
+		#if($bottomContentSep.bottomParagraph.getData())
+			<p class="bottom-content">$bottomContentSep.bottomParagraph.getData()</p>
+		#end
+	#end
+</div>
