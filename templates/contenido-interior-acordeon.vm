@@ -1,12 +1,12 @@
 <div class="article-acccordion">
-	#if($mainHeader.getData())
+	#if($mainHeader.getData() != "")
 		<h2 class="top">$mainHeader.getData()</h2>
 	#end
-	#if($image.getData())
+	#if($image.getData() != "")
 		<img src="$image.getData()" />
 	#end
 	#foreach($ingressSep in $ingressSeparator.getSiblings())
-		#if($ingressSep.ingress.getData())
+		#if($ingressSep.ingress.getData() != "")
 			<p class="ingress">$ingressSep.ingress.getData()</p>
 		#end
 	#end
@@ -21,10 +21,10 @@
 		</div>
 	#end
 	#foreach($bottomContentSep in $bottomContentSeparator.getSiblings())
-		#if($bottomContentSep.bottomHeader.getData())
+		#if($bottomContentSep.bottomHeader.getData() != "")
 			<h2 class="bottom">$bottomContentSep.bottomHeader.getData()</h2>
 		#end
-		#if($bottomContentSep.bottomParagraph.getData())
+		#if($bottomContentSep.bottomParagraph.getData() != "")
 			<p class="bottom-content">$bottomContentSep.bottomParagraph.getData()</p>
 		#end
 	#end

@@ -1,4 +1,4 @@
-#if($alternativeBackground.getData() != "")
+#if($alternativeBackground.getData() == "true")
 	#set ($backgroundColor = "alternative-background-color")
 #else 
 	#set ($backgroundColor = "")
@@ -11,7 +11,7 @@
 		</div>
 	#end
 	#if($textOnImage.getData() != "")
-		#if($textOnImageInWhite.getData() != "")
+		#if($textOnImageInWhite.getData() == "true")
 			#set ($color = "white")
 		#else 
 			#set ($color = "")

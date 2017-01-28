@@ -1,13 +1,13 @@
-#if($isTextWhite.getData())
+#if($isTextWhite.getData() == "true")
 	#set ($color = "white")
 #else 
 	#set ($color = "")
 #end	
 <div class="image-teaser-with-button-on-image $color">
-	#if($image.getData())
+	#if($image.getData() != "")
 		<img src="$image.getData()" />
 	#end	
-	#if($header.getData())
+	#if($header.getData() != "")
 		<h2>
 			$header.getData()
 		</h2>

@@ -1,14 +1,14 @@
 <div class="image-teaser">
-	#if($header.getData())
+	#if($header.getData() != "")
 		<h2>
 			$header.getData()
 		</h2>
 	#end
 	<div class="wpr">
-		#if($paragraph.getData())
+		#if($paragraph.getData() != "")
 			<p>${paragraph.getData()}</p>
 		#end		
-		#if($buttonText.getData())
+		#if($buttonText.getData() != "")
 			<a href="$buttonLink.getFriendlyUrl()">
 				$buttonText.getData()
 			</a>

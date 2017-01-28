@@ -6,7 +6,7 @@
 				<a class="play-icon" href="javascript:void(0)"><span></span></a>
 			#end
 			#if($header.getData() != "")
-				#if($textInWhite.getData() != "")
+				#if($textInWhite.getData() == "true")
 					#set ($color = "white")
 				#else 
 					#set ($color = "")

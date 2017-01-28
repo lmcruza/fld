@@ -1,19 +1,19 @@
 <div class="contact-us">
-	#if($mainHeader.getData())
+	#if($mainHeader.getData() != "")
 		<h2>
 			$mainHeader.getData()
 		</h2>
 	#end
-	#if($headerImage.getData())
+	#if($headerImage.getData() != "")
 		<img src="$headerImage.getData()" />
 	#end
-	#if($secondHeader.getData())
+	#if($secondHeader.getData() != "")
 		<h3>
 			$secondHeader.getData()
 		</h3>
 	#end
 	#foreach($person in $personDetails.getSiblings())
-		<div class="accordion-wpr $bold">
+		<div class="accordion-wpr">
 			<div class="wpr">
 				<a href="javascript:void(0)" class="acccordion-link">
 					<div class="left">
