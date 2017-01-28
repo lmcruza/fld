@@ -1,0 +1,75 @@
+<section class="regular slider">
+	#foreach($sep in $separator.getSiblings())
+
+		<div>
+			#if($sep.topHeader.getData()) 
+				#if($sep.isTopWhite.getData() == "true")
+					#set ($headerColor = "white")
+				#else 
+					#set ($headerColor = "")
+				#end			
+				#if($sep.topHeaderLink.getData())
+					<div class="content-wpr-top $headerColor">
+						<a href="$sep.topHeaderLink.getData()">
+							#if($sep.topHeader.getData())
+								<h2>$sep.topHeader.getData()</h2>
+							#end
+							#if($sep.topHeaderParagraph.getData())
+								<p>$sep.topHeaderParagraph.getData()</p>
+							#end								
+						</a>
+					</div>
+				#else
+					<div class="content-wpr-top $headerColor">
+						#if($sep.topHeader.getData())
+							<h2>$sep.topHeader.getData()</h2>
+						#end
+						#if($sep.topHeaderParagraph.getData())
+							<p>$sep.topHeaderParagraph.getData()</p>
+						#end								
+					</div>					
+				#end
+			#end
+			#if($sep.media.getData())
+				#if ($sep.isVideo.getData() == "true")				
+					<video width="100%" controls>
+						<source src="$sep.media.getData()" type="video/mp4">
+						Your browser does not support the video tag.
+					</video> 
+				#else 
+					<div>
+						<img src="$sep.media.getData()">
+					</div>					
+				#end
+			#end
+			#if($sep.bottomHeader.getData()) 
+				#if($sep.isBottomWhite.getData() == "true")
+					#set ($footerColor = "white")
+				#else 
+					#set ($footerColor = "")
+				#end			
+				#if($sep.bottomHeaderLink.getData())
+					<div class="content-wpr-bottom $footerColor">
+						<a href="$sep.bottomHeaderLink.getData()">
+							#if($sep.bottomHeader.getData())
+								<h2>$sep.bottomHeader.getData()</h2>
+							#end
+							#if($sep.bottomHeaderParagraph.getData())
+								<p>$sep.bottomHeaderParagraph.getData()</p>
+							#end								
+						</a>
+					</div>
+				#else
+					<div class="content-wpr-bottom $footerColor">
+						#if($sep.bottomHeader.getData())
+							<h2>$sep.bottomHeader.getData()</h2>
+						#end
+						#if($sep.bottomHeaderParagraph.getData())
+							<p>$sep.bottomHeaderParagraph.getData()</p>
+						#end								
+					</div>					
+				#end
+			#end				
+		</div>
+	#end
+</section>
