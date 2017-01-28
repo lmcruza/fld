@@ -1,0 +1,7 @@
+<div class="contenido-archivos-relacionados">
+	#foreach($fileSep in $fileSeparator.getSiblings())
+	    <div class="archivo-relacionado">
+	        <a href="$fileSep.file.getData()&download=true">$fileSep.fileDescription.getData()</a>
+	    </div>
+	#end
+</div>
