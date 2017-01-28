@@ -7,9 +7,15 @@
 	</compatibility>
 	<theme id="fld" name="fld-theme">
 		<settings>
+			<!-- Social Network links -->
 			<setting configurable="true" key="facebook" value="" />
 			<setting configurable="true" key="twitter" value="" />
 			<setting configurable="true" key="youtube" value="" />
+			<!-- Footer links -->
+			<setting configurable="true" key="Link Aviso Legal" value="/aviso-legal" />
+			<setting configurable="true" key="Link Política de cookies" value="/politica-cookies" />
+			<setting configurable="true" key="Link Política de Privacidad" value="/politica-de-privacidad" />
+			<setting configurable="true" key="Link Mapa web" value="/mapa-web1" />
 		</settings>
 		<color-scheme id="01" name="Default">
 			<default-cs>true</default-cs>

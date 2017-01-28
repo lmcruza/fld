@@ -112,10 +112,18 @@ $theme.include($body_top_include)
 		#set($currentSiteUrl = $themeDisplay.getPortalURL()+"/web"+$layout.getGroup().getFriendlyURL()) 
 		<div class="portal-links">
 			<ul>
-				<li><a href="$currentSiteUrl/aviso-legal">Aviso Legal</a></li>		
-				<li><a href="$currentSiteUrl/politica-cookies">Política de cookies</a></li>
-				<li><a href="$currentSiteUrl/politica-de-privacidad">Política de Privacidad</a></li>
-				<li><a href="$currentSiteUrl/mapa-web1">Mapa web</a></li>
+				#if ($theme.getSetting("Link Aviso Legal") != "")
+					<li><a href="$currentSiteUrl$theme.getSetting("Link Aviso Legal")">Aviso Legal</a></li>		
+				#end
+				#if ($theme.getSetting("Link Política de cookies") != "")
+					<li><a href="$currentSiteUrl$theme.getSetting("Link Política de cookies")">Política de cookies</a></li>
+				#end
+				#if ($theme.getSetting("Link Política de Privacidad") != "")
+					<li><a href="$currentSiteUrl$theme.getSetting("Link Política de Privacidad")">Política de Privacidad</a></li>
+				#end
+				#if ($theme.getSetting("Link Mapa web") != "")
+					<li><a href="$currentSiteUrl$theme.getSetting("Link Mapa web")">Mapa web</a></li>
+				#end
 			</ul>
 		</div>
 		<div class="info-wpr">
