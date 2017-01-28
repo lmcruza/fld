@@ -1,9 +1,6 @@
 <div class="contenido-texto-foto-flotante">
-    #if($headerProperties.anchor.getData())
-	    <span id="$headerProperties.anchor.getData()"></span>
-	#end
-    #if($headerProperties.headerText.getData())
-	    <h2>$headerProperties.headerText.getData()</h2>
+    #if($headerText.getData())
+	    <h2>$headerText.getData()</h2>
 	#end
     #foreach($paragraphSep in $paragraphSeparator.getSiblings())
         <div class="contenido-texto-foto-flotante paragraph-container">
