@@ -445,6 +445,7 @@ div.media-container a:hover{
 .content-article {
 	padding:30px 25px 0 25px;
 	font-size: 14px !important;
+	text-align:center;
 }
 .content-article  img{
 	width:100%;

@@ -1,25 +1,27 @@
-<div class="content-article-top">
-	#foreach($to in $top.getSiblings())
-		#if($to.topHeader.getData() != "")
-			<h2>
-				$to.topHeader.getData()
-			</h2>
+<div class="content-article">
+	<div class="content-article-top">
+		#foreach($to in $top.getSiblings())
+			#if($to.topHeader.getData() != "")
+				<h2>
+					$to.topHeader.getData()
+				</h2>
+			#end
+			#if($to.image.getData() != "")
+				<img src="$to.image.getData()" />
+			#end
+			#if($to.topParagraph.getData() != "")
+				<p>$to.topParagraph.getData()</p>
+			#end
 		#end
-		#if($to.image.getData() != "")
-			<img src="$to.image.getData()" />
+	</div>
+	<div class="box">
+		#if($bottom.bottomHeader.getData() != "")
+			<h3>
+				$bottom.bottomHeader.getData()
+			</h3>
 		#end
-		#if($to.topParagraph.getData() != "")
-			<p>$to.topParagraph.getData()</p>
+		#if($bottom.bottomParagraph.getData() != "")
+			<p>$bottom.bottomParagraph.getData()</p>
 		#end
-	#end
-</div>
-<div class="content-article-bottom">
-	#if($bottom.bottomHeader.getData() != "")
-		<h2>
-			$bottom.bottomHeader.getData()
-		</h2>
-	#end
-	#if($bottom.bottomParagraph.getData() != "")
-		<p>$bottom.bottomParagraph.getData()</p>
-	#end
+	</div>
 </div>
