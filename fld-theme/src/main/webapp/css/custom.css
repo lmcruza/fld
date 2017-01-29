@@ -1163,6 +1163,49 @@ div.media-container a:hover{
 	color:#939393;
 	border-color:#939393;
 }
+/*contenido-texto-foto-flotante*/
+.contenido-texto-foto-flotante  {
+	padding:0 20px;
+}
+.contenido-texto-foto-flotante .paragraph-container:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}
+.contenido-texto-foto-flotante .paragraph-container {
+	padding:0;
+	line-height:1.3em;
+	font-size:16px;
+}
+/*left*/
+.contenido-texto-foto-flotante h2 {
+	font-weight:normal;
+	font-size:30px;
+	text-transform: uppercase;	
+	padding:10px 0 0 0;	
+}
+.contenido-texto-foto-flotante .left img {
+	float:left;
+	margin:0 20px 10px 0;
+}
+/*right*/
+.contenido-texto-foto-flotante .right{
+	text-align:right;
+}
+.contenido-texto-foto-flotante .right img {
+	float:right;
+	margin:0 0 10px 20px;
+}
+/*center*/
+.contenido-texto-foto-flotante .center{
+	text-align:center;
+}
+.contenido-texto-foto-flotante .center h2{
+	text-align:center;
+}
 /*search-layout*/
 .search-layout {
 	font-size:0.7em;
