@@ -4,6 +4,9 @@
 			$header.getData()
 		</h2>
 	#end
+	#if($image.getData())
+		<img src="$image.getData()" />
+	#end	
 	<div class="wpr">
 		#if($paragraph.getData() != "")
 			<p>${paragraph.getData()}</p>
