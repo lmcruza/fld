@@ -945,16 +945,13 @@ div.media-container a:hover{
 	flex-wrap: wrap;
 }
 .news-feed section {
-	width:23%;
+	width:18%;
 	margin-right:2%;
 	position:relative;
-	height:350px;
 	overflow:hidden;
+	text-align:center;
 }
-.news-feed a:hover {
-	text-decoration:underline;
-	color: #000;	
-}
+
 .news-feed h3{
 	color: #333333;
     font-size: 16px !important;
@@ -978,6 +975,15 @@ div.media-container a:hover{
     background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */
+}
+.news-feed a {
+	display:block;
+}
+.news-feed a:hover {
+	text-decoration:none;
+}
+.news-feed a:hover * {
+	color:#727272;	
 }
 .load-more {
 	text-align:center;
