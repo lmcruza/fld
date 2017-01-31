@@ -155,23 +155,23 @@ body.dark {
 	color:#c90000 !important;	
 }
 /*right social media links*/
-#menu-main-right {
+header .nav-menu {
 	float:right;
-	margin:25px 20px 0 10px;
+	margin:25px 20px 0 10px !important;
 }
-#menu-main-right li {
+.nav-menu li {
 	float:left;
 	margin-left:10px;
 	list-style-type:none;
 }
-#menu-main-right li span{
+.nav-menu li span{
 	text-indent:-9999em;
 	display:block;
 }
-#menu-main-right li i{
+.nav-menu li i{
 	color:#595959;
 }
-#menu-main-right a:hover i {
+.nav-menu a:hover i {
 	color:#c90000;
 	text-decoration:none;
 }
@@ -1261,31 +1261,48 @@ html body .white *{
 	color:#FFF !important;
 }
 /*FOOTER*/
+footer#footer:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}
+footer#footer .nav-menu {
+	float:right;
+}
 footer#footer .channels{
-	text-align:center;
-	margin-top:100px;	
+	margin-top:50px;
+	width:100%;
+	overflow:hidden;
 }
 footer#footer .channels ul {
 	margin:0;
-	display:inline-block;
+	display:block;
+	margin-right:20px;
 }
 footer#footer .channels ul li{
-	list-style-type:none;
-	margin: 0 25px 0 0;
-	display:inline-block;
-	
+	float:right;
+}
+footer#footer .copy-right {
+	float:left;
+	font-size:16px;
+	padding-left:20px;
 }
 footer#footer .portal-links{
-	text-align:center;
-	margin:55px 0 25px 0;
+	float:right;
+	margin:0 20px 10px 10px;
 }
 footer#footer .portal-links ul {
 	margin:0;
-	display:inline-block;
+	float:right;
 }
 footer#footer .portal-links ul li{
 	list-style-type:none;
-	
+	float:right;
+	font-size:16px;
+	padding-left:18px;
 }
 footer#footer .portal-links ul li a{
 	display:block;
@@ -1299,6 +1316,7 @@ footer#footer .info-wpr p {
 	color:#464646;
 	display:inline-block;
 }
+.copy-right
 .aui a:focus {
 	text-decoration:none;
 	outline:0;
