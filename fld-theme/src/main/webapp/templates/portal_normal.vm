@@ -8,9 +8,8 @@
 	<title>$the_title - $company_name</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	#js("$javascript_folder/jquery-3.1.1.min.js")
-	#js("$javascript_folder/main-content.js")
-	#js("$javascript_folder/slick.min.js")
+	##js("$javascript_folder/jquery-3.1.1.min.js")
+
 	
 	$theme.include($top_head_include)
 	
@@ -95,21 +94,20 @@ $theme.include($body_top_include)
 			$theme.wrapPortlet("portlet.vm", $content_include)
 		#end		
 	</div>
-	<footer id="footer" role="contentinfo">	
+	<footer id="footer" role="contentinfo">
 		<div class="channels">
-			<ul class="nav-menu">
+			<ul>
 				#if ($theme.getSetting("twitter") != "")
-					<li class="twitter"><a target="_blank" href="$theme.getSetting("twitter")"><i class="icon-twitter "></i><span class="fa-hidden">Twitter</span></a></li>
+					<li><a href="$theme.getSetting("twitter")"><img src="$images_folder/custom/twitter-logo.png" /></a></li>
 				#end
 				#if ($theme.getSetting("facebook") != "")
-					<li class="facebook"><a target="_blank" href="$theme.getSetting("facebook")"><i class="icon-facebook "></i><span class="fa-hidden">Facebook</span></a></li>
+					<li><a href="$theme.getSetting("facebook")"><img src="$images_folder/custom/facebook-logo.png" /></a></li>
 				#end
 				#if ($theme.getSetting("youtube") != "")
-					<li class="youtube"><a target="_blank" href="$theme.getSetting("youtube")"><i class="icon-youtube "></i><span class="fa-hidden">YouTube</span></a></li>
+					<li><a href="$theme.getSetting("youtube")"><img src="$images_folder/custom/youtube-logo.png" /></a></li>
 				#end
 			</ul>
 		</div>
-		<p class="copy-right">© 2017 Fundación Línea Directa. </p>
 		#set($currentSiteUrl = $themeDisplay.getPortalURL()+"/web"+$layout.getGroup().getFriendlyURL()) 
 		<div class="portal-links">
 			<ul>
@@ -119,6 +117,9 @@ $theme.include($body_top_include)
 				<li><a href="$currentSiteUrl$theme.getSetting("Link Mapa web")">Mapa web</a></li>
 			</ul>
 		</div>
+		<div class="info-wpr">
+			<p>© 2017 Fundación Línea Directa. </p>
+		</div>
 	</footer>
 </div>
 
@@ -126,6 +127,10 @@ $theme.include($body_bottom_include)
 
 $theme.include($bottom_include)
 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+#js("$javascript_folder/slick.min.js")
+#js("$javascript_folder/main-content.js")
 </body>
 
 </html>
