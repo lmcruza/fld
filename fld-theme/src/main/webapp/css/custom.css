@@ -1249,9 +1249,15 @@ div.media-container a:hover{
 	border-color:#939393;
 }
 /*search-layout*/
+#wrapper .input-container {
+	padding:0 20px;
+}
 .search-layout {
 	font-size:0.7em;
-	padding:0 20px
+}
+
+#wrapper .search-layout {
+	width:auto;
 }
 /*white selection*/ 
 html body .white {
