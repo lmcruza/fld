@@ -127,6 +127,9 @@
 .slick-slider .slick-slide {
 	position:relative;
 }
+.slick-slider .content-wpr-bottom p, .slick-slider .content-wpr-top p {
+	text-align:center;
+}
 .slick-slider .content-wpr-top {
 	position:absolute;
 	top:10%;
