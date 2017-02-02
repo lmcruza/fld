@@ -7,7 +7,18 @@
 				</h2>
 			#end
 			#if($to.image.getData() != "")
+				#if($to.textOnImageWhite.getData() == "true")
+					#set ($color = "white")
+				#else 
+					#set ($color = "")
+				#end
 				<img src="$to.image.getData()" />
+				#if($to.headerOnImage.getData() != "")
+					<h3 class="$color">$to.headerOnImage.getData()</h3>
+				#end
+				#if($to.paragraphOnImage.getData() != "")
+					<p class="$color">$to.paragraphOnImage.getData()</p>
+				#end
 			#end
 			#if($to.topParagraph.getData() != "")
 				<p>$to.topParagraph.getData()</p>

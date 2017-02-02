@@ -3,7 +3,18 @@
 		<h2 class="top">$mainHeader.getData()</h2>
 	#end
 	#if($image.getData() != "")
+		#if($textOnImageWhite.getData() == "true")
+			#set ($color = "white")
+		#else 
+			#set ($color = "")
+		#end
 		<img src="$image.getData()" />
+		#if($headerOnImage.getData() != "")
+		    <h3 class="$color">$headerOnImage.getData()</h3>
+	    #end
+	    #if($paragraphOnImage.getData() != "")
+		    <p class="$color">$paragraphOnImage.getData()</p>
+		#end
 	#end
 	#foreach($ingressSep in $ingressSeparator.getSiblings())
 		#if($ingressSep.ingress.getData() != "")

@@ -5,7 +5,18 @@
 		</h2>
 	#end
 	#if($headerImage.getData() != "")
+		#if($textOnImageWhite.getData() == "true")
+			#set ($color = "white")
+		#else 
+			#set ($color = "")
+		#end
 		<img src="$headerImage.getData()" />
+		#if($headerOnImage.getData() != "")
+		    <h3 class="$color">$headerOnImage.getData()</h3>
+	    #end
+	    #if($paragraphOnImage.getData() != "")
+		    <p class="$color">$paragraphOnImage.getData()</p>
+		#end
 	#end
 	#if($secondHeader.getData() != "")
 		<h3>
