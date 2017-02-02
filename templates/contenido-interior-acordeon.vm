@@ -27,7 +27,13 @@
 				<h3>$accordionSep.accordionHeader.getData() <span></span></h3>
 			</a>
 			<div class="acccordion-content">
-				<p>$accordionSep.accordionParagraph.getData()</p>
+        		#if($accordionSep.linkToPage.getData() != "")
+        		    <a href="$accordionSep.linkToPage.getFriendlyUrl()">
+        			    <p>$accordionSep.accordionParagraph.getData()</p>
+    			    </a>
+        		#else
+        		    <p>$accordionSep.accordionParagraph.getData()</p>
+        		#end
 			</div>
 		</div>
 	#end
