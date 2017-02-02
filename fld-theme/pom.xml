@@ -109,7 +109,7 @@
 		<liferay.app.server.lib.global.dir>C:\liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\lib\ext</liferay.app.server.lib.global.dir>
 		<liferay.app.server.portal.dir>C:\liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps\ROOT</liferay.app.server.portal.dir>
 		<liferay.version>6.2.5</liferay.version>
---->		
-		
+-->
+
 	</properties>
 </project>
