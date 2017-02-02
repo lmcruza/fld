@@ -1266,6 +1266,13 @@ html body .white {
 html body .white *{
 	color:#FFF !important;
 }
+/*anchor template*/
+.anchor {
+	position:relative;
+	top:-80px;
+	height:1px;
+	overflow:hidden;
+}
 /*FOOTER*/
 footer#footer:after {
     visibility: hidden;
