@@ -1,0 +1,36 @@
+<div class="four-image-teaser">
+	<div class="top">
+    	#foreach($contentSep in $contentSeparator.getSiblings())
+            #if($contentSep.textAlignment.getData() != "left")
+            	#set ($alignment = "social-media")
+            #else 
+            	#set ($alignment = "image-teaser-with-button-on-image")
+            #end	
+            #if($contentSep.isTextWhite.getData() != "true")
+            	#set ($color = "white")
+            #else 
+            	#set ($color = "")
+            #end	
+            <div class="$alignment $color">
+            	#if($contentSep.image.getData() != "")
+            		<img src="$contentSep.image.getData()" />
+            	#end	
+            	#if($contentSep.header.getData() != "")
+            		<h2>
+            			$contentSep.header.getData()
+            		</h2>
+            	#end
+            	<div class="wpr">
+            		#if($contentSep.paragraph.getData() != "")
+            			<p>$contentSep.paragraph.getData()</p>
+            		#end		
+            		#if($contentSep.buttonText.getData() != "")
+            			<a href="$contentSep.linkToPage.getFriendlyUrl()">
+            				$contentSep.buttonText.getData()
+            			</a>
+            		#end	
+            	</div>
+            </div>
+        #end
+	</div>
+</div>
