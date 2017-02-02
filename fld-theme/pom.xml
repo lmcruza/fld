@@ -3,9 +3,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cgi</groupId>
-	<artifactId>fld-theme</artifactId>
+	<artifactId>flda-theme</artifactId>
 	<packaging>war</packaging>
-	<name>fld-theme Theme</name>
+	<name>flda-theme Theme</name>
 	<version>1.0-SNAPSHOT</version>
 	<build>
 		<plugins>
@@ -91,25 +91,14 @@
 		<liferay.theme.parent>_styled</liferay.theme.parent>
 		<liferay.theme.type>vm</liferay.theme.type>
 
-		<!-- Custom properties (Luis Manuel) -->
-<!-- -->
-		<liferay.maven.plugin.version>6.2.5</liferay.maven.plugin.version>
-		<liferay.auto.deploy.dir>/home/lmcruza/workspace/liferay-portal-6.2-ce-ga6/deploy</liferay.auto.deploy.dir>
-		<liferay.app.server.deploy.dir>/home/lmcruza/workspace/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps</liferay.app.server.deploy.dir>
-		<liferay.app.server.lib.global.dir>/home/lmcruza/workspace/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/lib/ext</liferay.app.server.lib.global.dir>
-		<liferay.app.server.portal.dir>/home/lmcruza/workspace/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/ROOT</liferay.app.server.portal.dir>
-		<liferay.version>6.2.5</liferay.version>
-<!-- 	-->
-
-		<!-- Custom properties (Valtteri) -->
-<!--
+		<!-- Custom properties -->
 		<liferay.maven.plugin.version>6.2.5</liferay.maven.plugin.version>
 		<liferay.auto.deploy.dir>C:\liferay\liferay-portal-6.2-ce-ga6\deploy</liferay.auto.deploy.dir>
 		<liferay.app.server.deploy.dir>C:\liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps</liferay.app.server.deploy.dir>
 		<liferay.app.server.lib.global.dir>C:\liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\lib\ext</liferay.app.server.lib.global.dir>
 		<liferay.app.server.portal.dir>C:\liferay\liferay-portal-6.2-ce-ga6\tomcat-7.0.62\webapps\ROOT</liferay.app.server.portal.dir>
 		<liferay.version>6.2.5</liferay.version>
--->
-
+		<!-- -->
+		
 	</properties>
 </project>
