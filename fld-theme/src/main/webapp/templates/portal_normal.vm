@@ -94,20 +94,21 @@ $theme.include($body_top_include)
 			$theme.wrapPortlet("portlet.vm", $content_include)
 		#end		
 	</div>
-	<footer id="footer" role="contentinfo">
+	<footer id="footer" role="contentinfo">	
 		<div class="channels">
-			<ul>
+			<ul class="nav-menu">
 				#if ($theme.getSetting("twitter") != "")
-					<li><a href="$theme.getSetting("twitter")"><img src="$images_folder/custom/twitter-logo.png" /></a></li>
+					<li class="twitter"><a target="_blank" href="$theme.getSetting("twitter")"><i class="icon-twitter "></i><span class="fa-hidden">Twitter</span></a></li>
 				#end
 				#if ($theme.getSetting("facebook") != "")
-					<li><a href="$theme.getSetting("facebook")"><img src="$images_folder/custom/facebook-logo.png" /></a></li>
+					<li class="facebook"><a target="_blank" href="$theme.getSetting("facebook")"><i class="icon-facebook "></i><span class="fa-hidden">Facebook</span></a></li>
 				#end
 				#if ($theme.getSetting("youtube") != "")
-					<li><a href="$theme.getSetting("youtube")"><img src="$images_folder/custom/youtube-logo.png" /></a></li>
+					<li class="youtube"><a target="_blank" href="$theme.getSetting("youtube")"><i class="icon-youtube "></i><span class="fa-hidden">YouTube</span></a></li>
 				#end
 			</ul>
 		</div>
+		<p class="copy-right">© 2017 Fundación Línea Directa. </p>
 		#set($currentSiteUrl = $themeDisplay.getPortalURL()+"/web"+$layout.getGroup().getFriendlyURL()) 
 		<div class="portal-links">
 			<ul>
@@ -116,9 +117,6 @@ $theme.include($body_top_include)
 				<li><a href="$currentSiteUrl$theme.getSetting("Link Política de Privacidad")">Política de Privacidad</a></li>
 				<li><a href="$currentSiteUrl$theme.getSetting("Link Mapa web")">Mapa web</a></li>
 			</ul>
-		</div>
-		<div class="info-wpr">
-			<p>© 2017 Fundación Línea Directa. </p>
 		</div>
 	</footer>
 </div>
