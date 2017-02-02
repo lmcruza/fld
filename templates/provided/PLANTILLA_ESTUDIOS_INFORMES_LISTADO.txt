@@ -1,0 +1,157 @@
+##
+## Velocity Transform Template
+##
+## All dynamic elements in a structure can be accessed as a Velocity variable.
+##
+## The given structure:
+##
+## <root>
+##   <dynamic-element name="main-text" type="text_area">
+##     <dynamic-element name="sub-image" type="image"></dynamic-element>
+##     <dynamic-element name="sub-text" type="text"></dynamic-element>
+##   </dynamic-element>
+##   <dynamic-element name="more-text" type="text_area"></dynamic-element>
+##   <dynamic-element name="ms-list" type="multi-list">
+##     <dynamic-element name="chocolate" type="Chocolate"></dynamic-element>
+##     <dynamic-element name="strawberry" type="Strawberry"></dynamic-element>
+##     <dynamic-element name="vanilla" type="Vanilla"></dynamic-element>
+##   </dynamic-element>
+## </root>
+##
+## The dynamic element "main-text" can be accessed in the following ways:
+##
+## $main-text.getName()     - The name "main-text"
+## $main-text.getData()     - The data in the article for main-text
+## $main-text.getType()     - The type "text-area"
+## $main-text.getChildren() - A collection with two nodes (sub-image and
+##                            sub-text) that can be used in the #foreach clause
+## $main-text.getSiblings() - A collection of elements with the name
+##                            "main-text". This will only return more than one
+##                            element if this element is repeatable.
+##
+## One special accessor exists for elements of type "multi-list":
+##
+## $ms-list.getOptions() - A collection with up to three string entries
+##                         (chocolate, strawberry, or vanilla) that can be used
+##                         in the #foreach clause
+##
+## Another special accessor exists for elements of type "link_to_layout":
+##
+## $linkToPage.getUrl() - The URL that links to the selected page in the current
+##                        community, organization, etc.
+##
+## The variable $journalTemplatesPath can be used to include another Journal
+## template, e.g. #parse ("$journalTemplatesPath/LAYOUT-PARENT")
+##
+## The variable $viewMode specifies which mode the article is being viewed in.
+## For example, if $viewMode evaluates to "print", that means the user clicked
+## the print icon to view this article.
+##
+###Variable de Lenguaje
+#set ($language_id = $user.getLanguageId())
+###Fin Variable de Lenguaje
+
+#set ($documentService = $serviceLocator.findService("com.liferay.portlet.documentlibrary.service.DLFileEntryLocalService"))
+
+
+##set ($documentService = $portal.getClass().forName("com.liferay.portlet.documentlibrary.service.DLFileEntryLocalServiceUtil").getMethod("getService", null).invoke(null, null))
+
+	#if ($fecha.data != '')
+		<div class="enc">
+			<span class="fecha">$fecha.data</span>
+		</div>
+	#end
+	#if ($titulo.data != '')
+		<h2>
+		#if ($contenido.data != '')
+			<a class="tit" href="$request.attributes.DETALLE_URL">
+		#else
+		   <span class="tit">
+		#end	
+			  $titulo.data
+		#if ($contenido.data != '')	  
+			</a>
+		#else
+		 	</span>
+		#end	
+		</h2>
+	#end
+	#if ($imagen_listado.data != '' || $entradilla.data != '')
+		<div class="wysigyg">
+			#if ($imagen_listado.data != '')
+				#foreach ($datoImage in $imagen_listado.getChildren())
+					#if ($datoImage.getName() == 'alt_imagen_listado')
+						#set ($alt_listado = $datoImage.data)
+					#end
+					#if ($alt_listado == '')
+						#set ($alt_listado = $titulo.data)
+					#end
+				#end
+				<img width="150" src="$imagen_listado.data" alt="$alt_listado" />
+			#end
+			#if ($entradilla.data != '')
+				<p>$entradilla.data</p>
+			#end
+		</div>
+	#end
+	#if ($contenido.data != '')
+		#if ($imagen_galeria.data != '' || $video_galeria != '' || ($videoweb_galeria && $videoweb_galeria.data != '') || $audio_galeria != '' || $documentos.data != '')
+			<ul class="relatedmedia">
+				#if ($imagen_galeria.data != '')
+					<li>
+						<a href="$request.attributes.DETALLE_URL_IMAGENES" title="#language("template.liferay.nota_prensa_listado.fotografia")">
+							<img alt="#language("template.liferay.nota_prensa_listado.fotografia")" src="$request.theme-display.path-theme-images/i_photo.png">
+						</a>
+					</li>
+				#end
+				#if ($video_galeria.data != '' || ($videoweb_galeria && $videoweb_galeria.data != ''))
+					<li>
+						<a href="$request.attributes.DETALLE_URL_VIDEO" title="#language("template.liferay.nota_prensa_listado.videos")">
+							<img alt="#language("template.liferay.nota_prensa_listado.videos")" src="$request.theme-display.path-theme-images/i_video.png">
+						</a>
+					</li>
+				#end
+				#if ($audio_galeria.data != '')
+					<li>
+						<a href="$request.attributes.DETALLE_URL_AUDIO" title="#language("template.liferay.nota_prensa_listado.audio")">
+							<img alt="#language("template.liferay.nota_prensa_listado.audio")" src="$request.theme-display.path-theme-images/i_audio.png">
+						</a>
+					</li>
+				#end
+				#if ($documentos.data != '')
+					<li>
+						<a href="$request.attributes.DETALLE_URL_DOCUMENTOS" title="#language("template.liferay.nota_prensa_listado.documentos")">
+							<img alt="#language("template.liferay.nota_prensa_listado.documentos")" src="$request.theme-display.path-theme-images/i_doc.png">
+						</a>
+					</li>
+				#end
+			</ul>
+		#end
+	#elseif($documentos.data != '' )
+	    #foreach ($documento in $documentos.getSiblings())
+			#set ($url = $httpUtil.decodeURL($documento.getData()))
+			#set ($arr = $stringUtil.split($url,'/'))
+			#set($counter = 0)
+			#foreach($el in $arr)
+				#if($counter==0)
+					#set($att_id = $el)
+				#elseif($counter==3)
+					#set($directorio  = $el)
+				#elseif($counter==4)
+					 #set($titulo = $el)
+				#end
+				#set($counter = $counter + 1)
+			#end
+			#set($theme = $request.theme-display.path-theme-images)
+			#set ($ruta =$theme)
+			#set ($fileEntry = $documentService.getFileEntry($getterUtil.getLong($groupId),$getterUtil.getLong($directorio),$titulo))
+			#set ($tituloDocumento =$titulo)
+                        #if($documento.texto_documento.data != '' )
+                             #set ($tituloDocumento =$documento.texto_documento.data)
+                         #end
+                        <a rel="nofollow" class="more" href="$documento.getData()">$tituloDocumento
+			#set($ext='.png')		
+                       
+            <img src='$ruta/file_system/small/$fileEntry.getIcon()$ext'/></a>
+		#end
+	#end

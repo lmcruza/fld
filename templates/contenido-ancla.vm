@@ -1,1 +1,1 @@
-<div class="contenido-ancla" id="$anchorName.getData()" class="contenido-ancla"></div>
+<div class="anchor" id="$anchorName.getData()"><!-- --></div>

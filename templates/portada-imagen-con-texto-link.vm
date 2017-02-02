@@ -1,20 +1,27 @@
 <div class="image-teaser">
-	#if($header.getData() != "")
-		<h2>
-			$header.getData()
-		</h2>
-	#end
-	#if($image.getData())
-		<img src="$image.getData()" />
-	#end	
-	<div class="wpr">
+	<div class="left">
+		#if($header.getData() != "")
+			<h2>
+				$header.getData()
+			</h2>
+		#end
 		#if($paragraph.getData() != "")
-			<p>${paragraph.getData()}</p>
+			$paragraph.getData()
 		#end		
 		#if($buttonText.getData() != "")
-			<a href="$buttonLink.getFriendlyUrl()">
+			<a href="$buttonLink.getData()">
 				$buttonText.getData()
 			</a>
 		#end	
+	</div>
+	<div class="right">
+		#if($image.getData() != "")
+			<img src="$image.getData()" />
+		#end
+		#if($imageHeader.getData() != "")		
+			<h3>
+				$imageHeader.getData()
+			</h3>
+		#end
 	</div>
 </div>

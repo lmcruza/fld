@@ -25,7 +25,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="paragraphSeparator" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-separator" width="">
-		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="highlightedText" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="highlightedText" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="es_ES">
 				<entry name="label">
 					<![CDATA[Texto destacado]]>
