@@ -464,6 +464,10 @@ div.media-container a:hover{
 	padding-bottom:25px;
 	text-align:center;
 }
+.content-article h3 {
+	font-size:30px;
+	padding-bottom:0;
+}
 .content-article p{
 	text-align:center;
 	margin:20px 200px;
@@ -688,8 +692,8 @@ div.media-container a:hover{
 	margin-top:0;
 }
 .image-teaser .left a{
-	display:block;
-	padding:15px 10px;
+	display:inline-block;
+	padding:15px 60px;
 	border:3px solid #cacaca;
 	border-radius: 7px;
 	text-align:center;
@@ -752,8 +756,8 @@ div.media-container a:hover{
 	color:#333333;
 }
 .image-teaser-with-button-on-image .wpr a {
-	display:block;
-	padding:15px 10px;
+	display:inline-block;
+	padding:15px 60px;
 	border:3px solid #c9cbc8;
 	border-radius: 7px;
 	text-align:center;
@@ -800,8 +804,8 @@ div.media-container a:hover{
 	color:#333333;
 }
 .social-media .wpr a {
-	display:block;
-	padding:15px 10px;
+	display:inline-block;
+	padding:15px 60px;
 	border:3px solid #c9cbc8;
 	border-radius: 7px;
 	text-align:center;
@@ -1208,7 +1212,11 @@ div.media-container a:hover{
 	font-weight: 600;
 	color:#666;
 	text-transform: uppercase;	
-	padding:10px 0 0 0;	
+	padding:10px 0 15px 0;	
+}
+.contenido-texto-foto-flotante .paragraph-container h2 {
+	font-size:30px;
+	padding-bottom:0;
 }
 .contenido-texto-foto-flotante .left img {
 	float:left;
