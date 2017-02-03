@@ -466,6 +466,7 @@ div.media-container a:hover{
 }
 .content-article p{
 	text-align:center;
+	margin:20px 200px;
 }
 .content-article .box {
 	padding:12px 25px;
@@ -960,7 +961,7 @@ div.media-container a:hover{
 	flex-wrap: wrap;
 }
 .news-feed section {
-	width:18%;
+	width:31%;
 	margin-right:2%;
 	position:relative;
 	overflow:hidden;
