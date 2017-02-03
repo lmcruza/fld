@@ -1,4 +1,9 @@
-<div class="article-acccordion">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end						
+<div class="article-acccordion $background">
 	#if($mainHeader.getData() != "")
 		<h2 class="top">$mainHeader.getData()</h2>
 	#end

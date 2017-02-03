@@ -1224,7 +1224,7 @@ div.media-container a:hover{
 }
 /*right*/
 .contenido-texto-foto-flotante .right{
-	text-align:right;
+	text-align:left;
 }
 .contenido-texto-foto-flotante .right img {
 	float:right;
@@ -1283,6 +1283,10 @@ div.media-container a:hover{
 
 #wrapper .search-layout {
 	width:auto;
+}
+/*alternative background selection*/ 
+html body .alternative-background {
+	background-color:#f1f5f7 !important;
 }
 /*white selection*/ 
 html body .white {

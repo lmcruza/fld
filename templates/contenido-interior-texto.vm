@@ -1,4 +1,9 @@
-<div class="content-article">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end
+<div class="content-article $background">
 	<div class="content-article-top">
 		#foreach($to in $top.getSiblings())
 			#if($to.topHeader.getData() != "")

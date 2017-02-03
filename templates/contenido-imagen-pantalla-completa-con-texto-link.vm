@@ -1,10 +1,9 @@
 #if($alternativeBackground.getData() == "true")
-	#set ($backgroundColor = "alternative-background-color")
+	#set ($background = "alternative-background")
 #else 
-	#set ($backgroundColor = "")
+	#set ($background = "")
 #end						
-
-<div class="media-container $backgroundColor">
+<div class="media-container $background">
 	#if($image.getData() != "")
 	    <div class="media-wpr">
     		<img src="$image.getData()" />

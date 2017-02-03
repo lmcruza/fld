@@ -1,4 +1,9 @@
-<div class="contact-us">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end						
+<div class="contact-us $background">
 	#if($mainHeader.getData() != "")
 		<h2>
 			$mainHeader.getData()
@@ -36,6 +41,7 @@
 					</div>
 					<span class="icon"></span>
 				</a>
+			</div>
 			<div class="acccordion-content">
 				<p>
 					$person.resumee.getData()
