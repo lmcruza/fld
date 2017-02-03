@@ -1,4 +1,9 @@
-<div class="contenido-columnas-imagen-texto">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end						
+<div class="contenido-columnas-imagen-texto $background">
 	<div class="columnas-imagen-texto">
     	#foreach($columnSep in $columnSeparator.getSiblings())
     	    #if($columnSep.header.getData() != "")

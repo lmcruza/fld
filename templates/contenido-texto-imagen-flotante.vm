@@ -1,4 +1,9 @@
-<div class="contenido-texto-foto-flotante">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end						
+<div class="contenido-texto-foto-flotante $background">
     #if($headerText.getData() != "")
 	    <h2>$headerText.getData()</h2>
 	#end

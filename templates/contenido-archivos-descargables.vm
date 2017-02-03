@@ -1,4 +1,9 @@
-<div class="contenido-archivos-relacionados">
+#if($alternativeBackground.getData() == "true")
+	#set ($background = "alternative-background")
+#else 
+	#set ($background = "")
+#end						
+<div class="contenido-archivos-relacionados $background">
 	#foreach($fileSep in $fileSeparator.getSiblings())
 	    <div class="archivo-relacionado">
 	        <a href="$fileSep.file.getData()&download=true">$fileSep.fileDescription.getData()</a>
