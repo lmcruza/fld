@@ -1,3 +1,5 @@
+#set ($dlService = $serviceLocator.findService("com.liferay.portlet.documentlibrary.service.DLFileEntryLocalService"))
+
 #if($alternativeBackground.getData() == "true")
 	#set ($background = "alternative-background")
 #else 
@@ -5,8 +7,23 @@
 #end						
 <div class="contenido-archivos-relacionados $background">
 	#foreach($fileSep in $fileSeparator.getSiblings())
+
+        ## Get the group ID of the document library you are referring to
+        #set ($gid = $getterUtil.getLong($fileSep.file.getData().split("/").get(2)))
+        
+        ## Get the folder ID of the DL
+        #set ($fid = $getterUtil.getLong($fileSep.file.getData().split("/").get(3)))
+        
+        ## Get the file uid
+        #set ($fileUid = $fileSep.file.getData().split("/").get(5))
+        #set ($fileUid = $fileUid.split("\?").get(0))
+
+        ## Retrieve the FileEntry from the DL
+        #set ($fileEntry = $dlService.getFileEntryByUuidAndGroupId($fileUid, $gid))
+        #set ($fileSize =  $fileEntry.size/1024)
+
 	    <div class="archivo-relacionado">
-	        <a href="$fileSep.file.getData()&download=true">$fileSep.fileDescription.getData()</a>
+	        <a href="$fileSep.file.getData()&download=true" download >$fileSep.fileDescription.getData() - $fileEntry.extension ($fileSize kB)</a>
 	    </div>
 	#end
 </div>
