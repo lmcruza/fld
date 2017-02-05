@@ -63,23 +63,11 @@ $theme.include($body_top_include)
 				#parse ("$full_templates_path/mobile-navigation.vm")
 			</div>
 		</nav>
-		##set($currentSiteName = "web"+$layout.getGroup().getFriendlyURL()) 
+
 		<div id="site-search">
-			<form onsubmit="ctem_null_null_3_search(); return false;" name="ctem_null_null_3_fm" method="get" action="$currentSiteName/search">
-				<input name="p_p_id" value="3" type="hidden"/>
-				<input name="p_p_lifecycle" value="0" type="hidden"/>
-				<input name="p_p_state" value="maximized" type="hidden"/>
-				<input name="p_p_mode" value="view" type="hidden"/>
-				<input name="_3_struts_action" value="/search/search" type="hidden"/>
-				<input name="_3_redirect" value="/$currentSiteName/search" type="hidden"/> 
-				<input name="_3_groupId" value="$themeDisplay.getLayout().getGroup().getGroupId()" type="hidden"/> 
-				<input name="_3_keywords" size="30" class="search-box" value="" type="text"/> 
-				<input type="submit" class="btn" value='Buscar'/> 
-			</form>
-			<a id="close-search" href="javascript:void(0)">
-				<i class="icon-remove"></i>
-			</a>
-		</div>		
+			$theme.search()
+		</div>
+
 	</header>
 
 

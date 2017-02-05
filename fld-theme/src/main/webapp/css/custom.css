@@ -309,6 +309,9 @@ header .nav-menu {
 	color:#c90000;
 	text-decoration:none;
 } 
+#site-search select {
+	display:none;
+} 
 /*CONTENT*/
 div.media-container {
 	text-align:center;
