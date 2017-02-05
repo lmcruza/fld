@@ -1,0 +1,41 @@
+#if (!$entries.isEmpty())
+	<div class="news-feed">
+		<div class="wpr">
+			#foreach ($entry in $entries)
+				<section>
+					#set($renderer = $entry.getAssetRenderer() )
+					#set($className = $renderer.getClassName() )
+					#if( $className == "com.liferay.portlet.journal.model.JournalArticle" )
+						#set( $journalArticle = $renderer.getArticle() )
+						#set( $document = $saxReaderUtil.read($journalArticle.getContent()) )
+						#set( $rootElement = $document.getRootElement() )
+
+                        #set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='imagen_listado']/dynamic-content") )
+                        #set( $imagen_listado = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+                        #set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element/dynamic-element[@name='alt_imagen_listado']") )
+                        #set( $alt_imagen_listado = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+
+                        #if(!$imagen_listado.isEmpty())
+                            <p class="summary-image"><img src="$imagen_listado" alt="$alt_imagen_listado"></p>
+                        #end
+
+						#set( $link = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry, true) )
+						<a href="$link" class="link">
+
+							<p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $entry.getCreateDate()), $locale)</p>
+
+							#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='titulo']") )
+							#set( $titulo = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+							<h3 class="title">$titulo</h3>
+
+							#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='entradilla']") )
+							#set( $entradilla = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+							<p class="summary">$entradilla</p>        
+						</a>
+						<div class="hide-text"><!----></div> 
+					#end
+				</section>
+			#end
+		</div>
+	</div>
+#end
