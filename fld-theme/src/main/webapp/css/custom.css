@@ -1041,6 +1041,9 @@ div.media-container a:hover{
     position: absolute;
 	display:inline-block;
 }
+.centering-image-video-container .img-wpr .iframe {
+	display:block;
+}
 .centering-image-video-container .img-wpr img{
 	max-width:none;
 }

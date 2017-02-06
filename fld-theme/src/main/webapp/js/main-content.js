@@ -18,7 +18,9 @@ function centerImageVideo() {
 		}
 		else {
 			jQuery(this).addClass("center");
-			jQuery(this).find(".img-wpr").attr("style", "position:relative");
+			jQuery(this).find(".img-wpr").attr({
+				style:"position:relative;display:block"
+			});
 			var itemHeight = jQuery(this).find(".img-wpr").height();
 			jQuery(this).css("height", itemHeight);
 			jQuery(this).find(".content-wrapper").css("bottom", "20px")
@@ -35,15 +37,28 @@ jQuery(document).ready(function() {
 	$('#content .img-wpr a.play-icon').each(function(index) {
 		$(this).attr('id', index);
 	});	
-	
-	jQuery("#content .centering-image-video-container .img-wpr a.play-icon").on("click", function(e) {	
+	jQuery("#content .centering-image-video-container .img-wpr a.play-icon.video").on("click", function(e) {	
 		var currentVideo = $(this).attr('id');
 		var currentVideo = document.getElementById("video"+currentVideo);
 		currentVideo.play(); 
 		
 		$(this).prev().remove();
+		$(this).next().remove();
 		$(this).remove();
-		$(currentVideo).css("display", "block");
+		$(currentVideo).css("display", "inline-block");
+		$(this).parent().find(".iframe-wpr").css("display", "block");
+		centerImageVideo();
+	});	
+	jQuery("#content .centering-image-video-container .img-wpr a.play-icon.iframe").on("click", function(e) {		
+		$(this).prev().remove();
+		$(this).next().remove();
+		var iframeUrl = $(this).parent().find(".iframe-wpr").attr("url");
+		var iframeWidth = $(this).parent().find(".iframe-wpr").attr("iframeWidth");
+		var windowHeight = jQuery( window ).height()
+		windowHeight = windowHeight-80;
+		$(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
+		$(this).parent().find(".iframe-wpr").css("display", "block");
+		$(this).remove();
 		centerImageVideo();
 	});
 	setTimeout(function(){ centerImageVideo(); }, 1000);
