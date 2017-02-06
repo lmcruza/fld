@@ -1,7 +1,7 @@
 <div class="centering-image-video-container">
 	<div class="img-wpr">
 		<div class="img-wpr-inter">
-			#if($youtubeVideo.getData() == "true")
+			#if($videoSeparator.youtubeVideo.getData() == "true")
 				#set ($source = "iframe")
 			#else 
 				#set ($source = "video")
@@ -35,8 +35,8 @@
         			Your browser does not support the video tag.
         		</video> 
         	#end
-			#if($youtubeVideo.getData() != "")
-				<div class="iframe-wpr" style="display:none;" url="$youtubeVideo.getData()&autoplay=1" iframeWidth="3000">
+			#if($videoSeparator.youtubeVideo.getData() != "")
+				<div class="iframe-wpr" style="display:none;" url="$videoSeparator.youtubeVideo.getData()&autoplay=1" iframeWidth="3000">
 			#end
 	    </div>
     </div>
