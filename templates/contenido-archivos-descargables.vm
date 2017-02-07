@@ -11,9 +11,6 @@
         ## Get the group ID of the document library you are referring to
         #set ($gid = $getterUtil.getLong($fileSep.file.getData().split("/").get(2)))
         
-        ## Get the folder ID of the DL
-        #set ($fid = $getterUtil.getLong($fileSep.file.getData().split("/").get(3)))
-        
         ## Get the file uid
         #set ($fileUid = $fileSep.file.getData().split("/").get(5))
         #set ($fileUid = $fileUid.split("\?").get(0))
