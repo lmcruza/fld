@@ -1,4 +1,4 @@
-<div class="four-image-teaser">
+<div>
 	<div class="top">
     	#foreach($contentSep in $contentSeparator.getSiblings())
             #if($contentSep.textAlignment.getData() != "left")
