@@ -65,7 +65,10 @@ $theme.include($body_top_include)
 		</nav>
 
 		<div id="site-search">
-			$theme.search()
+			<div class="inner-wpr">
+				<span></span>
+				$theme.search()
+			</div>
 		</div>
 
 	</header>
