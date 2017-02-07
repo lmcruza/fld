@@ -8,8 +8,10 @@
 			#end
 			<a class="sub-teaser $color" href="$imageProps.linkToPage.getFriendlyUrl()">
 				<img src="$imageProps.image.getData()" />
-				<h3>$imageProps.header.getData()</h3>
-				<p>$imageProps.paragraph.getData()</p>
+				<div class="wpr">
+					<h3>$imageProps.header.getData()</h3>
+					<p>$imageProps.paragraph.getData()</p>
+				</div>
 			</a>
     	#end
 	</div>

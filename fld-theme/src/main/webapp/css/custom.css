@@ -333,8 +333,8 @@ div.media-container div.content-wpr {
 	position:absolute;
 	top:40%;
 	text-align:center;
-	width:94%;
-	padding:0 3%;
+	width:60%;
+	padding:0 20%;
 }
 div.media-container div.content-wpr *{
 	display:inline-block;
@@ -638,13 +638,35 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	height:300px;
 	overflow:hidden;
 }
-.four-image-teaser .top  a h3{
+.four-image-teaser .over {
+	width:100%;
+	height:100%;
 	position:absolute;
-	bottom:40%;
+	background:#000;
+	top:0;
+	left:0;
+	z-index:1;
+	transition: opacity 0.500s ease 0s;
+	opacity: 0;	
+}
+.four-image-teaser .top  a:hover .over {
+	opacity: 0.2;
+	transition: opacity 0.500s ease 0s;	
+}
+.four-image-teaser a .wpr{
+	position:absolute;
+	top:40%;
 	left:0;
 	width:94%;
 	padding:0 3%;
-	text-align:center;
+	text-align:center;	
+	transition: all 500ms linear 0ms;
+}
+.four-image-teaser a:hover .wpr{
+	top:20%;
+	transition: all 500ms linear 0ms;
+}
+.four-image-teaser .top  a h3{
 	font-size:25px;
 	font-weight: 600;
 	color:#666;
@@ -652,6 +674,15 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .four-image-teaser .top  a:hover h3{
 	color:#000;
+}
+.four-image-teaser a .wpr p{
+	transition: opacity 0.500s ease 0s;
+	opacity: 0;
+}
+.four-image-teaser a:hover .wpr  p{
+	display:block;
+	opacity: 1;
+	transition: opacity 0.500s ease 0s;
 }
 .four-image-teaser .bottom {
 	width:100%;
@@ -763,6 +794,7 @@ html body .image-teaser .white a{
 	bottom:10%;
 	right:5%;
 	width:30%;
+	text-align:center;
 }
 .image-teaser-with-button-on-image .wpr p{
 	font-size:18px;
@@ -817,6 +849,7 @@ html body .image-teaser-with-button-on-image .white a:hover{
 	bottom:10%;
 	left:5%;
 	width:30%;
+	text-align:center;
 }
 .social-media .wpr p{
 	font-size:18px;
