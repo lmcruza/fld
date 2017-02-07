@@ -1566,6 +1566,10 @@ footer#footer .info-wpr p {
 	text-decoration:none;
 	outline:0;
 }
+.portlet-dockbar {
+	width:100%;
+	overflow:hidden;
+}
 /*dark*/
 body.dark footer#footer .portal-links ul li a{
 	color: #FFF;
@@ -1607,9 +1611,9 @@ body.dark footer#footer .info-wpr p {
 	.video-image-text-teaser .media-wpr .content-wpr .inner-wpr h2 { font-size:20px;margin:0 0 10px 0;line-height:1.2em;}
 	.video-image-text-teaser .media-wpr .content-wpr .inner-wpr p {font-size:16px;margin:0;line-height:1.2em;}
 	.four-image-teaser .top {flex-wrap: wrap;}
-	.image-teaser .right h3 {font-size:36px;}
+	.image-teaser .right h3 {font-size:36px;bottom:60px;}
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
-	.image-teaser-with-button-on-image .wpr, .image-teaser .left, .image-teaser .right, .image-teaser, .social-media .wpr {width: auto;position:relative;bottom: 0;left:0;padding: 0 20px 20px 20px;text-align:center;}
+	.image-teaser-with-button-on-image .wpr, .image-teaser .left, .image-teaser .right, .image-teaser, .social-media .wpr {width: auto;bottom: 0;left:0;padding: 0 20px 20px 20px;text-align:center;}
 	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:18px;color:#555555 !important;text-align:center;}
 	.image-teaser .left a, .image-teaser-with-button-on-image .wpr a , .four-image-teaser .bottom a, .social-media .wpr a{display:inline-block;padding:18px 100px;background:#FFF;color:#333333 !important;border: 3px solid #cacaca;}
 	.image-teaser .left a:hover, .image-teaser-with-button-on-image .wpr a:hover , .four-image-teaser .bottom a:hover {text-decoration:none;}
@@ -1617,6 +1621,9 @@ body.dark footer#footer .info-wpr p {
 	.portlet-dockbar {margin-top:0;}
 	#wrapper header .navigation-content-mobile.open {z-index:301}
 	#content {margin-top:0;}
+	.four-image-teaser .top a {width:100%;}
+	.two-image-teaser .top {flex-wrap: wrap;}
+	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
 }
 @media screen and (max-width: 649px) {
 	.nav-desktop{display:none;}
