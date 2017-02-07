@@ -51,6 +51,7 @@
 #set ($language_id = $user.getLanguageId())
 ###Fin Variable de Lenguaje
 
+#set ($dlService = $serviceLocator.findService("com.liferay.portlet.documentlibrary.service.DLFileEntryLocalService"))
 
 <div class="docList">
 	#if ($fecha.data != '')
@@ -93,9 +94,6 @@
 				## Get the group ID of the document library you are referring to
 				#set ($gid = $getterUtil.getLong($documento.getData().split("/").get(2)))
 				
-				## Get the folder ID of the DL
-				#set ($fid = $getterUtil.getLong($documento.getData().split("/").get(3)))
-				
 				## Get the file uid
 				#set ($fileUid = $documento.getData().split("/").get(5))
 				#set ($fileUid = $fileUid.split("\?").get(0))
@@ -104,8 +102,14 @@
 				#set ($fileEntry = $dlService.getFileEntryByUuidAndGroupId($fileUid, $gid))
 				#set ($fileSize =  $fileEntry.size/1024)
 
+				#if($fileSep.file.getData().indexOf("?") >= 0)
+					#set ($downloadUrl = $documento.getData() + "&download=true")
+				#else
+					#set ($downloadUrl = $documento.getData() + "?download=true")
+				#end
+
 				<div class="archivo-relacionado">
-					<a href="$documento.getData()&download=true" download >$documento.texto_documento.getData() - $fileEntry.extension ($fileSize kB)</a>
+					<a href="$downloadUrl" download >$documento.texto_documento.getData() - $fileEntry.extension ($fileSize kB)</a>
 				</div>
 			#end
 		</div>
@@ -144,9 +148,6 @@
 
 				## Get the group ID of the document library you are referring to
 				#set ($gid = $getterUtil.getLong($videoGaleria.getData().split("/").get(2)))
-				
-				## Get the folder ID of the DL
-				#set ($fid = $getterUtil.getLong($videoGaleria.getData().split("/").get(3)))
 				
 				## Get the file uid
 				#set ($fileUid = $videoGaleria.getData().split("/").get(5))
