@@ -356,7 +356,7 @@ div.media-container h2 {
 	font-weight: 600;
 }
 div.media-container p {
-	padding:0 3% 10px 3%;
+	padding:0 20% 10px 20%;
 	text-align:center;
 	color:#666;
 }
@@ -685,7 +685,8 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	transition: opacity 0.500s ease 0s;
 }
 .four-image-teaser .bottom {
-	width:100%;
+	width:60%;
+	margin:0 20%;
 	text-align:center;
 }
 .four-image-teaser .bottom  h2{
@@ -1334,8 +1335,8 @@ html body .columnas-imagen-texto  .white a:hover{
 	position:absolute;
 	bottom:20px;
 	left:0;
-	width:96%;
-	padding:0 2%;
+	width:60%;
+	padding:0 20%;
 	text-align:center;
 }
 .portada-imagen-con-texto-link .wpr a {
