@@ -1,4 +1,4 @@
-<div>
+<div class="two-image-teaser">
 	<div class="top">
     	#foreach($contentSep in $contentSeparator.getSiblings())
             #if($contentSep.textAlignment.getData() != "left")
@@ -15,12 +15,13 @@
             	#if($contentSep.image.getData() != "")
             		<img src="$contentSep.image.getData()" />
             	#end	
-            	#if($contentSep.header.getData() != "")
-            		<h2>
-            			$contentSep.header.getData()
-            		</h2>
-            	#end
+
             	<div class="wpr">
+					#if($contentSep.header.getData() != "")
+						<h2>
+							$contentSep.header.getData()
+						</h2>
+					#end				
             		#if($contentSep.paragraph.getData() != "")
             			<p>$contentSep.paragraph.getData()</p>
             		#end		

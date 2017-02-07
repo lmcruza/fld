@@ -410,7 +410,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-weight: 600;
 	color:#666;	
 	text-transform: uppercase;	
-	padding-bottom:25px;
+	padding:0 20% 25px 20%;
 	text-align:center;
 }
 .article-acccordion img {
@@ -419,6 +419,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .article-acccordion p.ingress {
 	text-align:center;
+	padding:0 20% 0 20%;
 }
 .article-acccordion h3 {
 	font-size:20px;
@@ -427,6 +428,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	text-transform: uppercase;
 	padding:0 20px 10px 20px;
 	margin:0;
+	text-align:center;
 }
 .article-acccordion .acccordion-link:hover{
 	color:#000;
@@ -457,6 +459,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .article-acccordion .accordion-wpr {
 	border-bottom:#696969 solid 1px;
+	margin:0 20%;
 }
 .article-acccordion .acccordion-content {
 	display:none;
@@ -476,11 +479,11 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .article-acccordion h2.bottom {
 	margin-top:65px;
-	padding-bottom:0;	
+	padding: 0 20%;	
 }
 .article-acccordion p.bottom-content {
 	text-align:center;
-	padding:0 20px;
+	padding: 0 20%;
 }
 /*content-article*/
 .content-article {
@@ -644,7 +647,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 /*four-image-teaser*/
 .four-image-teaser {
 	width:100%;
-	padding:15px 0 25px 0;
+	padding:15px 0 0 0;
 }
 .four-image-teaser .top {
 	width:100%;
@@ -750,6 +753,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 .image-teaser .left{
 	width:35%;
 	margin-right:5%;
+	text-align:center;
 }
 .image-teaser .left h2 {
 	font-size:40px;
@@ -903,6 +907,30 @@ html body .social-media  .white a{
 }
 html body .social-media  .white a:hover{
 	color:#939393 !important;
+}
+/*two-image-teaser*/
+.two-image-teaser .top {
+	display: flex;
+}
+.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {
+	width:50%;
+}
+.two-image-teaser .social-media h2, .two-image-teaser .image-teaser-with-button-on-image h2 {
+	position: static;
+}
+
+#wrapper .two-image-teaser .wpr  {
+	bottom:auto;
+	top:10%;
+	width:50%;
+}
+#wrapper .two-image-teaser .social-media .wpr {
+	right:auto;
+	left:5%;
+}
+#wrapper .two-image-teaser .image-teaser-with-button-on-image .wpr {
+	right:5%;
+	left:auto;
 }
 /*contact-us*/
 .contact-us {
