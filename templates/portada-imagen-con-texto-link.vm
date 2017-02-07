@@ -9,6 +9,7 @@
 			$paragraph.getData()
 		#end		
 		#if($buttonText.getData() != "")
+		<br />
 			<a href="$buttonLink.getData()">
 				$buttonText.getData()
 			</a>
