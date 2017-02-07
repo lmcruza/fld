@@ -22,8 +22,14 @@
         #set ($fileEntry = $dlService.getFileEntryByUuidAndGroupId($fileUid, $gid))
         #set ($fileSize =  $fileEntry.size/1024)
 
+        #if($fileSep.file.getData().indexOf("?") >= 0)
+            #set ($downloadUrl = $fileSep.file.getData() + "&download=true")
+        #else
+            #set ($downloadUrl = $fileSep.file.getData() + "?download=true")
+        #end
+
 	    <div class="archivo-relacionado">
-	        <a href="$fileSep.file.getData()&download=true" download >$fileSep.fileDescription.getData() - $fileEntry.extension ($fileSize kB)</a>
+	        <a href="$downloadUrl" download >$fileSep.fileDescription.getData() - $fileEntry.extension ($fileSize kB)</a>
 	    </div>
 	#end
 </div>
