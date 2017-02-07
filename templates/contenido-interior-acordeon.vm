@@ -8,46 +8,69 @@
 		<h2 class="top">$mainHeader.getData()</h2>
 	#end
 	#if($image.getData() != "")
-		#if($textOnImageWhite.getData() == "true")
-			#set ($color = "white")
-		#else 
-			#set ($color = "")
-		#end
 		<img src="$image.getData()" />
-		#if($headerOnImage.getData() != "")
-		    <h3 class="$color">$headerOnImage.getData()</h3>
-	    #end
-	    #if($paragraphOnImage.getData() != "")
-		    <p class="$color">$paragraphOnImage.getData()</p>
-		#end
+        #if($alternativeBackgroundInSection.getData() == "true")
+            #set ($background = "alternative-background")
+        #else 
+            #set ($background = "")
+        #end
+        <div class="$background">
+    		#if($bollowImageSeparator.headerBellowImage.getData() != "")
+    		    <h3>$headerBellowImage.getData()</h3>
+    	    #end
+    	    #if($bollowImageSeparator.paragraphBellowImage.getData() != "")
+    		    <p>$paragraphBellowImage.getData()</p>
+    		#end
+		</div>
 	#end
 	#foreach($ingressSep in $ingressSeparator.getSiblings())
 		#if($ingressSep.ingress.getData() != "")
-			<p class="ingress">$ingressSep.ingress.getData()</p>
-		#end
-	#end
-	#foreach($accordionSep in $accordionSeparator.getSiblings())
-		<div class="accordion-wpr">
-			<a href="javascript:void(0)" class="acccordion-link">
-				<h3>$accordionSep.accordionHeader.getData() <span></span></h3>
-			</a>
-			<div class="acccordion-content">
-        		#if($accordionSep.linkToPage.getData() != "")
-        		    <a href="$accordionSep.linkToPage.getFriendlyUrl()">
-        			    <p>$accordionSep.accordionParagraph.getData()</p>
-    			    </a>
-        		#else
-        		    <p>$accordionSep.accordionParagraph.getData()</p>
-        		#end
+            #if($ingressSep.alternativeBackgroundInIngressSection.getData() == "true")
+                #set ($background = "alternative-background")
+            #else 
+                #set ($background = "")
+            #end
+            <div class="$background">
+    			<p class="ingress">$ingressSep.ingress.getData()</p>
 			</div>
-		</div>
+		#end
 	#end
+    #if($alternativeBackgroundInAccordionSection.getData() == "true")
+        #set ($background = "alternative-background")
+    #else 
+        #set ($background = "")
+    #end
+    <div class="$background">
+    	#foreach($accordionSep in $accordionSeparator.getSiblings())
+    		<div class="accordion-wpr $background">
+    			<a href="javascript:void(0)" class="acccordion-link">
+    				<h3>$accordionSep.accordionHeader.getData() <span></span></h3>
+    			</a>
+    			<div class="acccordion-content">
+            		#if($accordionSep.linkToPage.getData() != "")
+            		    <a href="$accordionSep.linkToPage.getFriendlyUrl()">
+            			    <p>$accordionSep.accordionParagraph.getData()</p>
+        			    </a>
+            		#else
+            		    <p>$accordionSep.accordionParagraph.getData()</p>
+            		#end
+    			</div>
+    		</div>
+    	#end
+	</div>
 	#foreach($bottomContentSep in $bottomContentSeparator.getSiblings())
-		#if($bottomContentSep.bottomHeader.getData() != "")
-			<h2 class="bottom">$bottomContentSep.bottomHeader.getData()</h2>
-		#end
-		#if($bottomContentSep.bottomParagraph.getData() != "")
-			<p class="bottom-content">$bottomContentSep.bottomParagraph.getData()</p>
-		#end
+        #if($bottomContentSep.alternativeBackgroundInBottonSection.getData() == "true")
+            #set ($background = "alternative-background")
+        #else 
+            #set ($background = "")
+        #end
+        <div class="$background">
+    		#if($bottomContentSep.bottomHeader.getData() != "")
+    			<h2 class="bottom">$bottomContentSep.bottomHeader.getData()</h2>
+    		#end
+    		#if($bottomContentSep.bottomParagraph.getData() != "")
+    			<p class="bottom-content">$bottomContentSep.bottomParagraph.getData()</p>
+    		#end
+		</div>
 	#end
 </div>
