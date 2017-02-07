@@ -2,9 +2,9 @@
 	<div class="top">
     	#foreach($contentSep in $contentSeparator.getSiblings())
             #if($contentSep.textAlignment.getData() != "left")
-            	#set ($alignment = "social-media")
-            #else 
             	#set ($alignment = "image-teaser-with-button-on-image")
+            #else 
+            	#set ($alignment = "social-media")
             #end	
             #if($contentSep.isTextWhite.getData() != "true")
             	#set ($color = "white")
