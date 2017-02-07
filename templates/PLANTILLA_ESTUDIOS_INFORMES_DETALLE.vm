@@ -88,38 +88,39 @@
 		</div>
 	#end
 	#if($documentos.getData() != "" )
-		<div class="noticia-documento">
+		
 			#foreach ($documento in $documentos.getSiblings())
+				<div class="noticia-documento">
+					## Get the group ID of the document library you are referring to
+					#set ($gid = $getterUtil.getLong($documento.getData().split("/").get(2)))
+					
+					## Get the folder ID of the DL
+					#set ($fid = $getterUtil.getLong($documento.getData().split("/").get(3)))
+					
+					## Get the file uid
+					#set ($fileUid = $documento.getData().split("/").get(5))
+					#set ($fileUid = $fileUid.split("\?").get(0))
 
-				## Get the group ID of the document library you are referring to
-				#set ($gid = $getterUtil.getLong($documento.getData().split("/").get(2)))
-				
-				## Get the folder ID of the DL
-				#set ($fid = $getterUtil.getLong($documento.getData().split("/").get(3)))
-				
-				## Get the file uid
-				#set ($fileUid = $documento.getData().split("/").get(5))
-				#set ($fileUid = $fileUid.split("\?").get(0))
+					## Retrieve the FileEntry from the DL
+					#set ($fileEntry = $dlService.getFileEntryByUuidAndGroupId($fileUid, $gid))
+					#set ($fileSize =  $fileEntry.size/1024)
 
-				## Retrieve the FileEntry from the DL
-				#set ($fileEntry = $dlService.getFileEntryByUuidAndGroupId($fileUid, $gid))
-				#set ($fileSize =  $fileEntry.size/1024)
+					#if($fileSep.file.getData().indexOf("?") >= 0)
+						#set ($downloadUrl = $documento.getData() + "&download=true")
+					#else
+						#set ($downloadUrl = $documento.getData() + "?download=true")
+					#end
 
-				#if($fileSep.file.getData().indexOf("?") >= 0)
-					#set ($downloadUrl = $documento.getData() + "&download=true")
-				#else
-					#set ($downloadUrl = $documento.getData() + "?download=true")
-				#end
-
-				<div class="archivo-relacionado">
-					<a href="$downloadUrl" download >$documento.texto_documento.getData() - $fileEntry.extension ($fileSize kB)</a>
+					<div class="archivo-relacionado">
+						<a href="$downloadUrl" download >$documento.texto_documento.getData() - $fileEntry.extension ($fileSize kB)</a>
+					</div>
 				</div>
 			#end
-		</div>
+		
 	#end
 	#if($imagen_galeria.getData() != "" )
-		<div class="noticia-imagen">
-			#foreach ($imgGaleria in $imagen_galeria.getSiblings())
+		#foreach ($imgGaleria in $imagen_galeria.getSiblings())
+			<div class="noticia-imagen">
 				#if($imgGaleria.alt_imagen.getData() != "")
 					<img src="$imgGaleria.getData()" alt="$imgGaleria.alt_imagen.getData()"/>
 				#else
@@ -131,16 +132,17 @@
 				#if($imgGaleria.descripcion.getData() != "")
 					<p>$imgGaleria.descripcion.getData()</p>
 				#end
-			#end
-		</div>
+			</div>
+		#end
+		
 	#end
 	#if($video_galeria.getData() != "" )
-		<div class="noticia-video">
-			#foreach ($videoGaleria in $video_galeria.getSiblings())
-        		<video controls="">
-        			<source src="$videoGaleria.getData()" type="video/mp4">
-        			Your browser does not support the video tag.
-        		</video> 
+		#foreach ($videoGaleria in $video_galeria.getSiblings())
+			<div class="noticia-video">
+				<video controls="">
+					<source src="$videoGaleria.getData()" type="video/mp4">
+					Your browser does not support the video tag.
+				</video> 
 				#if($videoGaleria.tituloRev2.getData() != "")
 					<h3>$videoGaleria.tituloRev2.getData()</h3>
 				#end
@@ -163,13 +165,14 @@
 				<div class="archivo-relacionado">
 					<a href="$videoGaleria.getData()" target="_blank">$videoGaleria.tituloRev2.getData() - $fileEntry.extension ($fileSize kB)</a>
 				</div>
-
-			#end
-		</div>
+			</div>
+		#end
+		
 	#end
 	#if($videoweb_galeria.getData() != "" )
-		<div class="noticia-video-web">
-			#foreach ($videoWebGaleria in $videoweb_galeria.getSiblings())
+		
+		#foreach ($videoWebGaleria in $videoweb_galeria.getSiblings())
+			<div class="noticia-video-web">
 				<iframe width="854" height="480" src="$videoWebGaleria.getData()" frameborder="0" allowfullscreen></iframe>
 				#if($videoWebGaleria.tituloRev3.getData() != "")
 					<h3>$videoWebGaleria.tituloRev3.getData()</h3>
@@ -177,15 +180,16 @@
 				#if($videoWebGaleria.descripcionRev2.getData() != "")
 					<p>$videoWebGaleria.descripcionRev2.getData()</p>
 				#end
-			#end
-		</div>
+			</div>
+		#end
+		
 	#end
 	#if($audio_galeria.getData() != "" )
-		<div class="noticia-audio">
-			#foreach ($audioGaleria in $audio_galeria.getSiblings())
+		#foreach ($audioGaleria in $audio_galeria.getSiblings())
+			<div class="noticia-audio">
 				<audio controls>
 					<source src="$audioGaleria.getData()" type="audio/mpeg">
-  					Your browser does not support the audio tag.
+					Your browser does not support the audio tag.
 				</audio> 
 				#if($audioGaleria.tituloRev4.getData() != "")
 					<h3>$audioGaleria.tituloRev4.getData()</h3>
@@ -193,7 +197,8 @@
 				#if($audioGaleria.descripcionRev3.getData() != "")
 					<p>$audioGaleria.descripcionRev3.getData()</p>
 				#end
-			#end
-		</div>
+			</div>
+		#end
+		
 	#end
 </div>

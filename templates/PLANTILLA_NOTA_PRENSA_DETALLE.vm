@@ -87,10 +87,9 @@
 			$contenido.data
 		</div>
 	#end
-	#if($documentos.getData() != "" )
-		<div class="noticia-documento">
-			#foreach ($documento in $documentos.getSiblings())
-
+	#if($documentos.getData() != "" )	
+		#foreach ($documento in $documentos.getSiblings())
+			<div class="noticia-documento">
 				## Get the group ID of the document library you are referring to
 				#set ($gid = $getterUtil.getLong($documento.getData().split("/").get(2)))
 				
@@ -111,33 +110,33 @@
 				<div class="archivo-relacionado">
 					<a href="$downloadUrl" download >$documento.texto_documento.getData() - $fileEntry.extension ($fileSize kB)</a>
 				</div>
-			#end
-		</div>
+			</div>
+		#end
 	#end
-	#if($imagen_galeria.getData() != "" )
+	#if($imagen_galeria.getData() != "" )		
+	#foreach ($imgGaleria in $imagen_galeria.getSiblings())
 		<div class="noticia-imagen">
-			#foreach ($imgGaleria in $imagen_galeria.getSiblings())
-				#if($imgGaleria.alt_imagen.getData() != "")
-					<img src="$imgGaleria.getData()" alt="$imgGaleria.alt_imagen.getData()"/>
-				#else
-					<img src="$imgGaleria.getData()" />
-				#end
-				#if($imgGaleria.tituloRev1.getData() != "")
-					<h3>$imgGaleria.tituloRev1.getData()</h3>
-				#end
-				#if($imgGaleria.descripcion.getData() != "")
-					<p>$imgGaleria.descripcion.getData()</p>
-				#end
+			#if($imgGaleria.alt_imagen.getData() != "")
+				<img src="$imgGaleria.getData()" alt="$imgGaleria.alt_imagen.getData()"/>
+			#else
+				<img src="$imgGaleria.getData()" />
+			#end
+			#if($imgGaleria.tituloRev1.getData() != "")
+				<h3>$imgGaleria.tituloRev1.getData()</h3>
+			#end
+			#if($imgGaleria.descripcion.getData() != "")
+				<p>$imgGaleria.descripcion.getData()</p>
 			#end
 		</div>
 	#end
-	#if($video_galeria.getData() != "" )
-		<div class="noticia-video">
-			#foreach ($videoGaleria in $video_galeria.getSiblings())
-        		<video controls="">
-        			<source src="$videoGaleria.getData()" type="video/mp4">
-        			Your browser does not support the video tag.
-        		</video> 
+	#end
+	#if($video_galeria.getData() != "" )	
+		#foreach ($videoGaleria in $video_galeria.getSiblings())
+			<div class="noticia-video">
+				<video controls="">
+					<source src="$videoGaleria.getData()" type="video/mp4">
+					Your browser does not support the video tag.
+				</video> 
 				#if($videoGaleria.tituloRev2.getData() != "")
 					<h3>$videoGaleria.tituloRev2.getData()</h3>
 				#end
@@ -160,9 +159,9 @@
 				<div class="archivo-relacionado">
 					<a href="$videoGaleria.getData()" target="_blank">$videoGaleria.tituloRev2.getData() - $fileEntry.extension ($fileSize kB)</a>
 				</div>
-
-			#end
-		</div>
+			</div>
+		#end
+		
 	#end
 	#if($videoweb_galeria.getData() != "" )
 		<div class="noticia-video-web">
