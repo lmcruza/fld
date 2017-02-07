@@ -1567,10 +1567,6 @@ footer#footer .info-wpr p {
 	text-decoration:none;
 	outline:0;
 }
-.portlet-dockbar {
-	width:100%;
-	overflow:hidden;
-}
 /*dark*/
 body.dark footer#footer .portal-links ul li a{
 	color: #FFF;
@@ -1632,6 +1628,7 @@ body.dark footer#footer .info-wpr p {
 	.work {height:400px;}
 	.image-teaser .right h3 {font-size:30px;bottom:20px;left:20px;}
 	.news-feed section { width:100%;margin-right:0;}
-.four-image-teaser .top a {width:100%;}	
+	.four-image-teaser .top a {width:100%;}	
+	.portlet-dockbar { width:100%; overflow:hidden;}
 }
  
