@@ -1,7 +1,7 @@
 <div class="centering-image-video-container">
 	<div class="img-wpr">
 		<div class="img-wpr-inter">
-			#if($videoSeparator.youtubeVideo.getData() == "true")
+			#if($videoSeparator.youtubeVideo.getData() != "")
 				#set ($source = "iframe")
 			#else 
 				#set ($source = "video")
@@ -25,18 +25,23 @@
 				</div>
 			#end
         	#if($videoSeparator.mp4Video.getData() != "")
-        		<video controls="" id="yui_patched_v3_11_0_1_1485263537202_788" style="display:none;">
+        		<video id="yui_patched_v3_11_0_1_1485263537202_788" style="display:none;" width="100%" loop>
         			<source src="$videoSeparator.mp4Video.getData()" type="video/mp4">
         			Your browser does not support the video tag.
         		</video> 
             #elseif($videoSeparator.streamingVideo.getData() != "")
-				<video controls="" style="display:none;">
-        			<source src="$videoSeparator.streamingVideo.getData()" type="video/mp4">
+				<video controls="" style="display:none;" width="100%">
+        			<source src="$videoSeparator.streamingVideo.getData()">
         			Your browser does not support the video tag.
         		</video> 
         	#end
 			#if($videoSeparator.youtubeVideo.getData() != "")
-				<div class="iframe-wpr" style="display:none;" url="$videoSeparator.youtubeVideo.getData()&autoplay=1" iframeWidth="3000">
+				#if($videoSeparator.youtubeVideo.getData().indexOf("?") >= 0)
+					#set ($youtubeUrl = $videoSeparator.youtubeVideo.getData() + "&controls=0&disablekb=1&autoplay=1")
+				#else
+					#set ($youtubeUrl = $videoSeparator.youtubeVideo.getData() + "?controls=0&disablekb=1&autoplay=1")
+				#end
+				<div class="iframe-wpr" style="display:none;" url="$youtubeUrl" iframeWidth="3000">
 			#end
 	    </div>
     </div>
