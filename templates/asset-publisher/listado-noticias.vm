@@ -17,6 +17,8 @@
 
                         #if(!$imagen_listado.isEmpty())
                             <p class="summary-image"><img src="$imagen_listado" alt="$alt_imagen_listado"></p>
+						#else
+                            <p class="summary-no-image"><!----></p>
                         #end
 
 						#set( $link = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry, true) )
