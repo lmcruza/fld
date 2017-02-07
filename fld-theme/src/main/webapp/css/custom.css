@@ -10,6 +10,7 @@ body {
 }
 iframe{
 	width:100%;
+	pointer-events: none;
 }
 body.dark {
 	background:#000;
