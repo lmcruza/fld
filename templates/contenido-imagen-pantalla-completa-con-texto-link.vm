@@ -16,7 +16,7 @@
 			#set ($color = "")
 		#end						
 		<div class="content-wpr $color">
-			<p>$textOnImage.getData()</p>
+			<h2>$textOnImage.getData()</h2>
 		</div>
 	#end
 	#if($header.getData() != "")
