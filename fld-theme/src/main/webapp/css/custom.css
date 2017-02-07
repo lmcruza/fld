@@ -2,7 +2,6 @@
 #wrapper {
 	padding:0;
 }
-
 body {
 	padding:0 !important;
 	font-size:18px !important;
@@ -33,6 +32,13 @@ body.dark {
 }		
 #wrapper {
 	position:unset;
+}
+/*white selection*/ 
+html body .white {
+	color:#FFF !important;
+}
+html body .white *{
+	color:#FFF !important;
 }
 /*HEADER*/
 #wrapper header {
@@ -363,7 +369,10 @@ div.media-container a{
 	margin-bottom:45px;
 	background:#FFF;
 }
-div.media-container a:hover{
+html body div.media-container  .white a{
+	color:#555 !important;
+}
+div.media-container a:hover, html body div.media-container  .white a:hover{
 	text-decoration:none;
 	color:#c90000;
 }
@@ -707,6 +716,9 @@ div.media-container a:hover{
 .image-teaser .left a:hover{
 	text-decoration:none;
 }
+html body .image-teaser .white a{
+		color:#333333 !important;
+}
 .image-teaser .right{
 	width:60%;
 	position:relative;
@@ -769,10 +781,16 @@ div.media-container a:hover{
 	margin-bottom:10px;
 	background:#FFF;
 }
+html body .image-teaser-with-button-on-image .white a{
+		color:#333333 !important;
+}
 .image-teaser-with-button-on-image .wpr a:hover {
 	text-decoration:none;
 	color:#939393 !important;
 	border-color:#939393;
+}
+html body .image-teaser-with-button-on-image .white a:hover{
+	color:#939393 !important;
 }
 /*social media*/
 .social-media {
@@ -817,10 +835,16 @@ div.media-container a:hover{
 	margin-bottom:10px;
 	background:#FFF;
 }
+html body .social-media  .white a{
+	color:#333333 !important;
+}
 .social-media .wpr a:hover {
 	text-decoration:none;
 	color:#939393 !important;
 	border-color:#939393;
+}
+html body .social-media  .white a:hover{
+	color:#939393 !important;
 }
 /*contact-us*/
 .contact-us {
@@ -1090,10 +1114,16 @@ div.media-container a:hover{
 	margin-bottom:10px;
 	background:#FFF;
 }
+html body .centering-image-video-container .white a{
+	color:#333333!important;
+}
 .centering-image-video-container .img-wpr-inter .content-wrapper a:hover{
 	text-decoration:none;
 	color:#939393;
 	border-color:#939393;
+}
+html body .centering-image-video-container  .white a:hover{
+	color:#939393 !important;
 }
 .centering-image-video-container .img-wpr-inter .play-icon {
 	position: absolute;
@@ -1153,10 +1183,16 @@ div.media-container a:hover{
 	margin-bottom:10px;
 	background:#FFF;	
 }
+html body .archivo-relacionador  .white a{
+	color:#333333 !important;
+}
 .archivo-relacionado a:hover{
 	text-decoration:none;
 	color:#939393;
 	border-color:#939393;
+}
+html body .archivo-relacionador  .white a:hover{
+	color:#939393 !important;
 }
 /*columnas-imagen-texto*/
 .columnas-imagen-texto {
@@ -1190,10 +1226,16 @@ div.media-container a:hover{
 	position:relative;
 	top:-120px;
 }
+html body .columnas-imagen-texto  .white a{
+	color:#333333 !important;
+}
 .columnas-imagen-texto a:hover{
 	text-decoration:none;
 	color:#939393;
 	border-color:#939393;
+}
+html body .columnas-imagen-texto  .white a:hover{
+	color:#939393 !important;
 }
 /*contenido-texto-foto-flotante*/
 .contenido-texto-foto-flotante  {
@@ -1274,10 +1316,16 @@ div.media-container a:hover{
 	margin-bottom:10px;
 	background:#FFF;	
 }
+html body .portada-imagen-con-texto-link  .white a{
+	color:#333333 !important;
+}
 .portada-imagen-con-texto-link .wpr a:hover{
 	text-decoration:none;
 	color:#939393;
 	border-color:#939393;
+}
+html body .portada-imagen-con-texto-link  .white a:hover{
+	color:#939393 !important;
 }
 /*search-layout*/
 #wrapper .input-container {
@@ -1293,13 +1341,6 @@ div.media-container a:hover{
 /*alternative background selection*/ 
 html body .alternative-background {
 	background-color:#f1f5f7 !important;
-}
-/*white selection*/ 
-html body .white {
-	color:#FFF !important;
-}
-html body .white *{
-	color:#FFF !important;
 }
 /*anchor template*/
 .anchor {
