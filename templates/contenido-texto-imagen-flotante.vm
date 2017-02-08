@@ -19,12 +19,14 @@
             #if($paragraphSep.image.getData() != "")
                 <img src="$paragraphSep.image.getData()" />
             #end
-            #if($paragraphSep.highlightedText.getData() != "")
-                <h2>$paragraphSep.highlightedText.getData()</h2>
-            #end
-            #if($paragraphSep.paragraph.getData() != "")
-                $htmlUtil.unescape($paragraphSep.paragraph.getData())
-            #end
+            <div class="inner">
+                #if($paragraphSep.highlightedText.getData() != "")
+                    <h2>$paragraphSep.highlightedText.getData()</h2>
+                #end
+                #if($paragraphSep.paragraph.getData() != "")
+                    $htmlUtil.unescape($paragraphSep.paragraph.getData())
+                #end
+            </div>
         </div>
     </div>
 #end
