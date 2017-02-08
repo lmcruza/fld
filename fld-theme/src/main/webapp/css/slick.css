@@ -133,13 +133,16 @@
 .slick-slider .content-wpr-top {
 	position:absolute;
 	top:10%;
-	left:25px;
+	left:0;
 	text-align:center;
+}
+.slick-slider  p, .slick-slider h2{
+    padding:0 20%;
 }
 .slick-slider .content-wpr-bottom {
 	position:absolute;
 	top:70%;
-	left:25px;
+	left:0;
 	text-align:center;
 }
 .slick-slider .content-wpr-bottom a, .slick-slider .content-wpr-top a{
