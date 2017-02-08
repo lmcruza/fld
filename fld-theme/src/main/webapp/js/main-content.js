@@ -111,9 +111,5 @@ function resizeWindow() {
 	var currentSlideHeight = jQuery("#content .slick-active").height();
 	jQuery("#content .regular.slider").css("height",currentSlideHeight);
 	currentSlideHeight = currentSlideHeight-50;
-	jQuery("#content .slick-dots").css("top",currentSlideHeight);
-
-	var imgWidth = jQuery(".slick-slide").width();
-	jQuery(".slick-slide .content-wpr-top").width(imgWidth-50);
-	jQuery(".slick-slide .content-wpr-bottom").width(imgWidth-50);	
+	jQuery("#content .slick-dots").css("top",currentSlideHeight);	
 }
