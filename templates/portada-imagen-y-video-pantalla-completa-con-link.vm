@@ -17,11 +17,13 @@
 					#set ($color = "")
 				#end						
 				<div class="content-wrapper $color">
-					<h2>$header.getData()</h2>
-					<p>$information.getData()</p>
-					#if($button.getData() != "" && $showButton.getData() == "true")
-						<a href="$linkToPage.getFriendlyUrl()">$button.getData()</a>
-					#end	
+				    <div class="inner">
+    					<h2>$header.getData()</h2>
+    					<p>$information.getData()</p>
+    					#if($button.getData() != "" && $showButton.getData() == "true")
+    						<a href="$linkToPage.getFriendlyUrl()">$button.getData()</a>
+    					#end
+					</div>
 				</div>
 			#end
         	#if($videoSeparator.mp4Video.getData() != "")

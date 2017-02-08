@@ -12,9 +12,17 @@ function centerImageVideo() {
 			topPosition = topPosition-topPosition-topPosition;
 			jQuery(this).find(".img-wpr").css("bottom", topPosition);
 			var leftPosition = (imageWidth - windowWidth) / 2;
+			var divWidth = jQuery(this).parent().width();
+			var leftContent = (imageWidth - divWidth) / 2;
+			divWidth = divWidth-20;
+			jQuery(this).find(".content-wrapper").css("left", leftContent);
+			
+			jQuery(this).find(".content-wrapper").css("width", divWidth);
 			leftPosition = leftPosition-leftPosition-leftPosition;
 			jQuery(this).find(".img-wpr").css("left", leftPosition);
-			jQuery(this).find(".content-wrapper").css("bottom", contentWrapperPosition) 
+			jQuery(this).find(".content-wrapper").css("bottom", contentWrapperPosition);
+			
+			
 		}
 		else {
 			jQuery(this).addClass("center");
