@@ -104,7 +104,7 @@ jQuery(document).ready(function() {
 	
 	
 	$( window ).resize(function() {
-		resizeWindow();
+		setTimeout(function(){ resizeWindow(); }, 500);
 	});
 	resizeWindow();
 	jQuery("#wrapper .slick-arrow, .slick-dots button").on("click", function(e) {

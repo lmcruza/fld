@@ -495,7 +495,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	text-align:center;
 }
 .content-article  img{
-	width:100%;
+	max-width:100%;
 	margin-bottom:25px;
 }
 .content-article h2, .content-article h3{
@@ -512,7 +512,8 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .content-article p{
 	text-align:center;
-	margin:20px 200px;
+	padding:0 20%;
+	margin-bottom:20px;
 }
 .content-article .box {
 	padding:12px 25px;
@@ -1221,8 +1222,9 @@ html body .social-media  .white a:hover{
 	text-align:center;
 	margin-top:20px;
 	color:#333333;
-	margin-bottom:10px;
+	margin-bottom:0;
 	background:#FFF;
+	
 }
 .centering-image-video-container iframe{
 	pointer-events: none;
@@ -1682,6 +1684,13 @@ body.dark footer#footer .info-wpr p {
 	.contact-us .image-wpr{position:static;margin-bottom:20px;padding:0;}
 	.contact-us .image-wpr *{color:#666 !important;}
 	.centering-image-video-container .img-wpr-inter .content-wrapper .inner {padding:0 20px;}
+	.content-article p {padding-left:20px;padding-right:20px;}
+	.article-acccordion p {padding:0 20px;}
+	.article-acccordion .accordion-wpr {margin:20px 20px 0 20px}
+	.article-acccordion h3 {padding:0}
+	.article-acccordion .accordion-wpr p {padding:0 20px;}
+	.article-acccordion h2.bottom , .article-acccordion p.bottom-content{padding:0 20px;}
+	div.media-container p {padding:0;}
 }
 @media screen and (max-width: 649px) {
 	.nav-desktop{display:none;}
@@ -1693,5 +1702,7 @@ body.dark footer#footer .info-wpr p {
 	.portlet-dockbar { width:100%; overflow:hidden;}
 	.centering-image-video-container .img-wpr-inter .content-wrapper p {display:none;}
 	.slick-slider .content-wpr-bottom p, .slick-slider .content-wpr-top p {display:none;}
+	.archivo-relacionado {padding:0 20px;}
+	
 }
  

@@ -135,15 +135,17 @@
 	top:10%;
 	left:0;
 	text-align:center;
+	width:100%;
 }
 .slick-slider  p, .slick-slider h2{
     padding:0 20%;
 }
 .slick-slider .content-wpr-bottom {
 	position:absolute;
-	top:70%;
+	bottom:10%;
 	left:0;
 	text-align:center;
+	width:100%;
 }
 .slick-slider .content-wpr-bottom a, .slick-slider .content-wpr-top a{
 	color:#000;
