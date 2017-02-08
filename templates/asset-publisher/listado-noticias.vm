@@ -24,7 +24,11 @@
 						#set( $link = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry, true) )
 						<a href="$link" class="link">
 
-							<p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $entry.getCreateDate()), $locale)</p>
+							<!-- p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $entry.getCreateDate()), $locale)</p -->
+
+							#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='fecha']") )
+							#set( $fecha = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
+							<p>$fecha</p>
 
 							#set( $xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='titulo']") )
 							#set( $titulo = $xPathSelector.selectSingleNode($rootElement).getStringValue() )
