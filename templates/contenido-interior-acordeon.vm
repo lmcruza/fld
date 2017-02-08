@@ -8,19 +8,21 @@
 		<h2 class="top">$mainHeader.getData()</h2>
 	#end
 	#if($image.getData() != "")
-		<img src="$image.getData()" />
-        #if($alternativeBackgroundInSection.getData() == "true")
-            #set ($background = "alternative-background")
-        #else 
-            #set ($background = "")
-        #end
-        <div class="$background over-image">
-    		#if($bollowImageSeparator.headerBellowImage.getData() != "")
-    		    <h3>$headerBellowImage.getData()</h3>
-    	    #end
-    	    #if($bollowImageSeparator.paragraphBellowImage.getData() != "")
-    		    <p>$paragraphBellowImage.getData()</p>
-    		#end
+		<div class="image-wpr">
+			<img src="$image.getData()" />
+			#if($alternativeBackgroundInSection.getData() == "true")
+				#set ($background = "alternative-background")
+			#else 
+				#set ($background = "")
+			#end
+			<div class="$background over-image">
+				#if($bollowImageSeparator.headerBellowImage.getData() != "")
+					<h3>$headerBellowImage.getData()</h3>
+				#end
+				#if($bollowImageSeparator.paragraphBellowImage.getData() != "")
+					<p>$paragraphBellowImage.getData()</p>
+				#end
+			</div>
 		</div>
 	#end
 	#foreach($ingressSep in $ingressSeparator.getSiblings())

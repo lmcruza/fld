@@ -506,6 +506,14 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	max-width:100%;
 	margin-bottom:25px;
 }
+.content-article .image-wpr {
+	position:relative;
+}
+.content-article .image-wpr .inner{
+	position:absolute;
+	bottom:10%;
+	left:0;
+}
 .content-article h2, .content-article h3{
 	font-size:40px;
 	font-weight: 600;

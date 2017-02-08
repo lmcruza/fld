@@ -12,18 +12,22 @@
 				</h2>
 			#end
 			#if($to.image.getData() != "")
-				#if($to.textOnImageWhite.getData() == "true")
-					#set ($color = "white")
-				#else 
-					#set ($color = "")
-				#end
-				<img src="$to.image.getData()" />
-				#if($to.headerOnImage.getData() != "")
-					<h3 class="$color">$to.headerOnImage.getData()</h3>
-				#end
-				#if($to.paragraphOnImage.getData() != "")
-					<p class="$color">$to.paragraphOnImage.getData()</p>
-				#end
+				<div class="image-wpr">
+					#if($to.textOnImageWhite.getData() == "true")
+						#set ($color = "white")
+					#else 
+						#set ($color = "")
+					#end
+					<img src="$to.image.getData()" />
+					<div class="inner">
+						#if($to.headerOnImage.getData() != "")
+							<h3 class="$color">$to.headerOnImage.getData()</h3>
+						#end
+						#if($to.paragraphOnImage.getData() != "")
+							<p class="$color">$to.paragraphOnImage.getData()</p>
+						#end
+					</div>
+				</div>
 			#end
 			#if($to.topParagraph.getData() != "")
                 #if($to.alternativeBackgroundInTopSection.getData() == "true")
