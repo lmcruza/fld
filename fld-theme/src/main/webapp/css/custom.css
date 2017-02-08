@@ -691,7 +691,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	transition: all 500ms linear 0ms;
 }
 .four-image-teaser a:hover .wpr{
-	top:20%;
+	top:5%;
 	transition: all 500ms linear 0ms;
 }
 .four-image-teaser .top  a h3{
@@ -937,6 +937,7 @@ html body .social-media  .white a:hover{
 /*contact-us*/
 .contact-us {
 	padding:40px 30px;
+	position:relative;
 }
 .contact-us img {
 	margin-bottom:45px;
@@ -949,6 +950,13 @@ html body .social-media  .white a:hover{
 	text-align:center;
 	text-transform:uppercase;
 }
+.contact-us .image-wpr{
+	padding:0 20% 0 20%;
+	text-align:center;
+	position:absolute;
+	top:20%;
+	left:0;
+}
 .contact-us h3{
 	font-size:30px;
 	font-weight: 600;
@@ -956,7 +964,7 @@ html body .social-media  .white a:hover{
 	padding:0 0 20px 0;
 	text-transform:uppercase;	
 	margin:0;
-	padding:0 0 20px 0;
+	
 }
 .contact-us .wpr{
 	border:2px solid #eeeeee;
@@ -1177,10 +1185,10 @@ html body .social-media  .white a:hover{
 }
 .centering-image-video-container .img-wpr-inter .content-wrapper {
     left: 0;
-    padding: 0 10%;
+    padding: 0 20%;
     position: absolute;
     text-align: center;
-    width: 80%;
+    width: 60%;
 }
 .centering-image-video-container .img-wpr-inter .content-wrapper  h2{
 	display:inline-block;
@@ -1362,6 +1370,9 @@ html body .columnas-imagen-texto  .white a:hover{
     padding: 0 0 10px;
     text-align: center;
     text-transform: uppercase;
+}
+.contenido-columnas-imagen-texto img {
+	margin-bottom:10px;
 }
 .contenido-columnas-imagen-texto a{
 	color: #666;
@@ -1664,6 +1675,8 @@ body.dark footer#footer .info-wpr p {
 	.four-image-teaser .bottom {margin:0;width:auto;}
 	.contenido-columnas-imagen-texto {flex-wrap: wrap;}
 	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:0;}
+	.contact-us .image-wpr{position:static;margin-bottom:20px;padding:0;}
+	.contact-us .image-wpr *{color:#666 !important;}
 }
 @media screen and (max-width: 649px) {
 	.nav-desktop{display:none;}
