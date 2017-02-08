@@ -1025,6 +1025,7 @@ html body .social-media  .white a:hover{
 	font-size:18px;
 	margin-bottom:0;
 	line-height:1.3em;
+	text-align:left;
 }
 .contact-us  .acccordion-content {
 	display:none;
@@ -1336,6 +1337,34 @@ html body .columnas-imagen-texto  .white a{
 }
 html body .columnas-imagen-texto  .white a:hover{
 	color:#939393 !important;
+}
+/*contenido-columnas-imagen-texto*/
+.contenido-columnas-imagen-texto {
+	display:flex;
+	padding:0 20px;
+	color:#666;
+}
+.contenido-columnas-imagen-texto .wpr {
+	margin-right:4%;
+	text-align:center;
+    overflow: hidden;
+    padding: 20px 2%;
+    position: relative;
+	 background: #eeeeef;
+}
+.contenido-columnas-imagen-texto .wpr:last-child {
+	margin-right:0;
+}
+.contenido-columnas-imagen-texto h2{
+    color: #666;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenido-columnas-imagen-texto a{
+	color: #666;
 }
 /*contenido-texto-foto-flotante*/
 .contenido-texto-foto-flotante  {

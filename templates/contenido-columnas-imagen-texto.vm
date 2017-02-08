@@ -4,21 +4,22 @@
 	#set ($background = "")
 #end						
 <div class="contenido-columnas-imagen-texto $background">
-	<div class="columnas-imagen-texto">
-    	#foreach($columnSep in $columnSeparator.getSiblings())
-    	    #if($columnSep.header.getData() != "")
-    	        <h2>$columnSep.header.getData()</h2>
-    	    #end
-    	    #if($columnSep.image.getData() != "")
-                <img src="$columnSep.image.getData()" />
-            #end
-    	    #if($columnSep.contentLink.getData() != "")
-    			<a href="$columnSep.contentLink.getData()">
-    			   <p>$columnSep.paragraph.getData()</p>
-                </a>
-            #else
-                <p>$columnSep.paragraph.getData()</p>
-            #end
-    	#end
-	</div>
+	#foreach($columnSep in $columnSeparator.getSiblings())
+		<div class="wpr">
+			#if($columnSep.header.getData() != "")
+				<h2>$columnSep.header.getData()</h2>
+			#end
+			#if($columnSep.image.getData() != "")
+				<img src="$columnSep.image.getData()" />
+			#end
+			#if($columnSep.contentLink.getData() != "")
+				<a href="$columnSep.contentLink.getData()">
+				<p>$columnSep.paragraph.getData()</p>
+				</a>
+			#else
+				<p>$columnSep.paragraph.getData()</p>
+			#end
+		</div>
+	#end
+	
 </div>
