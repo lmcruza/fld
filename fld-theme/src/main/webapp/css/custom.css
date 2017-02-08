@@ -261,6 +261,9 @@ header .nav-menu {
 	color:#FFF;
 	font-size:1.2em;
 }
+#wrapper header .navigation-content-mobile li a.first-lvl.selected {
+	color:#ff7979;
+}
 #wrapper header .navigation-content-mobile li.first-lvl .open-menu:hover {
 	text-decoration:none;
 }
@@ -417,7 +420,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	width:100%;
 	margin-bottom:25px;
 }
-.article-acccordion p.ingress {
+.article-acccordion p {
 	text-align:center;
 	padding:0 20% 0 20%;
 }
@@ -426,7 +429,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-weight: 600;
 	color:#666;
 	text-transform: uppercase;
-	padding:0 20px 10px 20px;
+	padding:0 20% 10px 20%;
 	margin:0;
 	text-align:center;
 }
@@ -465,8 +468,8 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	display:none;
 }
 .article-acccordion .accordion-wpr p {
-	padding:0 20px;
-	text-align:justify;
+	padding:0 20%;
+	text-align:center;
 }
 .article-acccordion .accordion-wpr p:last-child {
 	padding-bottom:20px;
@@ -1037,7 +1040,7 @@ html body .social-media  .white a:hover{
 }
 .contact-us  .acccordion-content {
 	display:none;
-	padding-left:135px;
+	padding:0 20px;
 }
 .contact-us .wpr.open .acccordion-content {
 	display:block;
@@ -1689,5 +1692,6 @@ body.dark footer#footer .info-wpr p {
 	.four-image-teaser .top a {width:100%;}	
 	.portlet-dockbar { width:100%; overflow:hidden;}
 	.centering-image-video-container .img-wpr-inter .content-wrapper p {display:none;}
+	.slick-slider .content-wpr-bottom p, .slick-slider .content-wpr-top p {display:none;}
 }
  
