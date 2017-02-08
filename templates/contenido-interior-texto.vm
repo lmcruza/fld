@@ -33,7 +33,7 @@
                 #end
                 <div class="$background">
 				    <p>$to.topParagraph.getData()</p>
-			    <div>
+			    </div>
 			#end
 		#end
 	</div>
