@@ -41,11 +41,11 @@
 					</div>
 					<span class="icon"></span>
 				</a>
-			</div>
-			<div class="acccordion-content">
-				<p>
-					$person.resumee.getData()
-				</p>
+				<div class="acccordion-content">
+					<p>
+						$person.resumee.getData()
+					</p>
+				</div>
 			</div>
 		</div>
 	#end	
