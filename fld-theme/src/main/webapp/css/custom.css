@@ -1341,7 +1341,7 @@ html body .columnas-imagen-texto  .white a:hover{
 /*contenido-columnas-imagen-texto*/
 .contenido-columnas-imagen-texto {
 	display:flex;
-	padding:0 20px;
+	padding:0 30px;
 	color:#666;
 }
 .contenido-columnas-imagen-texto .wpr {
@@ -1662,6 +1662,8 @@ body.dark footer#footer .info-wpr p {
 	.two-image-teaser .top {flex-wrap: wrap;}
 	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
 	.four-image-teaser .bottom {margin:0;width:auto;}
+	.contenido-columnas-imagen-texto {flex-wrap: wrap;}
+	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:0;}
 }
 @media screen and (max-width: 649px) {
 	.nav-desktop{display:none;}
