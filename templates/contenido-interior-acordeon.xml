@@ -51,7 +51,7 @@
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="headerBellowImage" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 		<meta-data locale="en_US">
 			<entry name="label">
-				<![CDATA[Header bellow image]]>
+				<![CDATA[Header on image]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -62,7 +62,7 @@
 		</meta-data>
 		<meta-data locale="es_ES">
 			<entry name="label">
-				<![CDATA[Cabecera bajo la imagen]]>
+				<![CDATA[Cabecera sobre la imagen]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -75,7 +75,7 @@
 	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="paragraphBellowImage" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="large">
 		<meta-data locale="en_US">
 			<entry name="label">
-				<![CDATA[Paragraph bellow image]]>
+				<![CDATA[Paragraph on image]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -86,7 +86,7 @@
 		</meta-data>
 		<meta-data locale="es_ES">
 			<entry name="label">
-				<![CDATA[Párrafo bajo la imagen]]>
+				<![CDATA[Párrafo sobre la imagen]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -96,10 +96,10 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
-	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="alternativeBackgroundInSection" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="textInWhite" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
 		<meta-data locale="en_US">
 			<entry name="label">
-				<![CDATA[Alternative background in section bellow image?]]>
+				<![CDATA[Text in white for header and paragraph on image?]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[false]]>
@@ -110,7 +110,7 @@
 		</meta-data>
 		<meta-data locale="es_ES">
 			<entry name="label">
-				<![CDATA[¿Usar fondo alternativo en la sección bajo la imagen?]]>
+				<![CDATA[¿Texto en blanco para la cabecera y el párrafo sobre la imagen?]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[false]]>
@@ -139,30 +139,6 @@
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
-				</entry>
-				<entry name="tip">
-					<![CDATA[]]>
-				</entry>
-			</meta-data>
-		</dynamic-element>
-		<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="alternativeBackgroundInIngressSection" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
-			<meta-data locale="en_US">
-				<entry name="label">
-					<![CDATA[Alternative background in section?]]>
-				</entry>
-				<entry name="predefinedValue">
-					<![CDATA[false]]>
-				</entry>
-				<entry name="tip">
-					<![CDATA[]]>
-				</entry>
-			</meta-data>
-			<meta-data locale="es_ES">
-				<entry name="label">
-					<![CDATA[¿Usar fondo alternativo en la sección?]]>
-				</entry>
-				<entry name="predefinedValue">
-					<![CDATA[false]]>
 				</entry>
 				<entry name="tip">
 					<![CDATA[]]>
@@ -300,30 +276,6 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
-	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="alternativeBackgroundInAccordionSection" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
-		<meta-data locale="en_US">
-			<entry name="label">
-				<![CDATA[Alternative background in accordion section?]]>
-			</entry>
-			<entry name="predefinedValue">
-				<![CDATA[false]]>
-			</entry>
-			<entry name="tip">
-				<![CDATA[]]>
-			</entry>
-		</meta-data>
-		<meta-data locale="es_ES">
-			<entry name="label">
-				<![CDATA[¿Usar fondo alternativo en la sección acordeón?]]>
-			</entry>
-			<entry name="predefinedValue">
-				<![CDATA[false]]>
-			</entry>
-			<entry name="tip">
-				<![CDATA[]]>
-			</entry>
-		</meta-data>
-	</dynamic-element>
 	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="bottomContentSeparator" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-separator" width="">
 		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="bottomHeader" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
@@ -373,30 +325,6 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="alternativeBackgroundInBottonSection" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
-			<meta-data locale="en_US">
-				<entry name="label">
-					<![CDATA[Alternative background in accordion section?]]>
-				</entry>
-				<entry name="predefinedValue">
-					<![CDATA[false]]>
-				</entry>
-				<entry name="tip">
-					<![CDATA[]]>
-				</entry>
-			</meta-data>
-			<meta-data locale="es_ES">
-				<entry name="label">
-					<![CDATA[¿Usar fondo alternativo en la sección acordeón?]]>
-				</entry>
-				<entry name="predefinedValue">
-					<![CDATA[false]]>
-				</entry>
-				<entry name="tip">
-					<![CDATA[]]>
-				</entry>
-			</meta-data>
-		</dynamic-element>
 		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Bottom content separator]]>
@@ -422,6 +350,30 @@
 				<![CDATA[]]>
 			</entry>
 			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="alternativeBackground_" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Use alternative background for entire content?]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[¿Usar fondo alternativo para todo el contenido?]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
 				<![CDATA[]]>
 			</entry>
 		</meta-data>

@@ -16,12 +16,12 @@
 			#set ($color = "")
 		#end
 		<img src="$headerImage.getData()" />
-		<div class="image-wpr">
+		<div class="image-wpr $color">
     		#if($headerOnImage.getData() != "")
-    		    <h3 class="$color">$headerOnImage.getData()</h3>
+    		    <h3>$headerOnImage.getData()</h3>
     	    #end
     	    #if($paragraphOnImage.getData() != "")
-    		    <p class="$color">$paragraphOnImage.getData()</p>
+    		    <p>$paragraphOnImage.getData()</p>
     		#end
 		</div>
 	#end
