@@ -14,7 +14,7 @@
         #else 
             #set ($background = "")
         #end
-        <div class="$background">
+        <div class="$background over-image">
     		#if($bollowImageSeparator.headerBellowImage.getData() != "")
     		    <h3>$headerBellowImage.getData()</h3>
     	    #end

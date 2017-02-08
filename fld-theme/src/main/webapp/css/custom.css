@@ -416,9 +416,17 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	padding:0 20% 25px 20%;
 	text-align:center;
 }
+.article-acccordion .image-wpr {
+	position:relative;	
+}
 .article-acccordion img {
 	width:100%;
 	margin-bottom:25px;
+}
+.article-acccordion .over-image {
+	position:absolute;
+	bottom:10%;
+	left:0;
 }
 .article-acccordion p {
 	text-align:center;
