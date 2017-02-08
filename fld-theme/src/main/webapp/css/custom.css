@@ -371,7 +371,7 @@ div.media-container div.content-wpr h3 {
 	color:#666;
 }
 div.media-container h2 {
-	padding:35px 3% 0 3%;
+	padding:35px 20% 0 20%;
 	text-align:center;
 	color:#666;
 	text-transform: uppercase;
@@ -514,6 +514,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 .content-article .box {
 	padding:12px 25px;
 	background:#bfbfbf;
+	margin: 0 -25px;
 }
 .face {
     backface-visibility: hidden;
@@ -962,7 +963,9 @@ html body .social-media  .white a:hover{
 	padding:2px;	
 	margin-bottom:6px;
 }
-
+.contact-us p{
+	text-align:center;
+}
 .contact-us a {
 	display:block;
 	position:relative;
@@ -1358,7 +1361,7 @@ html body .columnas-imagen-texto  .white a:hover{
 	color:#666;
 	text-transform: uppercase;	
 	padding:10px 0 25px 0;	
-	margin-bottom:0;
+	margin:0;
 	text-align: center;
 }
 .contenido-texto-foto-flotante .paragraph-container h2 {
