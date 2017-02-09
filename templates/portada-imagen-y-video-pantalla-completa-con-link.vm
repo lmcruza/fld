@@ -8,7 +8,9 @@
 			#end		
 			#if($imageSeparator.image.getData() != "")
 				<img src="$imageSeparator.image.getData()" />
-				<a class="play-icon $source" href="javascript:void(0)"><span></span></a>
+				#if($videoSeparator.mp4Video.getData() != "" || $videoSeparator.streamingVideo.getData() != "" || $videoSeparator.youtubeVideo.getData() != "")
+				    <a class="play-icon $source" href="javascript:void(0)"><span></span></a>
+			    #end
 			#end
 			#if($header.getData() != "")
 				#if($textInWhite.getData() == "true")
