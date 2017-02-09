@@ -45,3 +45,27 @@
 		</div>
 	</div>
 #end
+
+#set ( $url = $themeDisplay.getURLCurrent() )
+#set ( $paramPrefix = "_" + $themeDisplay.getPortletDisplay().getId() + "_" )
+#set ( $deltaParam = $paramPrefix + "delta" )
+#set ( $curParam = $paramPrefix + "cur" )
+#set ( $deltaParamValue = $httpUtil.getParameter($themeDisplay.getURLCurrent(), $deltaParam, false) )
+
+#if($deltaParamValue == "")
+    #set ( $deltaParamValue = 6 )
+#end
+
+#if ($entries.size() == $getterUtil.getInteger($deltaParamValue) )
+    #set ( $deltaParamValue = $getterUtil.getInteger($deltaParamValue) + 6 )
+    
+    #if( $url.indexOf("?") > 0)
+        #set ( $url = $url.substring(0, $url.indexOf("?")) )
+    #end
+    
+    #set ( $urlParams = "p_p_id=" + $themeDisplay.getPortletDisplay().getId() + "&" + $deltaParam + "=" + $deltaParamValue + "&" + $curParam + "=1" )
+    #set ( $url = $url + "?" + $urlParams )
+    <div class="load-more">
+      <a href="$url"><span></span></a>
+    </div>
+#end
