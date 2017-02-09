@@ -9,7 +9,9 @@
 	#end
 	#if($image.getData() != "")
 		<div class="image-wpr">
-			<img src="$image.getData()" />
+			<div class="img-wpr">
+				<img src="$image.getData()" />
+			</div>
 			#if($textInWhite.getData() == "true")
 				#set ($color = "white")
 			#else 

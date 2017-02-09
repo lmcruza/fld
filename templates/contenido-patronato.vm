@@ -15,7 +15,9 @@
 		#else 
 			#set ($color = "")
 		#end
-		<img src="$headerImage.getData()" />
+		<div class="img-wpr">
+			<img src="$headerImage.getData()" />
+		</div>
 		<div class="image-wpr $color">
     		#if($headerOnImage.getData() != "")
     		    <h3>$headerOnImage.getData()</h3>

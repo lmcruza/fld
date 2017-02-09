@@ -18,7 +18,9 @@
 					#else 
 						#set ($color = "")
 					#end
-					<img src="$to.image.getData()" />
+					<div class="img-wpr">
+						<img src="$to.image.getData()" />
+					</div>
 					<div class="inner $color">
 						#if($to.headerOnImage.getData() != "")
 							<h3>$to.headerOnImage.getData()</h3>

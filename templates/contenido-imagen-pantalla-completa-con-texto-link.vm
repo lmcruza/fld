@@ -5,7 +5,7 @@
 #end						
 <div class="media-container $background">
 	#if($image.getData() != "")
-	    <div class="media-wpr">
+		<div class="media-wpr img-wpr">
     		<img src="$image.getData()" />
 		</div>
 	#end
