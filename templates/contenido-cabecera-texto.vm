@@ -1,0 +1,34 @@
+#if($paragraphSeparator.header.getData() != "" || $paragraphSeparator.paragraph.getData() != "")
+	#if($paragraphSeparator.alternativeBackground.getData() == "true")
+		#set ($background = "alternative-background")
+	#else 
+		#set ($background = "")
+	#end
+    <div class="content-article $background">
+		#if($paragraphSeparator.header.getData() != "")
+			<h2>
+				$paragraphSeparator.header.getData()
+			</h2>
+		#end
+		#if($paragraphSeparator.paragraph.getData() != "")
+			<p>
+				$paragraphSeparator.paragraph.getData()
+			</p>
+		#end
+    </div>
+#end
+
+#foreach($paragraphSep in $paragraphSeparator2.getSiblings())
+	#if($paragraphSep.paragraph2.getData() != "")
+    	#if($paragraphSep.alternativeBackground2.getData() == "true")
+    		#set ($background = "alternative-background")
+    	#else 
+    		#set ($background = "")
+    	#end
+        <div class="content-article $background">
+			<p>
+				$paragraphSep.paragraph2.getData()
+			</p>
+        </div>
+    #end
+#end
