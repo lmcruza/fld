@@ -498,7 +498,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 /*content-article*/
 .content-article {
-	padding:30px 25px 25px 25px;
+	padding:30px 25px 0 25px;
 	font-size: 18px !important;
 	text-align:center;
 }
