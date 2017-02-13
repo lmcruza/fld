@@ -437,9 +437,10 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-weight: 600;
 	color:#666;
 	text-transform: uppercase;
-	padding:0 20% 10px 20%;
+	padding:0 20px 10px 0;
 	margin:0;
-	text-align:center;
+	text-align:left;
+	position:relative;
 }
 .article-acccordion .acccordion-link:hover{
 	color:#000;
@@ -454,7 +455,9 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
     height: 0;	
 }
 .article-acccordion a.acccordion-link h3 span {
-	float:right;
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 .article-acccordion a.acccordion-link h3 span:after {
 	content: "\f077"; 
@@ -476,14 +479,15 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	display:none;
 }
 .article-acccordion .accordion-wpr p {
-	padding:0 20%;
-	text-align:center;
+	padding:0;
+	text-align:left;
+	color:#333333;
 }
 .article-acccordion .accordion-wpr p:last-child {
 	padding-bottom:20px;
 }
 .article-acccordion  .accordion-wpr {
-	margin-top:25px;
+	margin-top:13px;
 }
 .article-acccordion div.open.accordion-wpr .acccordion-content {
 	display:block;
