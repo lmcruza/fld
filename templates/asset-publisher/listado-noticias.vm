@@ -1,3 +1,8 @@
+#set ( $anchor = $themeDisplay.getPortletDisplay().getId() )
+#set ( $anchor = $anchor.split("_").get(2))
+
+<div class="anchor" id="$anchor"><!-- --></div>
+
 #if (!$entries.isEmpty())
 	<div class="news-feed">
 		<div class="wpr">
@@ -22,6 +27,7 @@
                         #end
 
 						#set( $link = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry, true) )
+						#set ( $link = $link + "#" + $anchor )
 						<a href="$link" class="link">
 
 							<!-- p>$dateTool.format("dd/MM/yyyy", $dateTool.toDate("EEE, dd MMM yyyy hh:mm:ss Z", $entry.getCreateDate()), $locale)</p -->
@@ -43,29 +49,30 @@
 				</section>
 			#end
 		</div>
+		
+        #set ( $url = $themeDisplay.getURLCurrent() )
+        #set ( $paramPrefix = "_" + $themeDisplay.getPortletDisplay().getId() + "_" )
+        #set ( $deltaParam = $paramPrefix + "delta" )
+        #set ( $curParam = $paramPrefix + "cur" )
+        #set ( $deltaParamValue = $httpUtil.getParameter($themeDisplay.getURLCurrent(), $deltaParam, false) )
+        
+        #if($deltaParamValue == "")
+            #set ( $deltaParamValue = 6 )
+        #end
+        
+        #if ($entries.size() == $getterUtil.getInteger($deltaParamValue) )
+            #set ( $deltaParamValue = $getterUtil.getInteger($deltaParamValue) + 6 )
+            
+            #if( $url.indexOf("?") > 0)
+                #set ( $url = $url.substring(0, $url.indexOf("?")) )
+            #end
+            
+            #set ( $urlParams = "p_p_id=" + $themeDisplay.getPortletDisplay().getId() + "&" + $deltaParam + "=" + $deltaParamValue + "&" + $curParam + "=1" )
+            #set ( $url = $url + "?" + $urlParams + "#" + $anchor )
+            <div class="load-more">
+              <a href="$url"><span></span></a>
+            </div>
+        #end		
+		
 	</div>
-#end
-
-#set ( $url = $themeDisplay.getURLCurrent() )
-#set ( $paramPrefix = "_" + $themeDisplay.getPortletDisplay().getId() + "_" )
-#set ( $deltaParam = $paramPrefix + "delta" )
-#set ( $curParam = $paramPrefix + "cur" )
-#set ( $deltaParamValue = $httpUtil.getParameter($themeDisplay.getURLCurrent(), $deltaParam, false) )
-
-#if($deltaParamValue == "")
-    #set ( $deltaParamValue = 6 )
-#end
-
-#if ($entries.size() == $getterUtil.getInteger($deltaParamValue) )
-    #set ( $deltaParamValue = $getterUtil.getInteger($deltaParamValue) + 6 )
-    
-    #if( $url.indexOf("?") > 0)
-        #set ( $url = $url.substring(0, $url.indexOf("?")) )
-    #end
-    
-    #set ( $urlParams = "p_p_id=" + $themeDisplay.getPortletDisplay().getId() + "&" + $deltaParam + "=" + $deltaParamValue + "&" + $curParam + "=1" )
-    #set ( $url = $url + "?" + $urlParams )
-    <div class="load-more">
-      <a href="$url"><span></span></a>
-    </div>
 #end

@@ -53,6 +53,15 @@
 
 #set ($dlService = $serviceLocator.findService("com.liferay.portlet.documentlibrary.service.DLFileEntryLocalService"))
 
+#set ( $current_url = $request.get("attributes").CURRENT_COMPLETE_URL )
+#set ( $anchor = $current_url.substring($current_url.indexOf('/-/asset_publisher/')).split('/').get(3) )
+
+<div class="anchor" id="$anchor"><!-- --></div>
+
+#set ( $backUrl = $current_url.substring(0,$current_url.indexOf('/-/asset_publisher/')) + "#" + $anchor)
+
+<span class="header-back-to"> <a class="icon-circle-arrow-left previous-level" href="$backUrl" title="Back"> <span class="helper-hidden-accessible"> Back </span> </a> </span>
+
 <div class="docList">
 	#if ($fecha.data != '')
 		<div class="enc">

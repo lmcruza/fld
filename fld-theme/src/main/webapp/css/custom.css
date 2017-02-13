@@ -1562,6 +1562,10 @@ html body .portada-imagen-con-texto-link  .white a:hover{
 #wrapper  .portlet-asset-publisher .icon-circle-arrow-left{
 	padding:5px 20px 0 0;
 	margin-left:20px;
+	font-size:1.8em;
+}
+.portlet-asset-publisher .taglib-header {
+	display:none;
 }
 /*search-layout*/
 #wrapper .input-container {
