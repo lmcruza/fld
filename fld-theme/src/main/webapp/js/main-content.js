@@ -3,8 +3,9 @@ function centerImageVideo() {
 	var windowWidth = jQuery( window ).width();
 	var windowHeight = windowHeight-100;
 	jQuery("#wrapper .centering-image-video-container").each(function() {
-		var imageWidth = jQuery(this).find(".img-wpr-centering").width();	
-		if(imageWidth > windowWidth){
+		
+		var imageWidth = jQuery(this).find(".img-wpr-centering").width();
+		if(imageWidth >= windowWidth){
 			jQuery(this).height(windowHeight);
 			var imageHeight = jQuery(this).find(".img-wpr-centering").height();
 			var topPosition = (imageHeight - windowHeight) / 2;
@@ -39,38 +40,38 @@ jQuery(document).ready(function() {
 	jQuery("#open-search, #close-search").on("click", function() {
 		jQuery("#site-search").toggleClass("open");
 	});	
-	$('#content .img-wpr-centering video').each(function(index) {
-		$(this).attr('id', 'video'+index);
+	jQuery('#content .img-wpr-centering video').each(function(index) {
+		jQuery(this).attr('id', 'video'+index);
 	});
-	$('#content .img-wpr-centering a.play-icon').each(function(index) {
-		$(this).attr('id', index);
+	jQuery('#content .img-wpr-centering a.play-icon').each(function(index) {
+		jQuery(this).attr('id', index);
 	});	
 	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.video").on("click", function(e) {	
-		var currentVideo = $(this).attr('id');
+		var currentVideo = jQuery(this).attr('id');
 		var currentVideo = document.getElementById("video"+currentVideo);
 		currentVideo.play(); 
 		
-		$(this).prev().remove();
-		$(this).next().remove();
-		$(this).remove();
-		$(currentVideo).css("display", "inline-block");
-		$(this).parent().find(".iframe-wpr").css("display", "block");
+		jQuery(this).prev().remove();
+		jQuery(this).next().remove();
+		jQuery(this).remove();
+		jQuery(currentVideo).css("display", "inline-block");
+		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
 		centerImageVideo();
 	});	
 	jQuery("#content .centering-image-video-container .img-wpr a.play-icon.iframe").on("click", function(e) {		
-		$(this).prev().remove();
-		$(this).next().remove();
-		var iframeUrl = $(this).parent().find(".iframe-wpr").attr("url");
-		var iframeWidth = $(this).parent().find(".iframe-wpr").attr("iframeWidth");
+		jQuery(this).prev().remove();
+		jQuery(this).next().remove();
+		var iframeUrl = jQuery(this).parent().find(".iframe-wpr").attr("url");
+		var iframeWidth = jQuery(this).parent().find(".iframe-wpr").attr("iframeWidth");
 		var windowHeight = jQuery( window ).height()
 		windowHeight = windowHeight-80;
-		$(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
-		$(this).parent().find(".iframe-wpr").css("display", "block");
-		$(this).remove();
+		jQuery(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
+		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
+		jQuery(this).remove();
 		centerImageVideo();
 	});
 	setTimeout(function(){ centerImageVideo(); }, 1000);
-	$( window ).resize(function() {
+	jQuery( window ).resize(function() {
 		centerImageVideo();
 	});			
 	jQuery("#wrapper .nav-link-mobile").on("click", function(e) {	
@@ -79,7 +80,7 @@ jQuery(document).ready(function() {
 	var clickedLink = -1;
 	jQuery("#wrapper .navigation-content-mobile .open-menu").on("click", function(e) {
 		
-		var linkIndex = ($(this).parent().index());
+		var linkIndex = (jQuery(this).parent().index());
 		
 		if(clickedLink  != linkIndex) {
 			jQuery("#wrapper .navigation-content-mobile li.first-lvl").removeClass("open");
@@ -92,18 +93,18 @@ jQuery(document).ready(function() {
 		}
 		
 	});	
-	$(".regular").slick({
+	jQuery(".regular").slick({
 		dots: true,
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});	
-	$(".article-acccordion a.acccordion-link").on("click", function(e) {
-		$(this).parent().toggleClass("open");
+	jQuery(".article-acccordion a.acccordion-link").on("click", function(e) {
+		jQuery(this).parent().toggleClass("open");
 	});
 	
 	
-	$( window ).resize(function() {
+	jQuery( window ).resize(function() {
 		setTimeout(function(){ resizeWindow(); }, 500);
 	});
 		setTimeout(function(){ resizeWindow(); }, 500);
@@ -116,12 +117,12 @@ jQuery(document).ready(function() {
 	
 });
 function resizeWindow() {
-	var windowHeight = jQuery( window ).height();
-	windowHeight = windowHeight-80;
+	var windowHeightNew = jQuery( window ).height();
+	windowHeightNew = windowHeightNew-80;
 	jQuery("#content .img-wpr").each(function(index) {
 		var imgHeight = jQuery(this).height();
-		if(windowHeight < imgHeight) {
-			jQuery(this).height(windowHeight);
+		if(windowHeightNew < imgHeight) {
+			jQuery(this).height(windowHeightNew);
 		}
 	});	
 	var currentSlideHeight = jQuery("#content .slick-active").height();
