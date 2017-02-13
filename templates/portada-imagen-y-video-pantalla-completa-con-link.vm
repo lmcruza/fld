@@ -1,5 +1,5 @@
 <div class="centering-image-video-container">
-	<div class="img-wpr">
+	<div class="img-wpr-centering">
 		<div class="img-wpr-inter">
 			#if($videoSeparator.youtubeVideo.getData() != "")
 				#set ($source = "iframe")

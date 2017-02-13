@@ -3,14 +3,14 @@ function centerImageVideo() {
 	var windowWidth = jQuery( window ).width();
 	var windowHeight = windowHeight-100;
 	jQuery("#wrapper .centering-image-video-container").each(function() {
-		var imageWidth = jQuery(this).find(".img-wpr").width();	
+		var imageWidth = jQuery(this).find(".img-wpr-centering").width();	
 		if(imageWidth > windowWidth){
 			jQuery(this).height(windowHeight);
-			var imageHeight = jQuery(this).find(".img-wpr").height();
+			var imageHeight = jQuery(this).find(".img-wpr-centering").height();
 			var topPosition = (imageHeight - windowHeight) / 2;
 			contentWrapperPosition  = topPosition*1.1;
 			topPosition = topPosition-topPosition-topPosition;
-			jQuery(this).find(".img-wpr").css("bottom", topPosition);
+			jQuery(this).find(".img-wpr-centering").css("bottom", topPosition);
 			var leftPosition = (imageWidth - windowWidth) / 2;
 			var divWidth = jQuery(this).parent().width();
 			var leftContent = (imageWidth - divWidth) / 2;
@@ -19,17 +19,17 @@ function centerImageVideo() {
 			
 			jQuery(this).find(".content-wrapper").css("width", divWidth);
 			leftPosition = leftPosition-leftPosition-leftPosition;
-			jQuery(this).find(".img-wpr").css("left", leftPosition);
+			jQuery(this).find(".img-wpr-centering").css("left", leftPosition);
 			jQuery(this).find(".content-wrapper").css("bottom", contentWrapperPosition);
 			
 			
 		}
 		else {
 			jQuery(this).addClass("center");
-			jQuery(this).find(".img-wpr").attr({
+			jQuery(this).find(".img-wpr-centering").attr({
 				style:"position:relative;display:block"
 			});
-			var itemHeight = jQuery(this).find(".img-wpr").height();
+			var itemHeight = jQuery(this).find(".img-wpr-centering").height();
 			jQuery(this).css("height", itemHeight);
 			jQuery(this).find(".content-wrapper").css("bottom", "20px")
 		}
@@ -39,13 +39,13 @@ jQuery(document).ready(function() {
 	jQuery("#open-search, #close-search").on("click", function() {
 		jQuery("#site-search").toggleClass("open");
 	});	
-	$('#content .img-wpr video').each(function(index) {
+	$('#content .img-wpr-centering video').each(function(index) {
 		$(this).attr('id', 'video'+index);
 	});
-	$('#content .img-wpr a.play-icon').each(function(index) {
+	$('#content .img-wpr-centering a.play-icon').each(function(index) {
 		$(this).attr('id', index);
 	});	
-	jQuery("#content .centering-image-video-container .img-wpr a.play-icon.video").on("click", function(e) {	
+	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.video").on("click", function(e) {	
 		var currentVideo = $(this).attr('id');
 		var currentVideo = document.getElementById("video"+currentVideo);
 		currentVideo.play(); 
@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
 	$( window ).resize(function() {
 		setTimeout(function(){ resizeWindow(); }, 500);
 	});
-	resizeWindow();
+		setTimeout(function(){ resizeWindow(); }, 500);
 	jQuery("#wrapper .slick-arrow, .slick-dots button").on("click", function(e) {
 		setTimeout(function(){ resizeWindow(); }, 500);
 	});
@@ -116,8 +116,17 @@ jQuery(document).ready(function() {
 	
 });
 function resizeWindow() {
+	var windowHeight = jQuery( window ).height();
+	windowHeight = windowHeight-80;
+	jQuery("#content .img-wpr").each(function(index) {
+		var imgHeight = jQuery(this).height();
+		if(windowHeight < imgHeight) {
+			jQuery(this).height(windowHeight);
+		}
+	});	
 	var currentSlideHeight = jQuery("#content .slick-active").height();
 	jQuery("#content .regular.slider").css("height",currentSlideHeight);
 	currentSlideHeight = currentSlideHeight-50;
-	jQuery("#content .slick-dots").css("top",currentSlideHeight);	
+	jQuery("#content .slick-dots").css("top",currentSlideHeight);
+
 }

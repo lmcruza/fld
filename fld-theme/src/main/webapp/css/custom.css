@@ -1273,7 +1273,7 @@ html body .centering-image-video-container  .white a:hover{
 	height:50px;
 	background:#939393;
 	border-radius: 50px;
-	z-index:101;
+	z-index:99;
 }
 .centering-image-video-container .img-wpr-inter .play-icon:hover {
 	text-decoration:none;
@@ -1285,7 +1285,7 @@ html body .centering-image-video-container  .white a:hover{
 	font-size: 15px; 
 	display:block;
 	color:#FFF;
-	margin:15px 0 0 21px;
+	margin:13px 0 0 6px;
 }
 /*contenido-noticia*/
 .contenido-noticia p {
