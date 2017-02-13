@@ -460,7 +460,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
     top: 5px;
 }
 .article-acccordion a.acccordion-link h3 span:after {
-	content: "\f077"; 
+	content: "\f078";
 	font-family: 'fontawesome-alloy'; 
 	font-size: 10px; 
 	display:block;
@@ -469,7 +469,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	color:#303030;
 }	
 .article-acccordion .open a.acccordion-link h3 span:after {
-	content: "\f078"; 
+	content: "\f077";
 }
 .article-acccordion .accordion-wpr {
 	border-bottom:#696969 solid 1px;
@@ -1113,6 +1113,7 @@ html body .social-media  .white a:hover{
 /*news-feed*/
 .news-feed {
 	padding:60px;
+	background: #eeeeef;
 }
 .news-feed .wpr{
 	display:flex;
@@ -1126,7 +1127,8 @@ html body .social-media  .white a:hover{
 	overflow:hidden;
 	text-align:center;
 	padding:20px 2%;
-	background: #eeeeef;
+	background:#FFF;
+	
 }
 .news-feed h3{
 	font-size:18px !important;
