@@ -428,6 +428,9 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	bottom:10%;
 	left:0;
 }
+#wrapper .article-acccordion .over-image h3{
+	text-align:center;
+}
 .article-acccordion p {
 	text-align:center;
 	padding:0 20% 0 20%;
@@ -1574,6 +1577,8 @@ html body .portada-imagen-con-texto-link  .white a:hover{
 /*alternative background selection*/ 
 html body .alternative-background {
 	background-color:#f1f5f7 !important;
+	padding-bottom:10px !important;
+	padding-top:10px !important;
 }
 /*anchor template*/
 .anchor {
