@@ -1387,23 +1387,24 @@ html body .columnas-imagen-texto  .white a:hover{
 	margin-right:4%;
 	text-align:center;
     overflow: hidden;
-    padding: 20px 2%;
+    padding: 20px 0;
     position: relative;
-	 background: #eeeeef;
+	width: 31%;
+	text-align:center;
 }
 .contenido-columnas-imagen-texto .wpr:last-child {
 	margin-right:0;
 }
 .contenido-columnas-imagen-texto h2{
-    color: #666;
+    color: #000;
     font-size: 30px;
     font-weight: 600;
     padding: 0 0 10px;
     text-align: center;
-    text-transform: uppercase;
 }
 .contenido-columnas-imagen-texto img {
 	margin-bottom:10px;
+	display:inline-block;
 }
 .contenido-columnas-imagen-texto a{
 	color: #666;
@@ -1711,7 +1712,7 @@ body.dark footer#footer .info-wpr p {
 	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
 	.four-image-teaser .bottom {margin:0;width:auto;}
 	.contenido-columnas-imagen-texto {flex-wrap: wrap;}
-	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:0;}
+	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:3%;}
 	.contact-us .image-wpr{position:static;margin-bottom:20px;padding:0;}
 	.contact-us .image-wpr *{color:#666 !important;}
 	.centering-image-video-container .img-wpr-inter .content-wrapper .inner {padding:0 20px;}
@@ -1734,6 +1735,7 @@ body.dark footer#footer .info-wpr p {
 	.centering-image-video-container .img-wpr-inter .content-wrapper p {display:none;}
 	.slick-slider .content-wpr-bottom p, .slick-slider .content-wpr-top p {display:none;}
 	.archivo-relacionado {padding:0 20px;}
+	.contenido-columnas-imagen-texto .wpr {margin-right:0;width:94%;padding-left:3%;padding-right:3%}
 	
 }
  
