@@ -55,21 +55,24 @@ $theme.include($body_top_include)
 				#if ($theme.getSetting("youtube") != "")
 					<li class="youtube"><a target="_blank" href="$theme.getSetting("youtube")"><i class="icon-youtube "></i><span class="fa-hidden">YouTube</span></a></li>
 				#end
-			</ul>	
-			<a id="open-search" href="javascript:void(0);">
-				<i class="icon-search"></i>
-			</a>
+			</ul>
+			<div class="open-search-wpr">
+				<a id="open-search" href="javascript:void(0);">
+					<i class="icon-search"></i>
+				</a>
+				<div id="site-search">
+					<div class="inner-wpr">
+						<span></span>
+						$theme.search()
+					</div>
+				</div>				
+			</div>
 			<div class="navigation-content-mobile">
 				#parse ("$full_templates_path/mobile-navigation.vm")
 			</div>
 		</nav>
 
-		<div id="site-search">
-			<div class="inner-wpr">
-				<span></span>
-				$theme.search()
-			</div>
-		</div>
+
 
 	</header>
 

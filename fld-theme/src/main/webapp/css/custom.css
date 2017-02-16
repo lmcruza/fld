@@ -46,8 +46,9 @@ html body .white *{
 }
 #wrapper header .logo {
 	width:258px;
-	height:76px;
+	height:65px;
 	float:left;
+	overflow:hidden;
 }
 #wrapper header .logo h1{
 	margin:0;
@@ -63,6 +64,7 @@ html body .white *{
 
 #wrapper header  nav.main-nav {
 	position:relative;
+	padding-bottom:10px;
 }
 /*desktop navigation*/
 #wrapper header .nav-desktop {
@@ -190,7 +192,9 @@ header .nav-menu {
 	border-radius: 5px;
 	margin:15px 15px 0 0;
 	border:1px solid #e50c0c;
-
+}
+#wrapper header a.nav-link-mobile {
+	text-decoration:none;
 }
 #wrapper header a.nav-link-mobile span:after{
 	content: "\f0c9"; 
@@ -204,7 +208,7 @@ header .nav-menu {
 }
 #wrapper header  .navigation-content-mobile {
 	position:absolute;
-	top:62px;
+	top:72px;
 	right:99999px;
 	border:1px solid #e50c0c;
 	padding:10px;
@@ -282,10 +286,13 @@ header .nav-menu {
 	color:#FFF;	
 }
 /*site search*/
-#open-search {
-    float: right;
+.open-search-wpr {
+	margin-top: 23px;
+	float: right;
+	position:relative;
+}
+#open-search {   
     font-size: 18px;
-    margin-top: 23px;
 	color:#595959;
 }
 #open-search:hover {
@@ -298,10 +305,10 @@ header .nav-menu {
 	border:#cccccc 1px solid;
 	margin-top:10px;
 	padding:10px;
-	width:260px;
+	width:200px;
 	position:absolute;
-    right: 87px;
-    top: 50px;
+    right: -10px;
+    top: 25px;
 	background:#fff;
 }
 #site-search.open{
@@ -342,9 +349,15 @@ header .nav-menu {
 #site-search .input-text-wrapper, #site-search .input-text-wrapper input {
 	margin-bottom:0;
 }
+#site-search .input-text-wrapper:first-child{
+	width:150px;
+}
 #site-search select {
 	display:none;
 } 
+#site-search #search {
+	margin-left:10px;
+}
 /*CONTENT*/
 div.media-container {
 	text-align:center;
@@ -1696,15 +1709,11 @@ body.dark footer#footer .info-wpr p {
 	.news-feed section .hide-text{display:none;}
 	.video-image-text-teaser .media-wpr .content-wpr .inner-wpr h2 { font-size:20px;margin:0 0 10px 0;line-height:1.2em;}
 	.video-image-text-teaser .media-wpr .content-wpr .inner-wpr p {font-size:16px;margin:0;line-height:1.2em;}
-	.four-image-teaser .top {flex-wrap: wrap;}
+	
 	#wrapper header{position: relative;}
 	.portlet-dockbar {margin-top:0;}
 	#wrapper header .navigation-content-mobile.open {z-index:301}
 	#content {margin-top:0;}
-	.four-image-teaser .top a {width:100%;}
-	.two-image-teaser .top {flex-wrap: wrap;}
-	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
-	.four-image-teaser .bottom {margin:0;width:auto;}
 	.contenido-columnas-imagen-texto {flex-wrap: wrap;}
 	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:3%;}
 	.contact-us .image-wpr{position:static;margin-bottom:20px;padding:0;}
@@ -1719,6 +1728,11 @@ body.dark footer#footer .info-wpr p {
 	div.media-container p {padding:0;}
 }
 @media screen and (max-width: 649px) {
+	.four-image-teaser .top {flex-wrap: wrap;}
+	.four-image-teaser .top a {width:100%;}
+	.two-image-teaser .top {flex-wrap: wrap;}
+	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
+	.four-image-teaser .bottom {margin:0;width:auto;}	
 	.image-teaser .right h3 {font-size:36px;bottom:60px;}
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
 	#wrapper .image-teaser-with-button-on-image .wpr,#wrapper  .image-teaser .left,#wrapper  .image-teaser .right, .image-teaser,#wrapper .social-media .wpr {width: auto;padding: 0 20px 20px 20px;text-align:center;position:relative;left:auto !important;right:auto !important;bottom:auto;top:auto;}
@@ -1736,6 +1750,7 @@ body.dark footer#footer .info-wpr p {
 	.slick-slider .content-wpr-bottom p, .slick-slider .content-wpr-top p {display:none;}
 	.archivo-relacionado {padding:0 20px;}
 	.contenido-columnas-imagen-texto .wpr {margin-right:0;width:94%;padding-left:3%;padding-right:3%}
-	
+	#wrapper header  .navigation-content-mobile {width:250px;}
+	footer#footer p.copy-right, footer#footer .portal-links a{font-size:12px;}
 }
  
