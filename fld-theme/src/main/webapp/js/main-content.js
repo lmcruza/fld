@@ -113,21 +113,30 @@ jQuery(document).ready(function() {
 	});
 	jQuery("#wrapper .accordion-wpr .wpr a").on("click", function(e) {	
 		jQuery(this).parent().toggleClass("open");
-	});		
+	});
+	
+	resizeVideoVimeo();	
+	jQuery(window).bind('resize', function() { resizeVideoVimeo(); });
 	
 });
 function resizeWindow() {
-	var windowHeightNew = jQuery( window ).height();
-	windowHeightNew = windowHeightNew-80;
-	jQuery("#content .img-wpr").each(function(index) {
-		var imgHeight = jQuery(this).height();
-		if(windowHeightNew < imgHeight) {
-			jQuery(this).height(windowHeightNew);
-		}
-	});	
 	var currentSlideHeight = jQuery("#content .slick-active").height();
 	jQuery("#content .regular.slider").css("height",currentSlideHeight);
 	currentSlideHeight = currentSlideHeight-50;
-	jQuery("#content .slick-dots").css("top",currentSlideHeight);
+	jQuery("#content .slick-dots").css("top",currentSlideHeight);	
+}
 
+function resizeVideoVimeo() {
+	var windowHeight = jQuery( window ).height();
+	var windowWidth = jQuery( window ).width();
+	var windowHeightFinal = jQuery( window ).height() - 66;
+	
+	if(windowWidth > windowHeight + 350){
+		jQuery('.vimeo').height(windowHeightFinal);
+		jQuery(this).find(".vimeo").css("height", windowHeightFinal);
+	}
+	else{
+		jQuery('.vimeo').height("auto");
+		jQuery(this).find(".vimeo").css("height", "auto");
+	}
 }
