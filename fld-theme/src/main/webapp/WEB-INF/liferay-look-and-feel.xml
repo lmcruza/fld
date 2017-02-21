@@ -22,8 +22,5 @@
 			<default-cs>true</default-cs>
 			<css-class>default</css-class>
 		</color-scheme>
-		<color-scheme id="02" name="dark">
-			<css-class>dark</css-class>
-		</color-scheme>
 	</theme>	
 </look-and-feel>
