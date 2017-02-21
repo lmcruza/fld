@@ -36,14 +36,16 @@
 			#end
 		#end
 	</div>
-	<div class="box">
-		#if($bottom.bottomHeader.getData() != "")
-			<h3>
-				$bottom.bottomHeader.getData()
-			</h3>
-		#end
-		#if($bottom.bottomParagraph.getData() != "")
-			<p>$bottom.bottomParagraph.getData()</p>
-		#end
-	</div>
+	#if($bottom.bottomHeader.getData() != "" || $bottom.bottomParagraph.getData() != "")
+		<div class="box">
+			#if($bottom.bottomHeader.getData() != "")
+				<h3>
+					$bottom.bottomHeader.getData()
+				</h3>
+			#end
+			#if($bottom.bottomParagraph.getData() != "")
+				<p>$bottom.bottomParagraph.getData()</p>
+			#end
+		</div>
+	#end
 </div>
