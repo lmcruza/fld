@@ -1733,6 +1733,7 @@ body.dark footer#footer .info-wpr p {
 	.article-acccordion h2.bottom , .article-acccordion p.bottom-content{padding:0 20px;}
 	div.media-container p {padding:0;}
 	.four-image-teaser a .wpr p {opacity:1;}
+	div.media-container div.content-wpr {top:5%;padding-left:20px;padding-right:20px;width:90%;}
 }
 @media screen and (max-width: 649px) {
 	.four-image-teaser .top {flex-wrap: wrap;}
@@ -1758,6 +1759,8 @@ body.dark footer#footer .info-wpr p {
 	.contenido-columnas-imagen-texto .wpr {margin-right:0;width:94%;padding-left:3%;padding-right:3%}
 	#wrapper header  .navigation-content-mobile {width:250px;}
 	footer#footer p.copy-right, footer#footer .portal-links a{font-size:12px;}
+	.four-image-teaser .bottom {padding-left:20px;padding-right:20px;}
+	.image-teaser {padding-left:20px;padding-right:20px;}
 }
 
 /* Cambios samu */
