@@ -11,9 +11,6 @@ body {
 iframe{
 	width:100%;
 }
-body.dark {
-	background:#000;
-}
 #content {
 	width:100%;
 	overflow:hidden;
@@ -1616,6 +1613,9 @@ html body .alternative-background {
 .article-form-edit {
 	font-size:0.8em;
 }
+.portlet-journal-content li {
+	margin:0 0 20px 20px;
+}
 /*FOOTER*/
 footer#footer:after {
     visibility: hidden;
@@ -1674,13 +1674,6 @@ footer#footer .info-wpr p {
 .aui a:focus {
 	text-decoration:none;
 	outline:0;
-}
-/*dark*/
-body.dark footer#footer .portal-links ul li a{
-	color: #FFF;
-}
-body.dark footer#footer .info-wpr p {
-	color: #FFF;
 }
 .portlet-dockbar {
 	margin-top:80px;
@@ -1758,9 +1751,43 @@ body.dark footer#footer .info-wpr p {
 	.archivo-relacionado {padding:0 20px;}
 	.contenido-columnas-imagen-texto .wpr {margin-right:0;width:94%;padding-left:3%;padding-right:3%}
 	#wrapper header  .navigation-content-mobile {width:250px;}
-	footer#footer p.copy-right, footer#footer .portal-links a{font-size:12px;}
 	.four-image-teaser .bottom {padding-left:20px;padding-right:20px;}
 	.image-teaser {padding-left:20px;padding-right:20px;}
+	div.media-container div.content-wpr h3,
+	div.media-container h2,
+	.article-acccordion h2,
+	.content-article h2, 
+	.content-article h3,
+	.video-image-text-teaser .media-wpr .content-wpr .inner-wpr h2,
+	.four-image-teaser .top a h3,
+	.image-teaser .left h2,
+	.image-teaser .right h3,
+	.image-teaser-with-button-on-image h2,
+	.social-media h2,
+	.contact-us h2,
+	.media-space .top h3,
+	.media-space .bottom h3,
+	.centering-image-video-container .img-wpr-inter .content-wrapper  h2,
+	.contenido-noticia h2,
+	.columnas-imagen-texto h2,
+	.contenido-texto-foto-flotante h2,
+	.portada-imagen-con-texto-link h2{
+		font-size:27px !important;
+		line-height:1.3em;
+	}
+	.content-article h3,
+	.four-image-teaser .bottom  h2,
+	.contact-us h3,
+	.contenido-texto-foto-flotante .paragraph-container h2 {
+		font-size:22px;
+	}
+	footer#footer .nav-menu {float:none;text-align:center;}
+	footer#footer .channels ul {margin-right:0;}
+	footer#footer .channels ul li {float:none;display:inline-block;}
+	footer#footer .portal-links {float:none;}	
+	footer#footer .portal-links ul {float:none;text-align:center;}	
+	footer#footer .portal-links ul li{display:block;float:none;}
+	footer#footer .copy-right {float:none;padding-left:0;text-align:center;}
 }
 
 /* Cambios samu */

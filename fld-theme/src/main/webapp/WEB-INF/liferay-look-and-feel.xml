@@ -18,9 +18,5 @@
 			<setting configurable="true" key="Link Mapa web" value="/mapa-web" />
 			<setting key="portlet-setup-show-borders-default" value="false" />
 		</settings>
-		<color-scheme id="01" name="Default">
-			<default-cs>true</default-cs>
-			<css-class>default</css-class>
-		</color-scheme>
 	</theme>	
 </look-and-feel>

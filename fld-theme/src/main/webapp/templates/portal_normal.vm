@@ -102,7 +102,6 @@ $theme.include($body_top_include)
 				#end
 			</ul>
 		</div>
-		<p class="copy-right">© 2017 Fundación Línea Directa. </p>
 		#set($currentSiteUrl = $themeDisplay.getPortalURL()+"/web"+$layout.getGroup().getFriendlyURL()) 
 		<div class="portal-links">
 			<ul>
@@ -112,6 +111,7 @@ $theme.include($body_top_include)
 				<li><a href="$currentSiteUrl$theme.getSetting("Link Mapa web")">Mapa web</a></li>
 			</ul>
 		</div>
+		<p class="copy-right">© 2017 Fundación Línea Directa. </p>
 	</footer>
 </div>
 
