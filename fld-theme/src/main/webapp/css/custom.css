@@ -1741,7 +1741,6 @@ body.dark footer#footer .info-wpr p {
 	.four-image-teaser .bottom {margin:0;width:auto;}	
 	.image-teaser .right h3 {font-size:36px;bottom:60px;}
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
-	#wrapper .image-teaser-with-button-on-image .wpr,#wrapper  .image-teaser .left,#wrapper  .image-teaser .right, .image-teaser,#wrapper .social-media .wpr {width: auto;padding: 0 20px 20px 20px;text-align:center;position:relative;left:auto !important;right:auto !important;bottom:auto;top:auto;}
 	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:18px;color:#555555 !important;text-align:center;}
 	.image-teaser .left a, .image-teaser-with-button-on-image .wpr a , .four-image-teaser .bottom a, .social-media .wpr a{display:inline-block;padding:18px 100px;background:#FFF;color:#333333 !important;border: 3px solid #cacaca;}
 	.image-teaser .left a:hover, .image-teaser-with-button-on-image .wpr a:hover , .four-image-teaser .bottom a:hover {text-decoration:none;}	
