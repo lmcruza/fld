@@ -1732,6 +1732,7 @@ body.dark footer#footer .info-wpr p {
 	.article-acccordion .accordion-wpr p {padding:0 20px;}
 	.article-acccordion h2.bottom , .article-acccordion p.bottom-content{padding:0 20px;}
 	div.media-container p {padding:0;}
+	.four-image-teaser a .wpr p {opacity:1;}
 }
 @media screen and (max-width: 649px) {
 	.four-image-teaser .top {flex-wrap: wrap;}
