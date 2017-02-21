@@ -15,7 +15,7 @@
 			<setting configurable="true" key="Link Aviso Legal" value="/aviso-legal" />
 			<setting configurable="true" key="Link Política de cookies" value="/politica-cookies" />
 			<setting configurable="true" key="Link Política de Privacidad" value="/politica-de-privacidad" />
-			<setting configurable="true" key="Link Mapa web" value="/mapa-web1" />
+			<setting configurable="true" key="Link Mapa web" value="/mapa-web" />
 			<setting key="portlet-setup-show-borders-default" value="false" />
 		</settings>
 		<color-scheme id="01" name="Default">
