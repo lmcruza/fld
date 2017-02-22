@@ -8,7 +8,7 @@
 			#end		
 			#if($imageSeparator.image.getData() != "")
 				<img src="$imageSeparator.image.getData()" />
-				#if($videoSeparator.mp4Video.getData() != "" || $videoSeparator.streamingVideo.getData() != "" || $videoSeparator.youtubeVideo.getData() != "")
+				#if($videoSeparator.mp4Video.getData() != "" || $videoSeparator.vimeoVideo.getData() != "" || $videoSeparator.youtubeVideo.getData() != "")
 				    <a class="play-icon $source" href="javascript:void(0)"><span></span></a>
 			    #end
 			#end
@@ -33,19 +33,19 @@
         			<source src="$videoSeparator.mp4Video.getData()" type="video/mp4">
         			Your browser does not support the video tag.
         		</video> 
-            #elseif($videoSeparator.streamingVideo.getData() != "")
-				<video controls="" style="display:none;" width="100%">
-        			<source src="$videoSeparator.streamingVideo.getData()">
-        			Your browser does not support the video tag.
-        		</video> 
-        	#end
-			#if($videoSeparator.youtubeVideo.getData() != "")
+			#elseif($videoSeparator.youtubeVideo.getData() != "")
 				#if($videoSeparator.youtubeVideo.getData().indexOf("?") >= 0)
 					#set ($youtubeUrl = $videoSeparator.youtubeVideo.getData() + "&controls=0&disablekb=1&autoplay=1")
 				#else
 					#set ($youtubeUrl = $videoSeparator.youtubeVideo.getData() + "?controls=0&disablekb=1&autoplay=1")
 				#end
 				<div class="iframe-wpr" style="display:none;" url="$youtubeUrl" iframeWidth="3000">
+            #elseif($videoSeparator.vimeoVideo.getData() != "")
+				<div class="vimeo">
+					<div class="vimeoINT">
+							<iframe allowfullscreen="" frameborder="0" mozallowfullscreen="" src="$videoSeparator.vimeoVideo.getData()" webkitallowfullscreen=""></iframe>
+					</div>
+				</div>
 			#end
 	    </div>
     </div>

@@ -175,10 +175,10 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="streamingVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="vimeoVideo" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
-					<![CDATA[Streaming url]]>
+					<![CDATA[Vimeo url]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
@@ -189,7 +189,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Url de streaming]]>
+					<![CDATA[Url de Vimeo]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
