@@ -58,15 +58,14 @@ jQuery(document).ready(function() {
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
 		centerImageVideo();
 	});	
-	jQuery("#content .centering-image-video-container .img-wpr a.play-icon.iframe").on("click", function(e) {		
+	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.iframe").on("click", function(e) {	
 		jQuery(this).prev().remove();
-		jQuery(this).next().remove();
 		var iframeUrl = jQuery(this).parent().find(".iframe-wpr").attr("url");
-		var iframeWidth = jQuery(this).parent().find(".iframe-wpr").attr("iframeWidth");
+		var iframewidth = jQuery(this).parent().find(".iframe-wpr").attr("iframeWidth");
 		var windowHeight = jQuery( window ).height()
 		windowHeight = windowHeight-80;
-		jQuery(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
+		jQuery(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
 		jQuery(this).remove();
 		centerImageVideo();
 	});
