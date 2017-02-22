@@ -417,14 +417,14 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	color:#c90000;
 }
 /*article-acccordion*/
-.article-acccordion {
-	padding:30px 25px 0 25px;
+#wrapper .article-acccordion {
+	padding:30px 25px 60px !important;
 	font-size:18px !important;
 }
 .article-acccordion h2{
-	font-size:40px;
+	font-size:26px;
 	font-weight: 600;
-	color:#666;	
+	color:#333;	
 	text-transform: uppercase;	
 	padding:0 20% 25px 20%;
 	text-align:center;
@@ -538,6 +538,13 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	text-transform: uppercase;	
 	padding-bottom:25px;
 	text-align:center;
+}
+.content-article h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 65px 15px 20px;
+	text-transform:none;
 }
 .content-article h3 {
 	font-size:30px;
