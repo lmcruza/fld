@@ -11,9 +11,11 @@
 			</p>
 		#end
 		#if($buttonText.getData() != "")
-			<a href="$buttonLink.getFriendlyUrl()">
-				$buttonText.getData()
-			</a>
+			<div class="buttonLink">
+				<a href="$buttonLink.getFriendlyUrl()">
+					$buttonText.getData()
+				</a>
+			</div>
 		#end		
 	</div>
 </div>
