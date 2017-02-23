@@ -1411,6 +1411,7 @@ html body .columnas-imagen-texto  .white a:hover{
 	display:flex;
 	padding:0 30px;
 	color:#666;
+	justify-content:center;
 }
 .contenido-columnas-imagen-texto .wpr {
 	margin-right:4%;
@@ -1418,6 +1419,7 @@ html body .columnas-imagen-texto  .white a:hover{
     overflow: hidden;
     padding: 20px 2%;
     position: relative;
+	width:17%;
 }
 .contenido-columnas-imagen-texto .wpr:last-child {
 	margin-right:0;
