@@ -15,7 +15,12 @@
 		#else 
 			#set ($color = "")
 		#end						
-		<div class="content-wpr $color">
+			#if($textOnImageAlignment.getData())
+				#set ($textOIAlignment = $textOnImageAlignment.getData())
+			#else 
+				#set ($textOIAlignment = "")
+			#end						
+		<div class="content-wpr $color $color $textOIAlignment">
 			<h2>$textOnImage.getData()</h2>
 		</div>
 	#end

@@ -48,6 +48,90 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="textOnImageAlignment" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option18673" type="option" value="text-on-image-centered">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[centered]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[centrado]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option18674" type="option" value="text-on-image-upper-left">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[upper left]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[arriba a la izquierda]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option18675" type="option" value="text-on-image-upper-right">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[upper right]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[arriba a la derecha]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option18676" type="option" value="text-on-image-bottom-left">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bottom left]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[abajo a la izquierda]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option18677" type="option" value="text-on-image-bottom-right">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bottom right]]>
+				</entry>
+			</meta-data>
+			<meta-data locale="es_ES">
+				<entry name="label">
+					<![CDATA[abajo a la derecha]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Select alignment for text on image]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["text-on-image-centered"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+		<meta-data locale="es_ES">
+			<entry name="label">
+				<![CDATA[Seleccione alineación del texto sobre la imagen]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["text-on-image-centered"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
 	<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="textOnImageInWhite" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
 		<meta-data locale="es_ES">
 			<entry name="label">

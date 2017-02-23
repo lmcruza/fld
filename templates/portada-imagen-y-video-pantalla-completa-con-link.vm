@@ -12,13 +12,18 @@
 				    <a class="play-icon $source" href="javascript:void(0)"><span></span></a>
 			    #end
 			#end
-			#if($header.getData() != "")
+			#if($header.getData() != "" || $information.getData() != "")
 				#if($textInWhite.getData() == "true")
 					#set ($color = "white")
 				#else 
 					#set ($color = "")
+				#end
+				#if($textOnImageAlignment.getData())
+					#set ($textOIAlignment = $textOnImageAlignment.getData())
+				#else 
+					#set ($textOIAlignment = "")
 				#end						
-				<div class="content-wrapper $color">
+				<div class="content-wrapper $color $textOIAlignment">
 				    <div class="inner">
     					<h2>$header.getData()</h2>
     					<p>$information.getData()</p>

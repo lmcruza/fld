@@ -17,7 +17,12 @@
 			#else 
 				#set ($color = "")
 			#end						
-			<div class="over-image $color">
+			#if($textOnImageAlignment.getData())
+				#set ($textOIAlignment = $textOnImageAlignment.getData())
+			#else 
+				#set ($textOIAlignment = "")
+			#end						
+			<div class="over-image $color $textOIAlignment">
 				#if($bollowImageSeparator.headerBellowImage.getData() != "")
 					<h3>$headerBellowImage.getData()</h3>
 				#end
