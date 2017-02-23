@@ -18,10 +18,15 @@
 					#else 
 						#set ($color = "")
 					#end
+					#if($to.textOnImageAlignment.getData())
+						#set ($textOIAlignment = $to.textOnImageAlignment.getData())
+					#else 
+						#set ($textOIAlignment = "")
+					#end						
 					<div class="img-wpr">
 						<img src="$to.image.getData()" />
 					</div>
-					<div class="inner $color">
+					<div class="inner $color $textOIAlignment">
 						#if($to.headerOnImage.getData() != "")
 							<h3>$to.headerOnImage.getData()</h3>
 						#end

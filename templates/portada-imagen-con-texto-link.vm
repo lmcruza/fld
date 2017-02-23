@@ -20,9 +20,21 @@
 			<img src="$image.getData()" />
 		#end
 		#if($imageHeader.getData() != "")		
-			<h3>
-				$imageHeader.getData()
-			</h3>
+			#if($textInWhite.getData() == "true")
+				#set ($color = "white")
+			#else 
+				#set ($color = "")
+			#end
+			#if($textOnImageAlignment.getData())
+				#set ($textOIAlignment = $textOnImageAlignment.getData())
+			#else 
+				#set ($textOIAlignment = "")
+			#end						
+			<div class="content-wrapper $color $textOIAlignment">
+				<h3>
+					$imageHeader.getData()
+				</h3>
+			</div>
 		#end
 	</div>
 </div>
