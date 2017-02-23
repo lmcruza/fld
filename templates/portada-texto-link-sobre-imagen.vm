@@ -6,7 +6,7 @@
             #else 
             	#set ($alignment = "social-media")
             #end	
-            #if($contentSep.isTextWhite.getData() != "true")
+            #if($contentSep.isTextWhite.getData() == "true")
             	#set ($color = "white")
             #else 
             	#set ($color = "")
