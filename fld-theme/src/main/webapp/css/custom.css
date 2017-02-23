@@ -30,6 +30,9 @@ iframe{
 #wrapper {
 	position:unset;
 }
+.journal-content-article a {
+    color: #cc3333;
+}
 /*white selection*/ 
 html body .white {
 	color:#FFF !important;
@@ -554,6 +557,8 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	text-align:center;
 	padding:0 20%;
 	margin-bottom:20px;
+    font-size: 16px;
+    line-height: 1.7em;	
 }
 .content-article .box {
 	padding:12px 25px;
@@ -1626,6 +1631,10 @@ html body .alternative-background {
 .portlet-journal-content li {
 	margin:0 0 20px 20px;
 }
+/*img-wpr cuts too high images with js*/
+.img-wpr {
+	overflow:hidden;
+}
 /*FOOTER*/
 footer#footer:after {
     visibility: hidden;
@@ -1737,6 +1746,9 @@ footer#footer .info-wpr p {
 	div.media-container p {padding:0;}
 	.four-image-teaser a .wpr p {opacity:1;}
 	div.media-container div.content-wpr {top:5%;padding-left:20px;padding-right:20px;width:90%;}
+	.two-image-teaser .social-media h2, .two-image-teaser .image-teaser-with-button-on-image h2 { font-size:25px;}
+	.two-image-teaser .social-media p, .two-image-teaser .image-teaser-with-button-on-image p {font-size:15px;margin-bottom:0;padding:0;}
+	#wrapper .two-image-teaser .wpr {width:auto;text-align:center !important;}
 }
 @media screen and (max-width: 649px) {
 	.four-image-teaser .top {flex-wrap: wrap;}
@@ -1747,7 +1759,6 @@ footer#footer .info-wpr p {
 	.image-teaser .right h3 {font-size:36px;bottom:60px;}
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
 	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:18px;color:#555555 !important;text-align:center;}
-	.image-teaser .left a, .image-teaser-with-button-on-image .wpr a , .four-image-teaser .bottom a, .social-media .wpr a{display:inline-block;padding:18px 100px;background:#FFF;color:#333333 !important;border: 3px solid #cacaca;}
 	.image-teaser .left a:hover, .image-teaser-with-button-on-image .wpr a:hover , .four-image-teaser .bottom a:hover {text-decoration:none;}	
 	.nav-desktop{display:none;}
 	.trigger {width:100%;}
@@ -1863,10 +1874,6 @@ footer#footer .info-wpr p {
 .four-image-teaser .bottom li {
     color: #7f7f7f;
     font-size: 16px;
-}
-
-.bottom a {
-    color: #cc3333;
 }
 
 /*Home*/

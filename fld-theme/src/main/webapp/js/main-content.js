@@ -119,6 +119,14 @@ jQuery(document).ready(function() {
 	
 });
 function resizeWindow() {
+	var windowHeightNew = jQuery( window ).height();
+	windowHeightNew = windowHeightNew-80;
+	jQuery("#content .img-wpr").each(function(index) {
+		var imgHeight = jQuery(this).height();
+		if(windowHeightNew < imgHeight) {
+			jQuery(this).height(windowHeightNew);
+		}
+	});		
 	var currentSlideHeight = jQuery("#content .slick-active").height();
 	jQuery("#content .regular.slider").css("height",currentSlideHeight);
 	currentSlideHeight = currentSlideHeight-50;
