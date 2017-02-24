@@ -4,17 +4,19 @@
 	#else 
 		#set ($background = "")
 	#end
-    <div class="content-article $background">
-		#if($paragraphSeparator.header.getData() != "")
-			<h2>
-				$paragraphSeparator.header.getData()
-			</h2>
-		#end
-		#if($paragraphSeparator.paragraph.getData() != "")
-			<p>
-				$paragraphSeparator.paragraph.getData()
-			</p>
-		#end
+	<div class="four-image-teaser $background">
+	    <div class="bottom">
+        	#if($paragraphSeparator.header.getData() != "")
+        		<h2>
+    				$paragraphSeparator.header.getData()
+    			</h2>
+    		#end
+        	#if($paragraphSeparator.paragraph.getData() != "")
+    			<p>
+    				$paragraphSeparator.paragraph.getData()
+    			</p>
+        	#end
+        </div>
     </div>
 #end
 
@@ -25,10 +27,12 @@
     	#else 
     		#set ($background = "")
     	#end
-        <div class="content-article $background">
-			<p>
-				$paragraphSep.paragraph2.getData()
-			</p>
+        <div class="four-image-teaser $background">
+	        <div class="bottom">
+			    <p>
+				    $paragraphSep.paragraph2.getData()
+			    </p>
+            </div>
         </div>
     #end
 #end
