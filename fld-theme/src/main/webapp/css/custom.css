@@ -443,8 +443,14 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	position:absolute;
 	bottom:10%;
 	left:0;
+	padding:0 20%;
+	text-align:center;
 }
-
+.article-acccordion .over-image p{
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 20px;	
+}
 #wrapper .article-acccordion .over-image h3{
 	text-align:center;
 }
@@ -552,6 +558,14 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 .content-article h3 {
 	font-size:30px;
 	padding-bottom:0;
+}
+.content-article .inner h3{
+	font-size:40px;
+	font-weight: 600;
+	color:#666;
+	text-transform: uppercase;	
+	padding-bottom:25px;
+	text-align:center;	
 }
 .content-article p{
 	text-align:center;
@@ -1097,6 +1111,20 @@ html body .social-media  .white a:hover{
 .contact-us  .acccordion-content p{
 	font-size:16px;
 	text-align:left;
+}
+.contact-us .image-wpr h3 {
+	font-size:40px;
+	font-weight: 600;
+	color:#666;
+	text-transform: uppercase;	
+	padding-bottom:25px;
+	text-align:center;	
+}
+.contact-us .image-wpr p{
+	text-align:center;
+	margin-bottom:20px;
+    font-size: 16px;
+    line-height: 1.7em;	
 }
 .contact-us  .acccordion-content p span {
 	padding-right:5px;
@@ -1734,8 +1762,6 @@ footer#footer .info-wpr p {
 	#content {margin-top:0;}
 	.contenido-columnas-imagen-texto {flex-wrap: wrap;}
 	.contenido-columnas-imagen-texto .wpr {margin-bottom:20px;margin-right:3%;}
-	.contact-us .image-wpr{position:static;margin-bottom:20px;padding:0;}
-	.contact-us .image-wpr *{color:#666 !important;}
 	.centering-image-video-container .img-wpr-inter .content-wrapper .inner {padding:0 20px;}
 	.content-article p {padding-left:20px;padding-right:20px;}
 	.article-acccordion p {padding:0 20px;}
@@ -1749,6 +1775,8 @@ footer#footer .info-wpr p {
 	.two-image-teaser .social-media h2, .two-image-teaser .image-teaser-with-button-on-image h2 { font-size:25px;}
 	.two-image-teaser .social-media p, .two-image-teaser .image-teaser-with-button-on-image p {font-size:15px;margin-bottom:0;padding:0;}
 	#wrapper .two-image-teaser .wpr {width:auto;text-align:center !important;}
+	.contact-us .image-wpr {padding:0 40px;}
+	.article-acccordion .over-image {padding:0;}
 }
 @media screen and (max-width: 649px) {
 	.four-image-teaser .top {flex-wrap: wrap;}
@@ -1800,7 +1828,7 @@ footer#footer .info-wpr p {
 	.four-image-teaser .bottom  h2,
 	.contact-us h3,
 	.contenido-texto-foto-flotante .paragraph-container h2 {
-		font-size:22px;
+		font-size:22px !important;
 	}
 	footer#footer .nav-menu {float:none;text-align:center;}
 	footer#footer .channels ul {margin-right:0;}
