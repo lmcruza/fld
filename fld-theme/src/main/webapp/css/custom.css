@@ -1357,7 +1357,7 @@ html body .centering-image-video-container  .white a:hover{
     text-align: left;
 }
 
-html body .archivo-relacionador  .white a{
+html body .archivo-relacionado  .white a{
 	color:#333333 !important;
 }
 .archivo-relacionado a:hover{
@@ -1365,7 +1365,7 @@ html body .archivo-relacionador  .white a{
 	color:#939393;
 	border-color:#939393;
 }
-html body .archivo-relacionador  .white a:hover{
+html body .archivo-relacionado  .white a:hover{
 	color:#939393 !important;
 }
 /*columnas-imagen-texto*/
@@ -1821,8 +1821,8 @@ footer#footer .info-wpr p {
     width: auto !important;
 }
 
-.archivo-relacionado a::before {
-    content: url("/fundacion-theme/images/custom/icoPDF.png");
+.archivo-relacionado.pdf a::before {
+    content: url("../images/custom/icoPDF.png");
     margin-right: 10px;
 }
 

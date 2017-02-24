@@ -26,8 +26,8 @@
             #set ($background = "")
         #end
 
-	    <div class="archivo-relacionado $background">
-	        <a href="$downloadUrl" download >$fileSep.fileDescription.getData() - $fileEntry.extension ($fileSize kB)</a>
+	    <div class="archivo-relacionado $fileEntry.extension $background">
+	        <a href="$downloadUrl" download >$fileSep.fileDescription.getData()</a>
 	    </div>
 	#end
 </div>
