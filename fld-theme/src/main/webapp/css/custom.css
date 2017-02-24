@@ -453,6 +453,11 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 #wrapper .article-acccordion .over-image h3{
 	text-align:center;
+	color:#666;
+	text-transform: uppercase;
+	font-weight:normal;
+	font-size:40px;
+	font-weight: 600;	
 }
 
 .article-acccordion h3 {
