@@ -1381,13 +1381,13 @@ html body .centering-image-video-container  .white a:hover{
 
 .archivo-relacionado {
     padding-top: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 .archivo-relacionado a {
     background: #fff none repeat scroll 0 0;
     display: inline-block;
-    text-align: left;
+    text-align: center;
 }
 
 html body .archivo-relacionado  .white a{
