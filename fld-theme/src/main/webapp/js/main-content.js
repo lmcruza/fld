@@ -1,11 +1,13 @@
 function centerImageVideo() {
 	var windowHeight = jQuery( window ).height();
 	var windowWidth = jQuery( window ).width();
-	var windowHeight = windowHeight-100;
+	var windowHeight = windowHeight-80;
+	jQuery("#wrapper .centering-image-video-container iframe,#wrapper .centering-image-video-container video").height(windowHeight);
+	
 	jQuery("#wrapper .centering-image-video-container").each(function() {
 		
 		var imageWidth = jQuery(this).find(".img-wpr-centering").width();
-		if(imageWidth >= windowWidth){
+		if(imageWidth > windowWidth){
 			jQuery(this).height(windowHeight);
 			var imageHeight = jQuery(this).find(".img-wpr-centering").height();
 			var topPosition = (imageHeight - windowHeight) / 2;
@@ -15,7 +17,7 @@ function centerImageVideo() {
 			var leftPosition = (imageWidth - windowWidth) / 2;
 			var divWidth = jQuery(this).parent().width();
 			var leftContent = (imageWidth - divWidth) / 2;
-			divWidth = divWidth-20;
+			var divWidth = divWidth-20;
 			jQuery(this).find(".content-wrapper").css("left", leftContent);
 			
 			jQuery(this).find(".content-wrapper").css("width", divWidth);
@@ -56,19 +58,32 @@ jQuery(document).ready(function() {
 		jQuery(this).remove();
 		jQuery(currentVideo).css("display", "inline-block");
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
+		jQuery(this).parent().find(".content-wrapper").remove();
 		centerImageVideo();
 	});	
+	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.vimeo-video").on("click", function(e) {	
+		jQuery(this).prev().remove();
+		var iframeUrl = jQuery(this).parent().find(".vimeo-center-inner").attr("url");
+		var windowHeight = jQuery( window ).height()
+		var windowHeight = windowHeight-80;
+		jQuery(this).parent().find(".vimeo-center-inner").css("display", "block");
+		jQuery(this).parent().find(".vimeo-center-inner").html("<iframe allowfullscreen='' frameborder='0' mozallowfullscreen='' src='"+iframeUrl+"' webkitallowfullscreen='' height='"+windowHeight+"'></iframe>")
+		jQuery(this).parent().find(".content-wrapper").remove();
+		jQuery(this).remove();
+		centerImageVideo();
+	});
 	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.iframe").on("click", function(e) {	
 		jQuery(this).prev().remove();
 		var iframeUrl = jQuery(this).parent().find(".iframe-wpr").attr("url");
 		var iframewidth = jQuery(this).parent().find(".iframe-wpr").attr("iframeWidth");
 		var windowHeight = jQuery( window ).height()
-		windowHeight = windowHeight-80;
+		var windowHeight = windowHeight-80;
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
 		jQuery(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
+		jQuery(this).parent().find(".content-wrapper").remove();
 		jQuery(this).remove();
 		centerImageVideo();
-	});
+	});	
 	setTimeout(function(){ centerImageVideo(); }, 1000);
 	jQuery( window ).resize(function() {
 		centerImageVideo();
@@ -147,3 +162,27 @@ function resizeVideoVimeo() {
 		jQuery(this).find(".vimeo").css("height", "auto");
 	}
 }
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop()-100;
+  var window_bottom_position = (window_top_position + window_height-100);
+ 
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+ 
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+  });
+}
+var $animation_elements = $('#content .portlet-body');
+var $window = $(window);
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');

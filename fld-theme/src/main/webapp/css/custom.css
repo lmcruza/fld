@@ -383,17 +383,15 @@ div.media-container div.content-wpr *{
 	display:inline-block;
 }
 div.media-container div.content-wpr h3 {
-	text-transform: uppercase;
 	font-weight:normal;
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
 }
 div.media-container h2 {
-	padding:35px 20% 0 20%;
+	padding:0;
 	text-align:center;
 	color:#666;
-	text-transform: uppercase;
 	font-weight:normal;
 	font-size:40px;
 	font-weight: 600;
@@ -428,7 +426,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-size:26px;
 	font-weight: 600;
 	color:#333;	
-	text-transform: uppercase;	
 	padding:0 20% 25px 20%;
 	text-align:center;
 }
@@ -454,7 +451,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 #wrapper .article-acccordion .over-image h3{
 	text-align:center;
 	color:#666;
-	text-transform: uppercase;
 	font-weight:normal;
 	font-size:40px;
 	font-weight: 600;	
@@ -464,7 +460,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-size:20px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;
 	padding:0 20px 10px 0;
 	margin:0;
 	text-align:left;
@@ -549,7 +544,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding-bottom:25px;
 	text-align:center;
 }
@@ -568,7 +562,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding-bottom:25px;
 	text-align:center;	
 }
@@ -700,7 +693,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-weight: 600;
 	color:#000;
 	opacity: 1;
-	text-transform:uppercase;
 }
 .video-image-text-teaser .media-wpr .content-wpr .inner-wpr a:hover {
 	text-decoration:none;
@@ -767,7 +759,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
     color: #666;
     font-size: 40px;
     font-weight: 800;
-    text-transform: uppercase;
 }
 
 .four-image-teaser .top  a:hover h3{
@@ -830,7 +821,6 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform:uppercase;
 	line-height:1.2em;
 	margin-top:0;
 }
@@ -858,12 +848,11 @@ html body .image-teaser .white a{
 .image-teaser .right h3{
 	width:60%;
 	position:absolute;
-	bottom:40px;
-	left:40px;
+	bottom:35%;
+	left:20%;
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform:uppercase;
 	line-height:1.2em;
 	text-align:center;
 }
@@ -886,7 +875,6 @@ html body .image-teaser .white a{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform:uppercase;
 	margin:0;
 	width:96%;
 }
@@ -1018,7 +1006,6 @@ html body .social-media  .white a:hover{
 	color:#666;
 	padding:0 0 20px 0;
 	text-align:center;
-	text-transform:uppercase;
 }
 .contact-us .image-wpr{
 	padding:0 20% 0 20%;
@@ -1032,7 +1019,6 @@ html body .social-media  .white a:hover{
 	font-weight: 600;
 	color:#666;
 	padding:0 0 20px 0;
-	text-transform:uppercase;	
 	margin:0;
 	
 }
@@ -1121,7 +1107,6 @@ html body .social-media  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding-bottom:25px;
 	text-align:center;	
 }
@@ -1141,7 +1126,6 @@ html body .social-media  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform:uppercase;
 	text-align:center;
 	padding-bottom:40px;
 }
@@ -1150,7 +1134,6 @@ html body .social-media  .white a:hover{
 	font-weight: 600;
 	color:#666;
 	text-align:center;
-	text-transform:uppercase;
 	padding-top:60px;
 	padding:10px 20% 20px 20%;
 }
@@ -1162,7 +1145,6 @@ html body .social-media  .white a:hover{
 	line-height:1.2em;
 	margin-top:20px;
 	text-align:center;
-	text-transform:uppercase;
 	padding:10px 20% 20px 20%;	
 }
 .media-space .bottom p {
@@ -1296,7 +1278,6 @@ html body .social-media  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform:uppercase;
 	margin:0;
 	width:96%;
 }
@@ -1369,7 +1350,6 @@ html body .centering-image-video-container  .white a:hover{
 .contenido-noticia h2{
 	font-size:40px;
 	font-weight: 600;
-	text-transform: uppercase;	
 	padding:10px 20px 25px 20px;
 	text-align:center;
 }
@@ -1410,7 +1390,6 @@ html body .archivo-relacionado  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding:10px 2% 25px 2%;
 	text-align:center;
 	position:absolute;
@@ -1497,7 +1476,6 @@ html body .columnas-imagen-texto  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding:20px 0 20px 0;	
 	margin-bottom:0;
 	text-align: center;
@@ -1539,7 +1517,6 @@ html body .columnas-imagen-texto  .white a:hover{
 	font-size:40px;
 	font-weight: 600;
 	color:#666;
-	text-transform: uppercase;	
 	padding:10px 20px 20px 20px;
 	text-align:center;
 }
@@ -1667,6 +1644,7 @@ html body .alternative-background {
 /*img-wpr cuts too high images with js*/
 .img-wpr {
 	overflow:hidden;
+	position:relative;
 }
 /*FOOTER*/
 footer#footer:after {
@@ -1737,6 +1715,73 @@ footer#footer .info-wpr p {
 .portlet-content, .portlet-minimized .portlet-content-container {
 	padding:0;
 }
+.text-on-image-centered {
+
+}
+#wrapper .text-on-image-upper-left {
+	position: absolute;
+	text-align:left !important;
+	width:50% !important;
+	padding:0 !important;
+	top:15% !important;
+	left:7% !important;
+	right:auto !important;
+	bottom:auto !important;	
+}
+#wrapper .text-on-image-upper-left *{
+	text-align:left !important;	
+	padding:0 !important;	
+}
+#wrapper .text-on-image-upper-right {
+	position: absolute;
+	text-align:right !important;
+	width:50% !important;
+	padding:0 !important;
+	top:15% !important;
+	left:auto !important;
+	right:7% !important;
+	bottom:auto !important;			
+}
+#wrapper .text-on-image-upper-right *{
+	text-align:right !important;
+	padding:0 !important;	
+}
+#wrapper .text-on-image-bottom-left{
+	position: absolute;
+	text-align:left !important;
+	width:50% !important;
+	padding:0 !important;
+	top:auto !important;
+	left:7% !important;
+	right:auto !important;
+	bottom:15% !important;			
+}
+#wrapper .text-on-image-bottom-left *{
+	text-align:left !important;
+	padding:0 !important;
+}
+#wrapper .text-on-image-bottom-right{
+	position: absolute;
+	text-align:right !important;
+	width:50% !important;
+	padding:0 !important;
+	top:auto !important;
+	left:auto !important;
+	right:7% !important;
+	bottom:15% !important;			
+}
+#wrapper .text-on-image-bottom-right *{
+	text-align:right !important;
+	padding:0 !important;	
+}
+#content .portlet-body {
+	opacity:0;
+	transition: opacity 0.500s ease 0s;
+}
+#content .portlet-body.in-view {
+	opacity:1;
+	transition: opacity 1.000s ease 0s;
+}
 /*MEDIAQUESRIES*/
 /*
 1. L(arge) / Desktop. (min-width: 1090px)
@@ -1776,7 +1821,7 @@ footer#footer .info-wpr p {
 	.article-acccordion h2.bottom , .article-acccordion p.bottom-content{padding:0 20px;}
 	div.media-container p {padding:0;}
 	.four-image-teaser a .wpr p {opacity:1;}
-	div.media-container div.content-wpr {top:5%;padding-left:20px;padding-right:20px;width:90%;}
+	div.media-container div.content-wpr {top:35%;padding-left:20px;padding-right:20px;width:90%;}
 	.two-image-teaser .social-media h2, .two-image-teaser .image-teaser-with-button-on-image h2 { font-size:25px;}
 	.two-image-teaser .social-media p, .two-image-teaser .image-teaser-with-button-on-image p {font-size:15px;margin-bottom:0;padding:0;}
 	#wrapper .two-image-teaser .wpr {width:auto;text-align:center !important;}
@@ -1789,7 +1834,6 @@ footer#footer .info-wpr p {
 	.two-image-teaser .top {flex-wrap: wrap;}
 	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
 	.four-image-teaser .bottom {margin:0;width:auto;}	
-	.image-teaser .right h3 {font-size:36px;bottom:60px;}
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
 	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:18px;text-align:center;}
 	.image-teaser .left a:hover, .image-teaser-with-button-on-image .wpr a:hover , .four-image-teaser .bottom a:hover {text-decoration:none;}	

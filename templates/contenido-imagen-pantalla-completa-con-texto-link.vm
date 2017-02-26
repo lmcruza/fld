@@ -7,23 +7,24 @@
 	#if($image.getData() != "")
 		<div class="media-wpr img-wpr">
     		<img src="$image.getData()" />
+			#if($textOnImage.getData() != "")
+				#if($textOnImageInWhite.getData() == "true")
+					#set ($color = "white")
+				#else 
+					#set ($color = "")
+				#end						
+					#if($textOnImageAlignment.getData())
+						#set ($textOIAlignment = $textOnImageAlignment.getData())
+					#else 
+						#set ($textOIAlignment = "")
+					#end						
+				<div class="content-wpr $color $color $textOIAlignment">
+					<h2>$textOnImage.getData()</h2>
+				</div>
+			#end			
 		</div>
 	#end
-	#if($textOnImage.getData() != "")
-		#if($textOnImageInWhite.getData() == "true")
-			#set ($color = "white")
-		#else 
-			#set ($color = "")
-		#end						
-			#if($textOnImageAlignment.getData())
-				#set ($textOIAlignment = $textOnImageAlignment.getData())
-			#else 
-				#set ($textOIAlignment = "")
-			#end						
-		<div class="content-wpr $color $color $textOIAlignment">
-			<h2>$textOnImage.getData()</h2>
-		</div>
-	#end
+
 	#if($header.getData() != "")
 		<h2>
 			$header.getData()

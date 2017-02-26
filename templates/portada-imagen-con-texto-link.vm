@@ -34,7 +34,7 @@
 				<h3>
 					$imageHeader.getData()
 				</h3>
-			</div>
+			</div> 
 		#end
 	</div>
 </div>

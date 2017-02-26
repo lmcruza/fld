@@ -3,8 +3,10 @@
 		<div class="img-wpr-inter">
 			#if($videoSeparator.youtubeVideo.getData() != "")
 				#set ($source = "iframe")
-			#else 
+			#elseif($videoSeparator.mp4Video.getData() != "")
 				#set ($source = "video")
+			#elseif($videoSeparator.vimeoVideo.getData() != "")
+				#set ($source = "vimeo-video")
 			#end		
 			#if($imageSeparator.image.getData() != "")
 				<img src="$imageSeparator.image.getData()" />
@@ -46,11 +48,10 @@
 				#end
 				<div class="iframe-wpr" style="display:none;" url="$youtubeUrl" iframeWidth="3000">
             #elseif($videoSeparator.vimeoVideo.getData() != "")
-				<div class="vimeo">
-					<div class="vimeoINT">
-							<iframe allowfullscreen="" frameborder="0" mozallowfullscreen="" src="$videoSeparator.vimeoVideo.getData()" webkitallowfullscreen=""></iframe>
+				<div class="vimeo-center">
+					<div class="vimeo-center-inner" url="$videoSeparator.vimeoVideo.getData()">
 					</div>
-				</div>
+				</div>				
 			#end
 	    </div>
     </div>

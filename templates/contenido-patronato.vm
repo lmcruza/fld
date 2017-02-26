@@ -22,15 +22,16 @@
 		#end						
 		<div class="img-wpr">
 			<img src="$headerImage.getData()" />
+    		<div class="image-wpr $color $textOIAlignment">
+        		#if($headerOnImage.getData() != "")
+        		    <h3>$headerOnImage.getData()</h3>
+        	    #end
+        	    #if($paragraphOnImage.getData() != "")
+        		    <p>$paragraphOnImage.getData()</p>
+        		#end
+    		</div>			
 		</div>
-		<div class="image-wpr $color $textOIAlignment">
-    		#if($headerOnImage.getData() != "")
-    		    <h3>$headerOnImage.getData()</h3>
-    	    #end
-    	    #if($paragraphOnImage.getData() != "")
-    		    <p>$paragraphOnImage.getData()</p>
-    		#end
-		</div>
+
 	#end
 	#if($secondHeader.getData() != "")
 		<h3>

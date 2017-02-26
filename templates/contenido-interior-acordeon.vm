@@ -11,24 +11,24 @@
 		<div class="image-wpr">
 			<div class="img-wpr">
 				<img src="$image.getData()" />
-			</div>
-			#if($textInWhite.getData() == "true")
-				#set ($color = "white")
-			#else 
-				#set ($color = "")
-			#end						
-			#if($textOnImageAlignment.getData())
-				#set ($textOIAlignment = $textOnImageAlignment.getData())
-			#else 
-				#set ($textOIAlignment = "")
-			#end						
-			<div class="over-image $color $textOIAlignment">
-				#if($bollowImageSeparator.headerBellowImage.getData() != "")
-					<h3>$headerBellowImage.getData()</h3>
-				#end
-				#if($bollowImageSeparator.paragraphBellowImage.getData() != "")
-					<p>$paragraphBellowImage.getData()</p>
-				#end
+				#if($textInWhite.getData() == "true")
+					#set ($color = "white")
+				#else 
+					#set ($color = "")
+				#end						
+				#if($textOnImageAlignment.getData())
+					#set ($textOIAlignment = $textOnImageAlignment.getData())
+				#else 
+					#set ($textOIAlignment = "")
+				#end						
+				<div class="over-image $color $textOIAlignment">
+					#if($bollowImageSeparator.headerBellowImage.getData() != "")
+						<h3>$headerBellowImage.getData()</h3>
+					#end
+					#if($bollowImageSeparator.paragraphBellowImage.getData() != "")
+						<p>$paragraphBellowImage.getData()</p>
+					#end
+				</div>				
 			</div>
 		</div>
 	#end
