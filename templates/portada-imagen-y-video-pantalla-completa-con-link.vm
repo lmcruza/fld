@@ -1,4 +1,25 @@
 <div class="centering-image-video-container">
+	#if($header.getData() != "" || $information.getData() != "")
+		#if($textInWhite.getData() == "true")
+			#set ($color = "white")
+		#else 
+			#set ($color = "")
+		#end
+		#if($textOnImageAlignment.getData())
+			#set ($textOIAlignment = $textOnImageAlignment.getData())
+		#else 
+			#set ($textOIAlignment = "")
+		#end						
+		<div class="content-wrapper $color $textOIAlignment">
+			<div class="inner">
+				<h2>$header.getData()</h2>
+				<p>$information.getData()</p>
+				#if($button.getData() != "" && $showButton.getData() == "true")
+					<a href="$linkToPage.getFriendlyUrl()">$button.getData()</a>
+				#end
+			</div>
+		</div>
+	#end	
 	<div class="img-wpr-centering">
 		<div class="img-wpr-inter">
 			#if($videoSeparator.youtubeVideo.getData() != "")
@@ -13,27 +34,6 @@
 				#if($videoSeparator.mp4Video.getData() != "" || $videoSeparator.vimeoVideo.getData() != "" || $videoSeparator.youtubeVideo.getData() != "")
 				    <a class="play-icon $source" href="javascript:void(0)"><span></span></a>
 			    #end
-			#end
-			#if($header.getData() != "" || $information.getData() != "")
-				#if($textInWhite.getData() == "true")
-					#set ($color = "white")
-				#else 
-					#set ($color = "")
-				#end
-				#if($textOnImageAlignment.getData())
-					#set ($textOIAlignment = $textOnImageAlignment.getData())
-				#else 
-					#set ($textOIAlignment = "")
-				#end						
-				<div class="content-wrapper $color $textOIAlignment">
-				    <div class="inner">
-    					<h2>$header.getData()</h2>
-    					<p>$information.getData()</p>
-    					#if($button.getData() != "" && $showButton.getData() == "true")
-    						<a href="$linkToPage.getFriendlyUrl()">$button.getData()</a>
-    					#end
-					</div>
-				</div>
 			#end
         	#if($videoSeparator.mp4Video.getData() != "")
         		<video id="yui_patched_v3_11_0_1_1485263537202_788" style="display:none;" width="100%" loop>

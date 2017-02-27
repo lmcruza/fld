@@ -18,14 +18,9 @@ function centerImageVideo() {
 			var divWidth = jQuery(this).parent().width();
 			var leftContent = (imageWidth - divWidth) / 2;
 			var divWidth = divWidth-20;
-			jQuery(this).find(".content-wrapper").css("left", leftContent);
-			
-			jQuery(this).find(".content-wrapper").css("width", divWidth);
+
 			leftPosition = leftPosition-leftPosition-leftPosition;
 			jQuery(this).find(".img-wpr-centering").css("left", leftPosition);
-			jQuery(this).find(".content-wrapper").css("bottom", contentWrapperPosition);
-			
-			
 		}
 		else {
 			jQuery(this).addClass("center");
@@ -34,7 +29,6 @@ function centerImageVideo() {
 			});
 			var itemHeight = jQuery(this).find(".img-wpr-centering").height();
 			jQuery(this).css("height", itemHeight);
-			jQuery(this).find(".content-wrapper").css("bottom", "20px")
 		}
 	});	
 }
@@ -58,7 +52,7 @@ jQuery(document).ready(function() {
 		jQuery(this).remove();
 		jQuery(currentVideo).css("display", "inline-block");
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
-		jQuery(this).parent().find(".content-wrapper").remove();
+		jQuery(this).closest(".centering-image-video-container").find(".content-wrapper").remove();
 		centerImageVideo();
 	});	
 	jQuery("#content .centering-image-video-container .img-wpr-centering a.play-icon.vimeo-video").on("click", function(e) {	
@@ -68,7 +62,7 @@ jQuery(document).ready(function() {
 		var windowHeight = windowHeight-80;
 		jQuery(this).parent().find(".vimeo-center-inner").css("display", "block");
 		jQuery(this).parent().find(".vimeo-center-inner").html("<iframe allowfullscreen='' frameborder='0' mozallowfullscreen='' src='"+iframeUrl+"' webkitallowfullscreen='' height='"+windowHeight+"'></iframe>")
-		jQuery(this).parent().find(".content-wrapper").remove();
+		jQuery(this).closest(".centering-image-video-container").find(".content-wrapper").remove();
 		jQuery(this).remove();
 		centerImageVideo();
 	});
@@ -80,7 +74,7 @@ jQuery(document).ready(function() {
 		var windowHeight = windowHeight-80;
 		jQuery(this).parent().find(".iframe-wpr").css("display", "block");
 		jQuery(this).parent().find(".iframe-wpr").html(" <iframe frameborder='0' allowfullscreen src='"+iframeUrl+"' height='"+windowHeight+"'></iframe>");
-		jQuery(this).parent().find(".content-wrapper").remove();
+		jQuery(this).closest(".centering-image-video-container").find(".content-wrapper").remove();
 		jQuery(this).remove();
 		centerImageVideo();
 	});	
