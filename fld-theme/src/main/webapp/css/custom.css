@@ -479,7 +479,7 @@ div.media-container a:hover, html body div.media-container  .white a:hover{
 }
 .article-acccordion a.acccordion-link h3 span {
 	position: absolute;
-    right: 10px;
+    right: -8px;
     top: 5px;
 }
 .article-acccordion a.acccordion-link h3 span:after {
@@ -1829,15 +1829,20 @@ footer#footer .info-wpr p {
 	#wrapper .two-image-teaser .wpr {width:auto;text-align:center !important;}
 	.contact-us .image-wpr {padding:0 40px;}
 	.article-acccordion .over-image {padding:0;}
+	#wrapper .four-image-teaser h3{font-size:20px;margin:0;}
+	#wrapper .four-image-teaser p{font-size:15px;margin:0;}
+	.four-image-teaser a .wpr {top:30%;}
+	.four-image-teaser a:hover .wpr {top:10%;}
 }
 @media screen and (max-width: 649px) {
 	.four-image-teaser .top {flex-wrap: wrap;}
+	two-image-teaser .social-media h2, .two-image-teaser .image-teaser-with-button-on-image h2 { font-size:18px !important;padding-top:0 !important;}
 	.four-image-teaser .top a {width:100%;}
 	.two-image-teaser .top {flex-wrap: wrap;}
 	.two-image-teaser .social-media, .two-image-teaser .image-teaser-with-button-on-image {width:100%;}
 	.four-image-teaser .bottom {margin:0;width:auto;}	
 	html body .image-teaser-with-button-on-image h2, .image-teaser .left h2, .social-media h2, .four-image-teaser .bottom h2{font-size:40px;position:relative;color:#555555 !important;top: 0;font-weight:normal;margin-bottom:0;padding:20px 0 10px 0;}
-	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:18px;text-align:center;}
+	.image-teaser-with-button-on-image .wpr p, .social-media .wpr p{font-size:13px;text-align:center;}
 	.image-teaser .left a:hover, .image-teaser-with-button-on-image .wpr a:hover , .four-image-teaser .bottom a:hover {text-decoration:none;}	
 	.nav-desktop{display:none;}
 	.trigger {width:100%;}
