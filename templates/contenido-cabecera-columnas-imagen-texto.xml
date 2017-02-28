@@ -15,7 +15,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Header]]>
+					<![CDATA[Cabecera]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
@@ -39,7 +39,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Paragraph]]>
+					<![CDATA[Párrafo]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
@@ -63,7 +63,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Use alternative background colour for paragraph and header?]]>
+					<![CDATA[¿Usar color alternativo de fondo para la cabecera y el párrafo?]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[false]]>
@@ -89,7 +89,7 @@
 		</meta-data>
 		<meta-data locale="es_ES">
 			<entry name="label">
-				<![CDATA[Paragraph separator]]>
+				<![CDATA[Separador de párrafo]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -117,7 +117,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Paragraph]]>
+					<![CDATA[Párrafo]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[]]>
@@ -141,7 +141,7 @@
 			</meta-data>
 			<meta-data locale="es_ES">
 				<entry name="label">
-					<![CDATA[Use alternative background colour for paragraph?]]>
+					<![CDATA[¿Usar color alternativo de fondo para el párrafo?]]>
 				</entry>
 				<entry name="predefinedValue">
 					<![CDATA[false]]>
@@ -167,7 +167,7 @@
 		</meta-data>
 		<meta-data locale="es_ES">
 			<entry name="label">
-				<![CDATA[Paragraph separator]]>
+				<![CDATA[Separador de párrafo]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
