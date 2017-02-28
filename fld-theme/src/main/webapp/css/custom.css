@@ -1818,7 +1818,7 @@ footer#footer .info-wpr p {
 	.content-article p {padding-left:20px;padding-right:20px;}
 	.article-acccordion p {padding:0 20px;}
 	.article-acccordion .accordion-wpr {margin:20px 20px 0 20px}
-	.article-acccordion h3 {padding:0}
+	.article-acccordion h3 {padding:0 20px 0 0}
 	.article-acccordion .accordion-wpr p {padding:0 20px;}
 	.article-acccordion h2.bottom , .article-acccordion p.bottom-content{padding:0 20px;}
 	div.media-container p {padding:0;}
